@@ -1,0 +1,97 @@
+.header {
+  padding: $spacing-medium $spacing-small;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $color-border;
+  
+  @media (min-width: $breakpoint-md) {
+    padding: $spacing-medium;
+  }
+  
+  &__logo {
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-bold;
+    
+    &-link {
+      display: flex;
+      align-items: center;
+      
+      &:hover {
+        color: $color-text;
+      }
+    }
+    
+    &-image {
+      height: 40px;
+      width: auto;
+      margin-right: $spacing-small;
+    }
+  }
+  
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__menu {
+    display: flex;
+    gap: $spacing-medium;
+    
+    @media (max-width: ($breakpoint-md - 1)) {
+      display: none;
+    }
+  }
+  
+  &__menu-item {
+    position: relative;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $color-accent;
+      transition: width $transition-fast;
+    }
+    
+    &:hover:after,
+    &--active:after {
+      width: 100%;
+    }
+  }
+  
+  &__buttons {
+    display: flex;
+    gap: $spacing-small;
+  }
+  
+  &__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: $spacing-xsmall;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color $transition-fast;
+    
+    &:hover {
+      color: $color-accent;
+    }
+    
+    &--active {
+      color: $color-accent;
+    }
+  }
+  
+  &__mobile-menu-button {
+    display: none;
+    
+    @media (max-width: ($breakpoint-md - 1)) {
+      display: block;
+    }
+  }
+}

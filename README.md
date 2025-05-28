@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Digital City Series Website
+
+This is a static website for the Digital City Series art collection by Bernard Bolter, built with Next.js, SASS using BEM methodology, and React Context for state management.
+
+## Features
+
+- Static website built with Next.js app router
+- SASS with BEM methodology for styling
+- React Context API for state management
+- Responsive design for all device sizes
+- Artwork gallery with filtering and search functionality
+- Dynamic artwork detail pages
+- About section with artist information
+
+## Technology Stack
+
+- **Frontend Framework**: Next.js 15.x
+- **Styling**: SASS with BEM methodology
+- **State Management**: React Context API
+- **Data Fetching**: Axios
+- **Utility Libraries**: Lodash
+- **Static Export**: Next.js static site generation
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To create a static build of the website:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+This will generate a static export in the `out` directory that can be deployed to any static hosting service.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+/src
+  /app                 # Next.js app router pages
+  /components          # React components
+    /artwork           # Artwork-related components
+    /layout            # Layout components (Header, Footer)
+  /context             # React Context providers
+  /styles              # SASS styles
+    /components        # Component-specific styles
+    /pages             # Page-specific styles
+    _variables.scss    # SASS variables
+    globals.scss       # Global styles
+/public                # Static assets
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This website is configured for static export and can be deployed to any static hosting service like Netlify, Vercel, GitHub Pages, or AWS S3.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Credits
+
+- Artwork and concept by Bernard Bolter
+- Website development by Digital City Series team

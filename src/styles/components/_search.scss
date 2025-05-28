@@ -1,0 +1,97 @@
+.search {
+  &__container {
+    max-width: $breakpoint-md;
+    margin: 0 auto;
+    padding: $spacing-medium $spacing-small;
+    
+    @media (min-width: $breakpoint-md) {
+      padding: $spacing-medium;
+    }
+  }
+  
+  &__form {
+    position: relative;
+    margin-bottom: $spacing-large;
+  }
+  
+  &__input {
+    width: 100%;
+    padding: $spacing-small;
+    padding-left: $spacing-large;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-medium;
+    font-size: $font-size-base;
+    transition: border-color $transition-fast, box-shadow $transition-fast;
+    
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 2px rgba($color-primary, 0.1);
+    }
+  }
+  
+  &__icon {
+    position: absolute;
+    left: $spacing-small;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-text-light;
+  }
+  
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-small;
+    margin-bottom: $spacing-large;
+  }
+  
+  &__filter {
+    padding: $spacing-xsmall $spacing-small;
+    border-radius: $border-radius-small;
+    background-color: $color-secondary;
+    font-size: $font-size-small;
+    cursor: pointer;
+    transition: all $transition-fast;
+    
+    &:hover {
+      background-color: darken($color-secondary, 5%);
+    }
+    
+    &--active {
+      background-color: $color-primary;
+      color: $color-secondary;
+      
+      &:hover {
+        background-color: lighten($color-primary, 10%);
+      }
+    }
+  }
+  
+  &__results {
+    &-count {
+      margin-bottom: $spacing-medium;
+      font-size: $font-size-small;
+      color: $color-text-light;
+    }
+    
+    &-empty {
+      text-align: center;
+      padding: $spacing-xlarge 0;
+      color: $color-text-light;
+      
+      &-icon {
+        font-size: $font-size-xxlarge;
+        margin-bottom: $spacing-medium;
+      }
+      
+      &-title {
+        font-size: $font-size-large;
+        margin-bottom: $spacing-small;
+      }
+      
+      &-text {
+        margin-bottom: $spacing-medium;
+      }
+    }
+  }
+}
