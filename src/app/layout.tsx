@@ -1,14 +1,37 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "../styles/index.scss";
 import { AppProvider } from "../context/AppContext";
 import { LocaleProvider } from "../context/LocaleContext";
+import { Noto_Sans, Noto_Sans_SC, Noto_Sans_TC, Noto_Sans_Thai } from 'next/font/google'
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
+// Configure fonts for different languages
+const notoSans = Noto_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-noto-sans',
+  display: 'swap',
+})
+
+const notoSansSC = Noto_Sans_SC({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-noto-sans-sc',
+  display: 'swap',
+})
+
+const notoSansTC = Noto_Sans_TC({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-noto-sans-tc',
+  display: 'swap',
+})
+
+const notoSansThai = Noto_Sans_Thai({
+  subsets: ['latin', 'thai'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-noto-sans-thai',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Digital City Series",
@@ -22,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
+      <body className={`${notoSans.variable} ${notoSansSC.variable} ${notoSansTC.variable} ${notoSansThai.variable}`}>
         <LocaleProvider>
           <AppProvider>
             {children}

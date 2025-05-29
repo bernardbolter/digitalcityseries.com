@@ -1,4 +1,9 @@
 {
+  "header": {
+    "digital": "DIGITĀLS",
+    "city": "PILSĒTA",
+    "series": "SĒRIJA"
+  },
   "site": {
     "title": "Digitālo Pilsētu Sērija",
     "description": "Pilsētvides izpēte ar digitālās mākslas palīdzību"

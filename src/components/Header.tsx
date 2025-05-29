@@ -2,19 +2,25 @@
 
 import { useLocale } from '@/context/LocaleContext';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const { t } = useLocale();
+  const pathname = usePathname();
 
   return (
-    <header className="header">
+    <header>
       <div className="hero">
-        <h1>DIGITAL<br />CITY<br />SERIES</h1>
-        <span>{t('site.title')}</span>
+        <h1>
+          {t('header.digital')}<br />
+          {t('header.city')}<br />
+          {t('header.series')}
+        </h1>
+        {pathname !== '/' && (
+          <p>digital city series</p>
+        )}
       </div>
-      <div className="header__language-switcher--container">
-      <LanguageSwitcher className="header__language-switcher" />
-      </div>
+      <LanguageSwitcher />
     </header>
   );
 };

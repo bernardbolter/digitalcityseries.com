@@ -68,43 +68,35 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
   };
 
   return (
-    <div className={`language-switcher ${className}`}>
+    <div className={`language-switcher ${className} ${isOpen ? 'language-switcher--open' : ''}`}>
       <button 
         className="language-switcher__current" 
         onClick={toggleDropdown}
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
-        <span className="language-switcher__flag">
-          <FlagIcon code={locale} className="language-switcher__flag-icon" />
-        </span>
-        <span className="language-switcher__name">{localeNames[locale]}</span>
-        <svg 
-          className={`language-switcher__arrow ${isOpen ? 'language-switcher__arrow--open' : ''}`} 
-          width="10" 
-          height="6" 
-          viewBox="0 0 10 6" 
-          fill="none" 
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+        <div className="language-switcher__flag-container">
+          <FlagIcon code={locale} className="language-switcher__flag" />
+          <span className="language-switcher__name">{localeNames[locale]}</span>
+        </div>
       </button>
       
       {isOpen && (
         <div className="language-switcher__dropdown">
-          {availableLocales.map((loc) => (
-            <button
-              key={loc}
-              onClick={() => changeLanguage(loc)}
-              className={`language-switcher__option ${loc === locale ? 'language-switcher__option--active' : ''}`}
-            >
-              <span className="language-switcher__flag">
-                <FlagIcon code={loc} className="language-switcher__flag-icon" />
-              </span>
-              <span className="language-switcher__name">{localeNames[loc]}</span>
-            </button>
-          ))}
+          {availableLocales
+            .filter(loc => loc !== locale)
+            .map((loc) => (
+              <button
+                key={loc}
+                onClick={() => changeLanguage(loc)}
+                className="language-switcher__option"
+              >
+                <div className="language-switcher__flag-container">
+                  <FlagIcon code={loc} className="language-switcher__flag" />
+                  <span className="language-switcher__name">{localeNames[loc]}</span>
+                </div>
+              </button>
+            ))}
         </div>
       )}
     </div>

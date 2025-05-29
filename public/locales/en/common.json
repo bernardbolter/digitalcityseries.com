@@ -1,4 +1,9 @@
 {
+  "header": {
+    "digital": "DIGITAL",
+    "city": "CITY",
+    "series": "SERIES"
+  },
   "site": {
     "title": "Digital City Series",
     "description": "Exploring urban environments through digital art"

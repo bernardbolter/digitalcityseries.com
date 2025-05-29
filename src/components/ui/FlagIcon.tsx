@@ -8,15 +8,35 @@ type FlagIconProps = {
 const FlagIcon: React.FC<FlagIconProps> = ({ code, className = '' }) => {
   const flags: Record<string, JSX.Element> = {
     en: (
-      <svg viewBox="0 0 60 30" className={className}>
-        <clipPath id="uk">
-          <path d="M0,0 v30 h60 v-30 z"/>
-        </clipPath>
-        <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
-        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
-        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" strokeWidth="4"/>
-        <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
-        <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6"/>
+      <svg viewBox="0 0 60 40" className={className}>
+        <rect width="60" height="40" fill="#fff"/>
+        <g fill="#bd3d44">
+          <rect width="60" height="3" y="0"/>
+          <rect width="60" height="3" y="6"/>
+          <rect width="60" height="3" y="12"/>
+          <rect width="60" height="3" y="18"/>
+          <rect width="60" height="3" y="24"/>
+          <rect width="60" height="3" y="30"/>
+          <rect width="60" height="3" y="36"/>
+        </g>
+        <rect width="24" height="21" fill="#192f5d"/>
+        <g fill="#fff">
+          {/* Simplified stars - using dots instead of star shapes */}
+          <circle cx="4" cy="4" r="1.5"/>
+          <circle cx="10" cy="4" r="1.5"/>
+          <circle cx="16" cy="4" r="1.5"/>
+          <circle cx="22" cy="4" r="1.5"/>
+          <circle cx="7" cy="8" r="1.5"/>
+          <circle cx="13" cy="8" r="1.5"/>
+          <circle cx="19" cy="8" r="1.5"/>
+          <circle cx="4" cy="12" r="1.5"/>
+          <circle cx="10" cy="12" r="1.5"/>
+          <circle cx="16" cy="12" r="1.5"/>
+          <circle cx="22" cy="12" r="1.5"/>
+          <circle cx="7" cy="16" r="1.5"/>
+          <circle cx="13" cy="16" r="1.5"/>
+          <circle cx="19" cy="16" r="1.5"/>
+        </g>
       </svg>
     ),
     fr: (

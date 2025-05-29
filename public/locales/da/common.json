@@ -1,4 +1,9 @@
 {
+  "header": {
+    "digital": "DIGITAL",
+    "city": "BY",
+    "series": "SERIE"
+  },
   "site": {
     "title": "Digital By-serie",
     "description": "Udforskning af bymiljører gennem digital kunst"

@@ -1,4 +1,9 @@
 {
+  "header": {
+    "digital": "数字",
+    "city": "城市",
+    "series": "系列"
+  },
   "site": {
     "title": "数字城市系列",
     "description": "通过数字艺术探索城市环境"
