@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface ArtworkCardProps {
+interface ArtworkProps {
   artwork: {
     id: number;
     title: {
@@ -17,7 +17,7 @@ interface ArtworkCardProps {
   };
 }
 
-const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
+const Artwork = ({ artwork }: ArtworkProps) => {
   // Create a slug from the title
   const slug = artwork.title.rendered
     .toLowerCase()
@@ -74,4 +74,4 @@ const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
   );
 };
 
-export default ArtworkCard;
+export default Artwork;

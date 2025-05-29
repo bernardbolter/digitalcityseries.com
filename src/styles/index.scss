@@ -1,79 +1,11 @@
 // import base styles
 @import 'base/vars';
-
-// Reset & Base Styles
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $color-text;
-  background-color: $color-background;
-  -webkit-font-smoothing: antialiased;  
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color $transition-fast;
-  
-  &:hover {
-    color: $accent;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-heading;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-heading;
-  margin-bottom: $spacing-small;
-}
-
-p {
-  margin-bottom: $spacing-small;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-button, input, select, textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  
-  &:focus {
-    outline: none;
-  }
-}
+@import 'base/reset';
 
 // Import component styles
-@import 'components/header';
-@import 'components/footer';
-@import 'components/artwork';
-@import 'components/buttons';
-@import 'components/search';
 @import 'components/about';
+@import 'components/artwork';
+@import 'components/footer';
+@import 'components/header';
 @import 'components/language-switcher';
-
-// Import page styles
-@import 'pages/home';
-@import 'pages/artwork-detail';
+@import 'components/search';

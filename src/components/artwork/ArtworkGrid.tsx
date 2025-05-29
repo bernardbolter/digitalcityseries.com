@@ -1,7 +1,7 @@
 'use client';
 
 import { useAppContext } from '../../context/AppContext';
-import ArtworkCard from './ArtworkCard';
+import Artwork from './Artwork';
 
 const ArtworkGrid = () => {
   const { filteredArt, isLoading } = useAppContext();
@@ -27,7 +27,7 @@ const ArtworkGrid = () => {
   return (
     <div className="artwork__grid">
       {filteredArt.map((artwork) => (
-        <ArtworkCard key={artwork.id} artwork={artwork} />
+        <Artwork key={artwork.id} artwork={artwork} />
       ))}
     </div>
   );
