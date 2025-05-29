@@ -1,6 +1,7 @@
 'use client';
 
 import { useAppContext } from '../../context/AppContext';
+import { useLocale } from '../../context/LocaleContext';
 
 const Search = () => {
   const { 
@@ -14,6 +15,7 @@ const Search = () => {
     toggleRandom,
     searchButton
   } = useAppContext();
+  const { t } = useLocale();
 
   if (!searchButton) return null;
 
@@ -23,7 +25,7 @@ const Search = () => {
         <input
           type="text"
           className="search__input"
-          placeholder="Search artwork..."
+          placeholder={t('search.placeholder')}
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         />
@@ -40,19 +42,19 @@ const Search = () => {
           className={`search__filter ${recentChecked ? 'search__filter--active' : ''}`}
           onClick={toggleRecent}
         >
-          Most Recent
+          {t('search.recent')}
         </button>
         <button 
           className={`search__filter ${ogChecked ? 'search__filter--active' : ''}`}
           onClick={toggleOg}
         >
-          Oldest First
+          {t('search.original')}
         </button>
         <button 
           className={`search__filter ${randomChecked ? 'search__filter--active' : ''}`}
           onClick={toggleRandom}
         >
-          Random
+          {t('search.random')}
         </button>
       </div>
     </div>

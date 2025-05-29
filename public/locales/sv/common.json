@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "Digitala Städer-serien",
+    "description": "Utforska urbana miljöer genom digital konst"
+  },
+  "navigation": {
+    "home": "Hem",
+    "about": "Om",
+    "artwork": "Konstverk",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Digitala Städer-serien",
+    "subtitle": "Utforska urbana miljöer genom digital konst",
+    "viewArtwork": "Visa Konstverk"
+  },
+  "about": {
+    "title": "Om Serien",
+    "description": "Digitala Städer-serien är en samling digitala konstverk av Bernard Bolter som utforskar urbana miljöer genom ett unikt konstnärligt perspektiv.",
+    "artist": "Om Konstnären",
+    "artistDescription": "Bernard Bolter, född i San Francisco, har bott i Köpenhamn sedan 2009. Hans arbete utforskar skärningspunkten mellan urbana miljöer och digital konst."
+  },
+  "search": {
+    "placeholder": "Sök konstverk...",
+    "filter": "Filtrera",
+    "recent": "Nyligen",
+    "original": "Original",
+    "random": "Slumpmässig",
+    "noResults": "Inga konstverk hittades",
+    "tryAdjusting": "Försök att justera din sökning eller filter"
+  },
+  "artwork": {
+    "collection": "Konstverksamling",
+    "details": "Konstverksdetaljer",
+    "city": "Stad",
+    "year": "År",
+    "dimensions": "Mått",
+    "medium": "Medium",
+    "description": "Beskrivning",
+    "backToCollection": "Tillbaka till Samlingen"
+  },
+  "footer": {
+    "copyright": "© 2025 Digitala Städer-serien. Alla rättigheter förbehållna.",
+    "privacyPolicy": "Integritetspolicy",
+    "termsOfService": "Användarvillkor"
+  }
+}

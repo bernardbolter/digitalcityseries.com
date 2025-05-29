@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "Digital City Series",
+    "description": "Exploring urban environments through digital art"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "artwork": "Artwork",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Digital City Series",
+    "subtitle": "Exploring urban environments through digital art",
+    "viewArtwork": "View Artwork"
+  },
+  "about": {
+    "title": "About the Series",
+    "description": "The Digital City Series is a collection of digital artworks by Bernard Bolter that explores urban environments through a unique artistic lens.",
+    "artist": "About the Artist",
+    "artistDescription": "Bernard Bolter is a San Francisco native who has lived in Copenhagen since 2009. His work explores the intersection of urban environments and digital art."
+  },
+  "search": {
+    "placeholder": "Search artwork...",
+    "filter": "Filter",
+    "recent": "Recent",
+    "original": "Original",
+    "random": "Random",
+    "noResults": "No artwork found",
+    "tryAdjusting": "Try adjusting your search or filters"
+  },
+  "artwork": {
+    "collection": "Artwork Collection",
+    "details": "Artwork Details",
+    "city": "City",
+    "year": "Year",
+    "dimensions": "Dimensions",
+    "medium": "Medium",
+    "description": "Description",
+    "backToCollection": "Back to Collection"
+  },
+  "footer": {
+    "copyright": "© 2025 Digital City Series. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
+}

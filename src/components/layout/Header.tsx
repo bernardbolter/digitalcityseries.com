@@ -3,10 +3,13 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useAppContext } from '../../context/AppContext';
+import { useLocale } from '../../context/LocaleContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   const { toggleAbout, toggleSearch, searchButton, aboutSection } = useAppContext();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useLocale();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -14,23 +17,23 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="header__logo">
-        <Link href="/" className="header__logo-link">
-          <span>Digital City Series</span>
-        </Link>
+      <div className="hero">
+        <h1>DIGITAL<br />CITY<br />SERIES</h1>
+        <span>{t('site.title')}</span>
       </div>
+      <LanguageSwitcher className="header__language-switcher" />
 
       <nav className="header__nav">
         <ul className={`header__menu ${mobileMenuOpen ? 'header__menu--open' : ''}`}>
           <li className="header__menu-item">
-            <Link href="/">Home</Link>
+            <Link href="/">{t('navigation.home')}</Link>
           </li>
           <li className="header__menu-item">
             <button 
               className={`header__menu-item ${aboutSection ? 'header__menu-item--active' : ''}`}
               onClick={toggleAbout}
             >
-              About
+              {t('navigation.about')}
             </button>
           </li>
           <li className="header__menu-item">
@@ -41,10 +44,12 @@ const Header = () => {
         </ul>
 
         <div className="header__buttons">
+          <LanguageSwitcher className="header__language-switcher" />
+          
           <button 
             className={`header__button ${searchButton ? 'header__button--active' : ''}`}
             onClick={toggleSearch}
-            aria-label="Search"
+            aria-label={t('search.placeholder')}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8"></circle>

@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "Dijital Şehir Serisi",
+    "description": "Dijital sanat aracılığıyla kentsel ortamları keşfetmek"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
+    "artwork": "Sanat Eserleri",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Dijital Şehir Serisi",
+    "subtitle": "Dijital sanat aracılığıyla kentsel ortamları keşfetmek",
+    "viewArtwork": "Sanat Eserlerini Görüntüle"
+  },
+  "about": {
+    "title": "Seri Hakkında",
+    "description": "Dijital Şehir Serisi, Bernard Bolter'ın kentsel ortamları benzersiz bir sanatsal bakış açısıyla keşfeden dijital sanat çalışmaları koleksiyonudur.",
+    "artist": "Sanatçı Hakkında",
+    "artistDescription": "San Francisco doğumlu Bernard Bolter, 2009'dan beri Kopenhag'da yaşamaktadır. Çalışmaları, kentsel ortamlar ile dijital sanatın kesişimini keşfetmektedir."
+  },
+  "search": {
+    "placeholder": "Sanat eserlerinde ara...",
+    "filter": "Filtrele",
+    "recent": "Son",
+    "original": "Orijinal",
+    "random": "Rastgele",
+    "noResults": "Hiç sanat eseri bulunamadı",
+    "tryAdjusting": "Aramanızı veya filtrelerinizi ayarlamayı deneyin"
+  },
+  "artwork": {
+    "collection": "Sanat Koleksiyonu",
+    "details": "Sanat Eseri Detayları",
+    "city": "Şehir",
+    "year": "Yıl",
+    "dimensions": "Boyutlar",
+    "medium": "Teknik",
+    "description": "Açıklama",
+    "backToCollection": "Koleksiyona Dön"
+  },
+  "footer": {
+    "copyright": "© 2025 Dijital Şehir Serisi. Tüm hakları saklıdır.",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Kullanım Koşulları"
+  }
+}

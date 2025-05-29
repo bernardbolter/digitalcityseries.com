@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "數碼城市系列",
+    "description": "通過數碼藝術探索城市環境"
+  },
+  "navigation": {
+    "home": "首頁",
+    "about": "關於",
+    "artwork": "作品",
+    "contact": "聯絡我哋"
+  },
+  "hero": {
+    "title": "數碼城市系列",
+    "subtitle": "通過數碼藝術探索城市環境",
+    "viewArtwork": "睇作品"
+  },
+  "about": {
+    "title": "關於呢個系列",
+    "description": "《數碼城市系列》係Bernard Bolter嘅數碼藝術作品集，用獨特嘅藝術視角探索城市環境。",
+    "artist": "關於藝術家",
+    "artistDescription": "Bernard Bolter喺三藩市出世，2009年開始住喺哥本哈根。佢嘅作品探索城市環境同數碼藝術嘅交匯點。"
+  },
+  "search": {
+    "placeholder": "搵作品...",
+    "filter": "篩選",
+    "recent": "最近",
+    "original": "原創",
+    "random": "隨機",
+    "noResults": "搵唔到作品",
+    "tryAdjusting": "試下改改你嘅搜尋條件或者篩選器"
+  },
+  "artwork": {
+    "collection": "作品集",
+    "details": "作品詳情",
+    "city": "城市",
+    "year": "年份",
+    "dimensions": "尺寸",
+    "medium": "媒介",
+    "description": "描述",
+    "backToCollection": "返去作品集"
+  },
+  "footer": {
+    "copyright": "© 2025 數碼城市系列 版權所有。",
+    "privacyPolicy": "私隱政策",
+    "termsOfService": "服務條款"
+  }
+}

@@ -1,19 +1,21 @@
 'use client';
 
 import { useAppContext } from '../../context/AppContext';
+import { useLocale } from '../../context/LocaleContext';
 import Image from 'next/image';
 
 const About = () => {
   const { aboutSection } = useAppContext();
+  const { t } = useLocale();
 
   if (!aboutSection) return null;
 
   return (
     <div className="about__container">
       <div className="about__header">
-        <h2 className="about__title">About Digital City Series</h2>
+        <h2 className="about__title">{t('about.title')}</h2>
         <p className="about__subtitle">
-          A collection of digital artwork exploring urban environments around the world
+          {t('about.description')}
         </p>
       </div>
 
@@ -30,12 +32,9 @@ const About = () => {
             Each artwork is created using a unique process that involves photography, digital collage, and 
             various digital painting techniques.
           </p>
-          <h3>The Artist</h3>
+          <h3>{t('about.artist')}</h3>
           <p>
-            Bernard Bolter is a San Francisco-born artist who has lived and worked in various cities around 
-            the world. His work explores the relationship between urban environments, architecture, and the 
-            human experience. The Digital City Series represents his ongoing exploration of how we perceive 
-            and interact with the cities we inhabit.
+            {t('about.artistDescription')}
           </p>
         </div>
         <div className="about__image-container">

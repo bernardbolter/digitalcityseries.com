@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import axios from 'axios';
+import { useLocale } from '../../../../context/LocaleContext';
 
 interface ArtworkDetailProps {
   params: {
@@ -31,6 +32,7 @@ export default function ArtworkDetail({ params }: ArtworkDetailProps) {
   const [artwork, setArtwork] = useState<Artwork | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
+  const { t } = useLocale();
 
   useEffect(() => {
     const fetchArtwork = async () => {
@@ -64,10 +66,10 @@ export default function ArtworkDetail({ params }: ArtworkDetailProps) {
       <div className="artwork-detail__container">
         <div className="home__empty">
           <div className="home__empty-icon">⚠️</div>
-          <h3 className="home__empty-title">Error Loading Artwork</h3>
-          <p className="home__empty-text">{error || 'Artwork not found'}</p>
+          <h3 className="home__empty-title">{t('artwork.details')}</h3>
+          <p className="home__empty-text">{error || t('search.noResults')}</p>
           <Link href="/" className="button button--primary">
-            Back to Home
+            {t('artwork.backToCollection')}
           </Link>
         </div>
       </div>
@@ -82,7 +84,7 @@ export default function ArtworkDetail({ params }: ArtworkDetailProps) {
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
-          Back to Gallery
+          {t('artwork.backToCollection')}
         </Link>
 
         <div className="artwork-detail__header">
@@ -134,25 +136,25 @@ export default function ArtworkDetail({ params }: ArtworkDetailProps) {
           <div className="artwork-detail__specs">
             {artwork.acf.city && (
               <div className="artwork-detail__spec">
-                <div className="artwork-detail__spec-label">City</div>
+                <div className="artwork-detail__spec-label">{t('artwork.city')}</div>
                 <div className="artwork-detail__spec-value">{artwork.acf.city}</div>
               </div>
             )}
             {artwork.acf.year && (
               <div className="artwork-detail__spec">
-                <div className="artwork-detail__spec-label">Year</div>
+                <div className="artwork-detail__spec-label">{t('artwork.year')}</div>
                 <div className="artwork-detail__spec-value">{artwork.acf.year}</div>
               </div>
             )}
             {artwork.acf.dimensions && (
               <div className="artwork-detail__spec">
-                <div className="artwork-detail__spec-label">Dimensions</div>
+                <div className="artwork-detail__spec-label">{t('artwork.dimensions')}</div>
                 <div className="artwork-detail__spec-value">{artwork.acf.dimensions}</div>
               </div>
             )}
             {artwork.acf.medium && (
               <div className="artwork-detail__spec">
-                <div className="artwork-detail__spec-label">Medium</div>
+                <div className="artwork-detail__spec-label">{t('artwork.medium')}</div>
                 <div className="artwork-detail__spec-value">{artwork.acf.medium}</div>
               </div>
             )}

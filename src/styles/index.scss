@@ -1,4 +1,5 @@
-@import 'variables';
+// import base styles
+@import 'base/vars';
 
 // Reset & Base Styles
 *, *::before, *::after {
@@ -13,7 +14,7 @@ html, body {
   line-height: $line-height-base;
   color: $color-text;
   background-color: $color-background;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;  
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -23,7 +24,7 @@ a {
   transition: color $transition-fast;
   
   &:hover {
-    color: $color-accent;
+    color: $accent;
   }
 }
 
@@ -71,6 +72,7 @@ button {
 @import 'components/buttons';
 @import 'components/search';
 @import 'components/about';
+@import 'components/language-switcher';
 
 // Import page styles
 @import 'pages/home';

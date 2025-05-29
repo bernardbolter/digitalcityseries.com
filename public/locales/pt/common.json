@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "Série Cidade Digital",
+    "description": "Explorando ambientes urbanos através da arte digital"
+  },
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "artwork": "Obras",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "Série Cidade Digital",
+    "subtitle": "Explorando ambientes urbanos através da arte digital",
+    "viewArtwork": "Ver Obras"
+  },
+  "about": {
+    "title": "Sobre a Série",
+    "description": "A Série Cidade Digital é uma coleção de obras de arte digital de Bernard Bolter que explora ambientes urbanos através de uma perspectiva artística única.",
+    "artist": "Sobre o Artista",
+    "artistDescription": "Bernard Bolter, natural de São Francisco, vive em Copenhague desde 2009. Seu trabalho explora a interseção entre ambientes urbanos e arte digital."
+  },
+  "search": {
+    "placeholder": "Pesquisar obras...",
+    "filter": "Filtrar",
+    "recent": "Recentes",
+    "original": "Original",
+    "random": "Aleatório",
+    "noResults": "Nenhuma obra encontrada",
+    "tryAdjusting": "Tente ajustar sua pesquisa ou filtros"
+  },
+  "artwork": {
+    "collection": "Coleção de Obras",
+    "details": "Detalhes da Obra",
+    "city": "Cidade",
+    "year": "Ano",
+    "dimensions": "Dimensões",
+    "medium": "Técnica",
+    "description": "Descrição",
+    "backToCollection": "Voltar para a Coleção"
+  },
+  "footer": {
+    "copyright": "© 2025 Série Cidade Digital. Todos os direitos reservados.",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfService": "Termos de Serviço"
+  }
+}

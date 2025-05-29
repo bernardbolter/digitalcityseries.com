@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "Digitale Städteserie",
+    "description": "Erkundung städtischer Umgebungen durch digitale Kunst"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "artwork": "Kunstwerke",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Digitale Städteserie",
+    "subtitle": "Erkundung städtischer Umgebungen durch digitale Kunst",
+    "viewArtwork": "Kunstwerke ansehen"
+  },
+  "about": {
+    "title": "Über die Serie",
+    "description": "Die Digitale Städteserie ist eine Sammlung digitaler Kunstwerke von Bernard Bolter, die urbane Umgebungen durch eine einzigartige künstlerische Linse erkundet.",
+    "artist": "Über den Künstler",
+    "artistDescription": "Bernard Bolter ist ein in San Francisco geborener Künstler, der seit 2009 in Kopenhagen lebt. Seine Arbeit erforscht die Schnittstelle zwischen städtischen Umgebungen und digitaler Kunst."
+  },
+  "search": {
+    "placeholder": "Kunstwerke durchsuchen...",
+    "filter": "Filter",
+    "recent": "Neu",
+    "original": "Original",
+    "random": "Zufall",
+    "noResults": "Keine Kunstwerke gefunden",
+    "tryAdjusting": "Passen Sie Ihre Suche oder Filter an"
+  },
+  "artwork": {
+    "collection": "Kunstwerksammlung",
+    "details": "Kunstwerkdetails",
+    "city": "Stadt",
+    "year": "Jahr",
+    "dimensions": "Abmessungen",
+    "medium": "Medium",
+    "description": "Beschreibung",
+    "backToCollection": "Zurück zur Sammlung"
+  },
+  "footer": {
+    "copyright": "© 2025 Digitale Städteserie. Alle Rechte vorbehalten.",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsOfService": "Nutzungsbedingungen"
+  }
+}

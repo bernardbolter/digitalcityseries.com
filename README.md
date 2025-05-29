@@ -11,6 +11,7 @@ This is a static website for the Digital City Series art collection by Bernard B
 - Artwork gallery with filtering and search functionality
 - Dynamic artwork detail pages
 - About section with artist information
+- Internationalization (i18n) with support for English, French, and Spanish
 
 ## Technology Stack
 
@@ -20,6 +21,7 @@ This is a static website for the Digital City Series art collection by Bernard B
 - **Data Fetching**: Axios
 - **Utility Libraries**: Lodash
 - **Static Export**: Next.js static site generation
+- **Internationalization**: Custom i18n implementation for static sites
 
 ## Getting Started
 
@@ -46,6 +48,48 @@ npm run build
 ```
 
 This will generate a static export in the `out` directory that can be deployed to any static hosting service.
+
+To build the site with i18n support for all locales:
+
+```bash
+npm run build:i18n
+```
+
+This will generate locale-specific directories in the `out` directory, with a redirect from the root to the default locale.
+
+## Internationalization (i18n)
+
+The website supports multiple languages (English, French, and Spanish) using a custom i18n implementation that works with static site generation. Here's how it works:
+
+### Implementation Details
+
+- Uses a custom React Context (`LocaleContext`) to manage the current locale and translations
+- Translations are stored in JSON files in the `public/locales` directory
+- Language switching is handled client-side using localStorage to persist the user's language preference
+- The build process creates separate directories for each locale in the `out` directory
+
+### Adding a New Language
+
+1. Add a new translation file in `public/locales/[language-code]/common.json`
+2. Update the `SUPPORTED_LOCALES` environment variable in `next.config.js`
+
+### Usage in Components
+
+```jsx
+import { useLocale } from '../context/LocaleContext';
+
+function MyComponent() {
+  const { t, locale, setLocale } = useLocale();
+  
+  return (
+    <div>
+      <h1>{t('some.translation.key')}</h1>
+      <p>Current language: {locale}</p>
+      <button onClick={() => setLocale('fr')}>Switch to French</button>
+    </div>
+  );
+}
+```
 
 ## Project Structure
 

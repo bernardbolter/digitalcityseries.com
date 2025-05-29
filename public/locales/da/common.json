@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "Digital By-serie",
+    "description": "Udforskning af bymiljører gennem digital kunst"
+  },
+  "navigation": {
+    "home": "Hjem",
+    "about": "Om",
+    "artwork": "Kunstværker",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Digital By-serie",
+    "subtitle": "Udforskning af bymiljører gennem digital kunst",
+    "viewArtwork": "Se Kunstværker"
+  },
+  "about": {
+    "title": "Om Serien",
+    "description": "Digital By-serie er en samling digitale kunstværker af Bernard Bolter, der udforsker bymiljøer gennem et unikt kunstnerisk perspektiv.",
+    "artist": "Om Kunstneren",
+    "artistDescription": "Bernard Bolter, oprindeligt fra San Francisco, har boet i København siden 2009. Hans arbejde udforsker skæringspunktet mellem bymiljøer og digital kunst."
+  },
+  "search": {
+    "placeholder": "Søg blandt kunstværker...",
+    "filter": "Filtrer",
+    "recent": "Seneste",
+    "original": "Original",
+    "random": "Tilfældig",
+    "noResults": "Ingen kunstværker fundet",
+    "tryAdjusting": "Prøv at justere din søgning eller filtre"
+  },
+  "artwork": {
+    "collection": "Kunstsamling",
+    "details": "Kunstværkdetaljer",
+    "city": "By",
+    "year": "År",
+    "dimensions": "Mål",
+    "medium": "Medium",
+    "description": "Beskrivelse",
+    "backToCollection": "Tilbage til Samlingen"
+  },
+  "footer": {
+    "copyright": "© 2025 Digital By-serie. Alle rettigheder forbeholdes.",
+    "privacyPolicy": "Privatlivspolitik",
+    "termsOfService": "Servicevilkår"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "Digitalna Gradska Serija",
+    "description": "Istraživanje urbanih okruženja kroz digitalnu umjetnost"
+  },
+  "navigation": {
+    "home": "Početna",
+    "about": "O Nama",
+    "artwork": "Umjetnički Radovi",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Digitalna Gradska Serija",
+    "subtitle": "Istraživanje urbanih okruženja kroz digitalnu umjetnost",
+    "viewArtwork": "Pogledajte Radove"
+  },
+  "about": {
+    "title": "O Seriji",
+    "description": "Digitalna Gradska Serija je zbirka digitalnih umjetničkih djela Bernarda Boltera koja istražuje urbana okruženja kroz jedinstvenu umjetničku leću.",
+    "artist": "O Umjetniku",
+    "artistDescription": "Bernard Bolter, rođen u San Franciscu, živi u Kopenhagenu od 2009. godine. Njegov rad istražuje dodirnu točku urbanih okruženja i digitalne umjetnosti."
+  },
+  "search": {
+    "placeholder": "Pretraži umjetničke radove...",
+    "filter": "Filtriraj",
+    "recent": "Nedavno",
+    "original": "Original",
+    "random": "Slučajno",
+    "noResults": "Nije pronađen nijedan umjetnički rad",
+    "tryAdjusting": "Pokušajte prilagoditi svoju pretragu ili filtere"
+  },
+  "artwork": {
+    "collection": "Zbirka Umjetnina",
+    "details": "Detalji Umjetničkog Djela",
+    "city": "Grad",
+    "year": "Godina",
+    "dimensions": "Dimenzije",
+    "medium": "Tehnika",
+    "description": "Opis",
+    "backToCollection": "Povratak na Zbirku"
+  },
+  "footer": {
+    "copyright": "© 2025 Digitalna Gradska Serija. Sva prava pridržana.",
+    "privacyPolicy": "Politika Privatnosti",
+    "termsOfService": "Uvjeti Korištenja"
+  }
+}

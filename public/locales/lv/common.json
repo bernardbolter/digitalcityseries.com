@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "Digitālo Pilsētu Sērija",
+    "description": "Pilsētvides izpēte ar digitālās mākslas palīdzību"
+  },
+  "navigation": {
+    "home": "Sākums",
+    "about": "Par mums",
+    "artwork": "Mākslas darbi",
+    "contact": "Kontakti"
+  },
+  "hero": {
+    "title": "Digitālo Pilsētu Sērija",
+    "subtitle": "Pilsētvides izpēte ar digitālās mākslas palīdzību",
+    "viewArtwork": "Skatīt Mākslas Darbus"
+  },
+  "about": {
+    "title": "Par Sēriju",
+    "description": "Digitālo Pilsētu Sērija ir Bernarda Boltera digitālo mākslas darbu kolekcija, kas pēta pilsētvidi caur unikālu māksliniecisku prizmu.",
+    "artist": "Par Mākslinieku",
+    "artistDescription": "Bernards Bolters, dzimis Sanfrancisko, kopš 2009. gada dzīvo Kopenhāgenā. Viņa darbi pēta pilsētvides un digitālās mākslas krustpunktu."
+  },
+  "search": {
+    "placeholder": "Meklēt mākslas darbus...",
+    "filter": "Filtrs",
+    "recent": "Jaunākie",
+    "original": "Oriģināli",
+    "random": "Nejauši",
+    "noResults": "Netika atrasts neviens mākslas darbs",
+    "tryAdjusting": "Mēģiniet mainīt meklēšanas kritērijus vai filtrus"
+  },
+  "artwork": {
+    "collection": "Mākslas Kolekcija",
+    "details": "Mākslas Darba Detaļas",
+    "city": "Pilsēta",
+    "year": "Gads",
+    "dimensions": "Izmēri",
+    "medium": "Tehnika",
+    "description": "Apraksts",
+    "backToCollection": "Atpakaļ uz Kolekciju"
+  },
+  "footer": {
+    "copyright": "© 2025 Digitālo Pilsētu Sērija. Visas tiesības aizsargātas.",
+    "privacyPolicy": "Privātuma Politika",
+    "termsOfService": "Lietošanas Noteikumi"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "数字城市系列",
+    "description": "通过数字艺术探索城市环境"
+  },
+  "navigation": {
+    "home": "首页",
+    "about": "关于",
+    "artwork": "作品",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "title": "数字城市系列",
+    "subtitle": "通过数字艺术探索城市环境",
+    "viewArtwork": "查看作品"
+  },
+  "about": {
+    "title": "关于系列",
+    "description": "《数字城市系列》是伯纳德·博尔特（Bernard Bolter）的数字艺术作品集，通过独特的艺术视角探索城市环境。",
+    "artist": "关于艺术家",
+    "artistDescription": "伯纳德·博尔特出生于旧金山，自2009年起居住在哥本哈根。他的作品探索了城市环境与数字艺术的交汇点。"
+  },
+  "search": {
+    "placeholder": "搜索作品...",
+    "filter": "筛选",
+    "recent": "最近",
+    "original": "原创",
+    "random": "随机",
+    "noResults": "未找到作品",
+    "tryAdjusting": "尝试调整搜索条件或筛选器"
+  },
+  "artwork": {
+    "collection": "作品集",
+    "details": "作品详情",
+    "city": "城市",
+    "year": "年份",
+    "dimensions": "尺寸",
+    "medium": "媒介",
+    "description": "描述",
+    "backToCollection": "返回作品集"
+  },
+  "footer": {
+    "copyright": "© 2025 数字城市系列 保留所有权利。",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款"
+  }
+}

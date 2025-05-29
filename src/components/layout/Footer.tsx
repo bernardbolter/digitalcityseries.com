@@ -2,16 +2,18 @@
 
 import Link from 'next/link';
 import { useAppContext } from '../../context/AppContext';
+import { useLocale } from '../../context/LocaleContext';
 
 const Footer = () => {
   const { toggleAbout } = useAppContext();
+  const { t } = useLocale();
   
   return (
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__section">
-          <h3 className="footer__title">Digital City Series</h3>
-          <p>A collection of digital artwork exploring urban environments around the world.</p>
+          <h3 className="footer__title">{t('site.title')}</h3>
+          <p>{t('site.description')}</p>
           <div className="footer__social">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer__social-link" aria-label="Instagram">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -34,25 +36,25 @@ const Footer = () => {
         </div>
         
         <div className="footer__section">
-          <h3 className="footer__title">Navigation</h3>
+          <h3 className="footer__title">{t('navigation.home')}</h3>
           <nav className="footer__nav">
-            <Link href="/" className="footer__link">Home</Link>
-            <button onClick={toggleAbout} className="footer__link">About</button>
+            <Link href="/" className="footer__link">{t('navigation.home')}</Link>
+            <button onClick={toggleAbout} className="footer__link">{t('navigation.about')}</button>
             <a href="https://www.bernardbolter.com" target="_blank" rel="noopener noreferrer" className="footer__link">Bernard Bolter</a>
           </nav>
         </div>
         
         <div className="footer__section">
-          <h3 className="footer__title">Contact</h3>
+          <h3 className="footer__title">{t('navigation.contact')}</h3>
           <nav className="footer__nav">
             <a href="mailto:info@digitalcityseries.com" className="footer__link">info@digitalcityseries.com</a>
-            <a href="https://www.bernardbolter.com/contact" target="_blank" rel="noopener noreferrer" className="footer__link">Contact Form</a>
+            <a href="https://www.bernardbolter.com/contact" target="_blank" rel="noopener noreferrer" className="footer__link">{t('navigation.contact')}</a>
           </nav>
         </div>
       </div>
       
       <div className="footer__copyright">
-        © {new Date().getFullYear()} Digital City Series. All rights reserved. Created by Bernard Bolter.
+        {t('footer.copyright')}
       </div>
     </footer>
   );

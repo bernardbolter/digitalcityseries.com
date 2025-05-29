@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "Série Ville Numérique",
+    "description": "Explorer les environnements urbains à travers l'art numérique"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "artwork": "Œuvres d'art",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Série Ville Numérique",
+    "subtitle": "Explorer les environnements urbains à travers l'art numérique",
+    "viewArtwork": "Voir les œuvres"
+  },
+  "about": {
+    "title": "À propos de la série",
+    "description": "La Série Ville Numérique est une collection d'œuvres d'art numériques de Bernard Bolter qui explore les environnements urbains à travers un regard artistique unique.",
+    "artist": "À propos de l'artiste",
+    "artistDescription": "Bernard Bolter est un natif de San Francisco qui vit à Copenhague depuis 2009. Son travail explore l'intersection des environnements urbains et de l'art numérique."
+  },
+  "search": {
+    "placeholder": "Rechercher des œuvres...",
+    "filter": "Filtrer",
+    "recent": "Récent",
+    "original": "Original",
+    "random": "Aléatoire",
+    "noResults": "Aucune œuvre trouvée",
+    "tryAdjusting": "Essayez d'ajuster votre recherche ou vos filtres"
+  },
+  "artwork": {
+    "collection": "Collection d'œuvres d'art",
+    "details": "Détails de l'œuvre",
+    "city": "Ville",
+    "year": "Année",
+    "dimensions": "Dimensions",
+    "medium": "Médium",
+    "description": "Description",
+    "backToCollection": "Retour à la collection"
+  },
+  "footer": {
+    "copyright": "© 2025 Série Ville Numérique. Tous droits réservés.",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation"
+  }
+}
