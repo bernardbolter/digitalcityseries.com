@@ -1,10 +1,11 @@
 'use client';
 
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from '@/context/AppContext';
 import Artwork from './Artwork';
 
 const ArtworkGrid = () => {
   const { filteredArt, isLoading } = useAppContext();
+  console.log(filteredArt);
 
   if (isLoading) {
     return (

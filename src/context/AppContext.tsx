@@ -1,24 +1,15 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import axios from 'axios';
+import { useQuery, gql } from '@apollo/client';
 import { filter, shuffle, isEmpty } from 'lodash';
+import { client } from '../lib/apollo-client';
+import { GET_ARTWORK } from '../graphql/queries';
 
 // Define types for our artwork data
 interface Artwork {
-  id: number;
-  title: {
-    rendered: string;
-  };
-  acf: {
-    city: string;
-    year: string;
-    dimensions: string;
-    medium: string;
-    description: string;
-    artwork_image: string;
-  };
-  series: string;
+  id: string;
+  title: string;
 }
 
 // Define the context state type
@@ -47,6 +38,7 @@ const AppContext = createContext<AppContextState | undefined>(undefined);
 // Provider component
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [artlist, setArtlist] = useState<Artwork[]>([]);
+  const [filteredArt, setFilteredArt] = useState<Artwork[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [filter, setFilter] = useState<string>('');
   const [widthOfWindow, setWidthOfWindow] = useState<number>(
@@ -58,23 +50,24 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [aboutSection, setAboutSection] = useState<boolean>(false);
   const [searchButton, setSearchButton] = useState<boolean>(false);
 
-  // Load artwork data
-  useEffect(() => {
-    const loadArtwork = async () => {
-      setIsLoading(true);
-      try {
-        const response = await axios.get('https://www.bernardbolter.com/artwork/wp-json/wp/v2/artwork?per_page=100');
-        const dcsArtwork = filter(response.data, { series: 'dcs' });
-        setArtlist(dcsArtwork);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Error loading artwork:', error);
-        setIsLoading(false);
-      }
-    };
+  // GraphQL query to fetch artwork data
+  const { loading, error, data } = useQuery(GET_ARTWORK, {
+    client,
+    fetchPolicy: 'cache-first'
+  });
 
-    loadArtwork();
-  }, []);
+  // Update artlist when data is loaded
+  useEffect(() => {
+    if (data?.allArtwork?.nodes) {
+      setArtlist(data.allArtwork.nodes);
+      setFilteredArt(data.allArtwork.nodes);
+    }
+    setIsLoading(loading);
+    
+    if (error) {
+      console.error('Error loading artwork:', error);
+    }
+  }, [data, loading, error]);
 
   // Handle window resize
   useEffect(() => {
@@ -121,20 +114,21 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   };
 
   // Compute filtered artwork
-  const filteredArt = (() => {
-    const matchesFilter = new RegExp(filter, 'i');
-    let artworkFiltered = artlist.filter(
-      art => !filter || matchesFilter.test(art.title.rendered)
-    );
+  // const filteredArt = (() => {
+  //   const matchesFilter = new RegExp(filter, 'i');
+  //   let artworkFiltered = artlist.filter(art => {
+  //     const title = art.title || '';
+  //     return !filter || matchesFilter.test(title);
+  //   });
     
-    if (ogChecked) {
-      return [...artworkFiltered].reverse();
-    } else if (randomChecked) {
-      return shuffle(artworkFiltered);
-    } else {
-      return artworkFiltered;
-    }
-  })();
+  //   if (ogChecked) {
+  //     return [...artworkFiltered].reverse();
+  //   } else if (randomChecked) {
+  //     return shuffle(artworkFiltered);
+  //   } else {
+  //     return artworkFiltered;
+  //   }
+  // })();
 
   // Context value
   const value = {
