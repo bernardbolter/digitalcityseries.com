@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { useAppContext } from '../../context/AppContext';
-import { useLocale } from '../../context/LocaleContext';
+import { useAppContext } from '@/context/AppContext';
+import { useLocale } from '@/context/LocaleContext';
 
 const Footer = () => {
-  const { toggleAbout } = useAppContext();
+  const { toggleAbout } = useAppContext();  
   const { t } = useLocale();
   
   return (

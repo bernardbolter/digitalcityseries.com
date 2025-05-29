@@ -1,7 +1,7 @@
 'use client';
 
-import { useAppContext } from '../../context/AppContext';
-import { useLocale } from '../../context/LocaleContext';
+import { useAppContext } from '@/context/AppContext';
+import { useLocale } from '@/context/LocaleContext';
 import Image from 'next/image';
 
 const About = () => {

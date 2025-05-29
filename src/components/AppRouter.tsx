@@ -1,14 +1,14 @@
 'use client';
 
-import { useEffect, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 import { useLocale } from '../context/LocaleContext';
-import Header from './layout/Header';
-import Footer from './layout/Footer';
-import HomePage from './pages/HomePage';
-import About from './artwork/About';
-import Search from './artwork/Search';
+import Header from './Header';
+import About from './About';
+import Search from './Search';
 import ArtworkGrid from './artwork/ArtworkGrid';
+import Footer from './Footer';
+
 
 type RouteConfig = {
   path: string;
@@ -26,10 +26,11 @@ const AppRouter = () => {
       path: `/${locale}`,
       component: (
         <>
-          <HomePage />
+          <Header />
           <About />
           <Search />
           <ArtworkGrid />
+          <Footer />
         </>
       ),
       exact: true,
@@ -38,10 +39,11 @@ const AppRouter = () => {
       path: '/',
       component: (
         <>
-          <HomePage />
+          <Header />
           <About />
           <Search />
           <ArtworkGrid />
+          <Footer />
         </>
       ),
       exact: true,
@@ -60,13 +62,9 @@ const AppRouter = () => {
   // Render the layout with the current route's component
   const renderContent = () => {
     return (
-      <div className="layout">
-        <Header />
         <main className="layout__main">
           {currentRoute?.component || null}
         </main>
-        <Footer />
-      </div>
     );
   };
 

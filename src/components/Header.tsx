@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useAppContext } from '../../context/AppContext';
-import { useLocale } from '../../context/LocaleContext';
-import LanguageSwitcher from './LanguageSwitcher';
+import { useAppContext } from '@/context/AppContext';
+import { useLocale } from '@/context/LocaleContext';
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 
 const Header = () => {
   const { toggleAbout, toggleSearch, searchButton, aboutSection } = useAppContext();

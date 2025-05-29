@@ -1,7 +1,7 @@
 'use client';
 
 import ArtworkGrid from "../artwork/ArtworkGrid";
-import Search from "../artwork/Search";
+import Search from "../Search";
 import About from "../artwork/About";
 import Link from "next/link";
 import { useLocale } from '../../context/LocaleContext';
