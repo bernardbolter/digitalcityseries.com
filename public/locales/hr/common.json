@@ -4,6 +4,9 @@
     "city": "GRAD",
     "series": "SERIJA"
   },
+  "languageSwitcher": {
+    "currentLanguage": "Trenutni jezik"
+  },
   "site": {
     "title": "Digitalna Gradska Serija",
     "description": "Istraživanje urbanih okruženja kroz digitalnu umjetnost"

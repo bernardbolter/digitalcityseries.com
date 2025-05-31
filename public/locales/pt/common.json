@@ -4,6 +4,9 @@
     "city": "CIDADE",
     "series": "SÉRIE"
   },
+  "languageSwitcher": {
+    "currentLanguage": "Idioma atual"
+  },
   "site": {
     "title": "Série Cidade Digital",
     "description": "Explorando ambientes urbanos através da arte digital"

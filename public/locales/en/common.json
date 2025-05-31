@@ -48,5 +48,8 @@
     "copyright": "© 2025 Digital City Series. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
+  },
+  "languageSwitcher": {
+    "currentLanguage": "Current Language"
   }
 }

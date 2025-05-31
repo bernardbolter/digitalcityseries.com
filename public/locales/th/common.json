@@ -4,6 +4,9 @@
     "city": "เมือง",
     "series": "ซีรีส์"
   },
+  "languageSwitcher": {
+    "currentLanguage": "ภาษาปัจจุบัน"
+  },
   "site": {
     "title": "ซีรีส์เมืองดิจิทัล",
     "description": "สำรวจสภาพแวดล้อมในเมืองผ่านศิลปะดิจิทัล"

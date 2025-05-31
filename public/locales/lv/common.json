@@ -1,8 +1,11 @@
 {
   "header": {
-    "digital": "DIGITĀLS",
+    "digital": "DIGITĀLĀ",
     "city": "PILSĒTA",
     "series": "SĒRIJA"
+  },
+  "languageSwitcher": {
+    "currentLanguage": "Pašreizējā valoda"
   },
   "site": {
     "title": "Digitālo Pilsētu Sērija",

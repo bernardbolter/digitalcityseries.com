@@ -4,6 +4,9 @@
     "city": "BY",
     "series": "SERIE"
   },
+  "languageSwitcher": {
+    "currentLanguage": "Nuværende sprog"
+  },
   "site": {
     "title": "Digital By-serie",
     "description": "Udforskning af bymiljører gennem digital kunst"

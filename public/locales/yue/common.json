@@ -4,6 +4,9 @@
     "city": "城市",
     "series": "系列"
   },
+  "languageSwitcher": {
+    "currentLanguage": "目前語言"
+  },
   "site": {
     "title": "數碼城市系列",
     "description": "通過數碼藝術探索城市環境"

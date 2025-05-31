@@ -4,6 +4,9 @@
     "city": "STADT",
     "series": "REIHE"
   },
+  "languageSwitcher": {
+    "currentLanguage": "Aktuelle Sprache"
+  },
   "site": {
     "title": "Digitale Städteserie",
     "description": "Erkundung städtischer Umgebungen durch digitale Kunst"

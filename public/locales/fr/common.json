@@ -1,8 +1,11 @@
 {
   "header": {
-    "digital": "NUMÉRIQUE",
+    "digital": "DIGITAL",
     "city": "VILLE",
     "series": "SÉRIE"
+  },
+  "languageSwitcher": {
+    "currentLanguage": "Langue actuelle"
   },
   "site": {
     "title": "Série Ville Numérique",

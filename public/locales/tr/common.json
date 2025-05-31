@@ -4,6 +4,9 @@
     "city": "ŞEHİR",
     "series": "SERİ"
   },
+  "languageSwitcher": {
+    "currentLanguage": "Mevcut dil"
+  },
   "site": {
     "title": "Dijital Şehir Serisi",
     "description": "Dijital sanat aracılığıyla kentsel ortamları keşfetmek"

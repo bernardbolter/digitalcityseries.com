@@ -4,6 +4,9 @@
     "city": "STAD",
     "series": "SERIE"
   },
+  "languageSwitcher": {
+    "currentLanguage": "Aktuellt språk"
+  },
   "site": {
     "title": "Digitala Städer-serien",
     "description": "Utforska urbana miljöer genom digital konst"

@@ -3,6 +3,7 @@ import "../styles/index.scss";
 import { AppProvider } from "../context/AppContext";
 import { LocaleProvider } from "../context/LocaleContext";
 import { Noto_Sans, Noto_Sans_SC, Noto_Sans_TC, Noto_Sans_Thai } from 'next/font/google'
+import ClientWrapper from "../components/ClientWrapper";
 
 // Configure fonts for different languages
 const notoSans = Noto_Sans({
@@ -48,7 +49,9 @@ export default function RootLayout({
       <body className={`${notoSans.variable} ${notoSansSC.variable} ${notoSansTC.variable} ${notoSansThai.variable}`}>
         <LocaleProvider>
           <AppProvider>
-            {children}
+            <ClientWrapper>
+              {children}
+            </ClientWrapper>
           </AppProvider>
         </LocaleProvider>
       </body>
