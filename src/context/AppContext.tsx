@@ -22,7 +22,7 @@ interface AppContextState {
   ogChecked: boolean;
   randomChecked: boolean;
   aboutSection: boolean;
-  searchButton: boolean;
+  searchSection: boolean;
   filteredArt: Artwork[];
   setFilter: (filter: string) => void;
   toggleRecent: () => void;
@@ -44,11 +44,13 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [widthOfWindow, setWidthOfWindow] = useState<number>(
     typeof window !== 'undefined' ? window.innerWidth : 1024
   );
+
+
   const [recentChecked, setRecentChecked] = useState<boolean>(true);
   const [ogChecked, setOgChecked] = useState<boolean>(false);
   const [randomChecked, setRandomChecked] = useState<boolean>(false);
   const [aboutSection, setAboutSection] = useState<boolean>(false);
-  const [searchButton, setSearchButton] = useState<boolean>(false);
+  const [searchSection, setSearchSection] = useState<boolean>(false);
 
   // GraphQL query to fetch artwork data
   const { loading, error, data } = useQuery(GET_ARTWORK, {
@@ -107,10 +109,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const toggleSearch = () => {
-    setSearchButton(!searchButton);
-    if (isEmpty(filteredArt)) {
-      setFilter('');
-    }
+    setSearchSection(!searchSection);
   };
 
   // Compute filtered artwork
@@ -140,7 +139,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     ogChecked,
     randomChecked,
     aboutSection,
-    searchButton,
+    searchSection,
     filteredArt,
     setFilter,
     toggleRecent,

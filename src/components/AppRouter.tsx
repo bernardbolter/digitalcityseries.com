@@ -4,11 +4,9 @@ import { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 import { useLocale } from '../context/LocaleContext';
 import Header from './Header';
-import About from './About';
-import Search from './Search';
+import AboutSearch from './AboutSearch';
 import ArtworkGrid from './artwork/ArtworkGrid';
 import Footer from './Footer';
-
 
 type RouteConfig = {
   path: string;
@@ -27,8 +25,7 @@ const AppRouter = () => {
       component: (
         <>
           <Header />
-          <About />
-          <Search />
+          <AboutSearch />
           <ArtworkGrid />
           <Footer />
         </>
@@ -40,8 +37,7 @@ const AppRouter = () => {
       component: (
         <>
           <Header />
-          <About />
-          <Search />
+          <AboutSearch />
           <ArtworkGrid />
           <Footer />
         </>

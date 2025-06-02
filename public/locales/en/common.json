@@ -14,6 +14,10 @@
     "artwork": "Artwork",
     "contact": "Contact"
   },
+  "nav": {
+    "about": "About",
+    "search": "Search"
+  },
   "hero": {
     "title": "Digital City Series",
     "subtitle": "Exploring urban environments through digital art",
@@ -26,6 +30,8 @@
     "artistDescription": "Bernard Bolter is a San Francisco native who has lived in Copenhagen since 2009. His work explores the intersection of urban environments and digital art."
   },
   "search": {
+    "title": "Search Artwork",
+    "description": "Find artwork by city, year, or keyword",
     "placeholder": "Search artwork...",
     "filter": "Filter",
     "recent": "Recent",
