@@ -7,6 +7,13 @@ const nextConfig = {
   },
   images: {
     unoptimized: true, // Required for static export
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.digitalcityseries.com/bolter',
+        pathname: '/wp-content/uploads/**',
+      },
+    ],
     domains: ['www.digitalcityseries.com/bolter'], // Allow images from this domain
   },
   // We'll implement i18n manually since Next.js i18n is not compatible with static exports

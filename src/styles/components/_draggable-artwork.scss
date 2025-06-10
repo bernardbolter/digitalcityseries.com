@@ -1,0 +1,152 @@
+.draggable-artwork {
+  // Base styles
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1500px;
+  max-width: 1500px;
+  height: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  
+  // Hardware acceleration and smoothness
+  will-change: transform;
+  transform-origin: 0 0;
+  transform-style: preserve-3d;
+  
+  // Enable GPU acceleration
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  
+  // Optimize rendering for smooth animations
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  
+  // Smooth subpixel rendering
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  
+  // Touch optimization
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  
+  // Prevent image selection and dragging
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  
+  // High quality image rendering
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: crisp-edges;
+  
+  // Cursor states
+  cursor: grab;
+  
+  &:active {
+    cursor: grabbing;
+  }
+  
+  // Dragging state - optimized for performance
+  &--dragging {
+    // Force GPU layer
+    will-change: transform;
+    
+    // Disable any transitions for immediate response
+    transition: none !important;
+    
+    cursor: grabbing;
+    z-index: 1000;
+    
+    // Optimize for high-frequency updates
+    contain: layout style paint;
+    
+    // Slightly reduce opacity for visual feedback
+    opacity: 0.98;
+  }
+  
+  // Enhanced smoothness for non-dragging states
+  &:not(&--dragging) {
+    // Smooth easing for momentum and transitions
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    // Enable hardware acceleration during momentum
+    will-change: transform;
+  }
+  
+  // Responsive optimizations
+  @media (max-width: 768px) {
+    // Mobile-specific optimizations
+    -webkit-overflow-scrolling: touch;
+    
+    &--dragging {
+      // More aggressive GPU optimization on mobile
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 0.95;
+    }
+  }
+  
+  // High refresh rate displays
+  @media (min-resolution: 120dpi) {
+    // Optimize for high DPI and high refresh rate
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-backface-visibility: hidden;
+    
+    &--dragging {
+      // Extra smoothness for high-end displays
+      will-change: transform, opacity;
+    }
+  }
+  
+  // Performance variants
+  &--ultra-smooth {
+    // Maximum smoothness settings
+    transition: transform 0.16s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    &.draggable-image--dragging {
+      transition: none;
+    }
+  }
+  
+  &--performance {
+    // Optimized for lower-end devices
+    image-rendering: optimizeSpeed;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    
+    &--dragging {
+      will-change: transform;
+    }
+  }
+  
+  // Accessibility
+  &:focus {
+    outline: 2px solid #007acc;
+    outline-offset: 2px;
+  }
+  
+  // Reduced motion preferences
+  @media (prefers-reduced-motion: reduce) {
+    transition: none !important;
+    
+    &:not(&--dragging) {
+      will-change: auto;
+    }
+  }
+  
+  // Print styles
+  @media print {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    will-change: auto;
+  }
+}
