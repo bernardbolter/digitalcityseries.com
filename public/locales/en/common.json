@@ -9,10 +9,10 @@
     "description": "Exploring urban environments through digital art"
   },
   "navigation": {
-    "home": "Home",
     "about": "About",
-    "artwork": "Artwork",
-    "contact": "Contact"
+    "paintings" : "Paintings",
+    "businessPlan" : "Business Plan",
+    "contact" : "Contact"
   },
   "nav": {
     "about": "About",

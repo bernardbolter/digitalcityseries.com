@@ -12,10 +12,10 @@
     "description": "通過數碼藝術探索城市環境"
   },
   "navigation": {
-    "home": "首頁",
-    "about": "關於",
-    "artwork": "作品",
-    "contact": "聯絡我哋"
+      "about": "關於",
+      "paintings": "畫作",
+      "businessPlan": "商業計劃",
+      "contact": "聯絡"
   },
   "hero": {
     "title": "數碼城市系列",

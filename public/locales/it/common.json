@@ -12,10 +12,10 @@
     "description": "Esplorazione di ambienti urbani attraverso l'arte digitale"
   },
   "navigation": {
-    "home": "Home",
-    "about": "Informazioni",
-    "artwork": "Opere",
-    "contact": "Contatti"
+      "about": "Chi siamo",
+      "paintings": "Quadri",
+      "businessPlan": "Piano aziendale",
+      "contact": "Contatti"
   },
   "hero": {
     "title": "Serie di Città Digitali",

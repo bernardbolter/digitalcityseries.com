@@ -12,10 +12,10 @@
     "description": "通过数字艺术探索城市环境"
   },
   "navigation": {
-    "home": "首页",
-    "about": "关于",
-    "artwork": "作品",
-    "contact": "联系我们"
+      "about": "关于",
+      "paintings": "绘画",
+      "businessPlan": "商业计划",
+      "contact": "联系"
   },
   "hero": {
     "title": "数字城市系列",

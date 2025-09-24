@@ -12,10 +12,10 @@
     "description": "Dijital sanat aracılığıyla kentsel ortamları keşfetmek"
   },
   "navigation": {
-    "home": "Ana Sayfa",
-    "about": "Hakkında",
-    "artwork": "Sanat Eserleri",
-    "contact": "İletişim"
+      "about": "Hakkımızda",
+      "paintings": "Tablolar",
+      "businessPlan": "İş Planı",
+      "contact": "İletişim"
   },
   "hero": {
     "title": "Dijital Şehir Serisi",

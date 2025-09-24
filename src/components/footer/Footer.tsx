@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useAppContext } from '@/context/AppContext'
 import { useLocale } from '@/context/LocaleContext'
-import ContactForm from '@/components/ContactForm'
+import ContactForm from '@/components/footer/ContactForm'
 
 const Footer = () => {
   const { toggleAbout } = useAppContext();  

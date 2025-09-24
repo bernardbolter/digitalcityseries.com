@@ -12,10 +12,10 @@
     "description": "Erkundung städtischer Umgebungen durch digitale Kunst"
   },
   "navigation": {
-    "home": "Startseite",
-    "about": "Über uns",
-    "artwork": "Kunstwerke",
-    "contact": "Kontakt"
+      "about": "Über uns",
+      "paintings": "Gemälde",
+      "businessPlan": "Geschäftsplan",
+      "contact": "Kontakt"
   },
   "hero": {
     "title": "Digitale Städteserie",

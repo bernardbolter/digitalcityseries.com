@@ -1,0 +1,37 @@
+@use '../base/vars.scss' as *;
+
+.paintings-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    width: 100%;
+    background: grey;
+    z-index: 1000;
+    height: 100vh;
+    transition: transform .7s ease-in-out;
+}
+
+.paintings-container__open {
+    transform: translateX(0);
+    transition: transform .7s ease-in-out;
+}
+
+.paintings-content {
+    position: relative;
+    height: 100vh; /* or a fixed height */
+    overflow-y: auto; /* This is the key property for scrolling */
+}
+
+.paintings-close-container {
+    position: absolute;
+    z-index: 1001;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+
+    svg {
+        fill: white;
+    }
+}

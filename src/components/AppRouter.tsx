@@ -1,12 +1,13 @@
-'use client';
+'use client'
 
-import { ReactNode } from 'react';
-import { usePathname } from 'next/navigation';
-import { useLocale } from '../context/LocaleContext';
-import Header from './Header';
-import AboutSearch from './AboutSearch';
-import ArtworkGrid from './artwork/ArtworkGrid';
-import Footer from './Footer';
+import { ReactNode } from 'react'
+import { usePathname } from 'next/navigation'
+import { useLocale } from '@/context/LocaleContext'
+import Header from '@/components/header/Header'
+import About from '@/components/about/About'
+import Paintings from '@/components/paintings/Paintings'
+import ArtworkGrid from './artwork/ArtworkGrid'
+import Footer from '@/components/footer/Footer'
 
 type RouteConfig = {
   path: string;
@@ -15,8 +16,8 @@ type RouteConfig = {
 };
 
 const AppRouter = () => {
-  const pathname = usePathname();
-  const { locale } = useLocale();
+  const pathname = usePathname()
+  const { locale } = useLocale()
 
   // Define your routes
   const routes: RouteConfig[] = [
@@ -25,7 +26,8 @@ const AppRouter = () => {
       component: (
         <>
           <Header />
-          <AboutSearch />
+          <About />
+          <Paintings />
           <ArtworkGrid />
           <Footer />
         </>
@@ -37,7 +39,8 @@ const AppRouter = () => {
       component: (
         <>
           <Header />
-          <AboutSearch />
+          <About />
+          <Paintings />
           <ArtworkGrid />
           <Footer />
         </>

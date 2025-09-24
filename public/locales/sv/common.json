@@ -12,10 +12,10 @@
     "description": "Utforska urbana miljöer genom digital konst"
   },
   "navigation": {
-    "home": "Hem",
-    "about": "Om",
-    "artwork": "Konstverk",
-    "contact": "Kontakt"
+      "about": "Om oss",
+      "paintings": "Målningar",
+      "businessPlan": "Affärsplan",
+      "contact": "Kontakt"
   },
   "hero": {
     "title": "Digitala Städer-serien",

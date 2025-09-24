@@ -15,21 +15,23 @@ interface Artwork {
 // Define the context state type
 interface AppContextState {
   artlist: Artwork[];
+  filteredArt: Artwork[];
   isLoading: boolean;
   filter: string;
   widthOfWindow: number;
-  recentChecked: boolean;
-  ogChecked: boolean;
+
+  latestChecked: boolean;
+  oldestChecked: boolean;
   randomChecked: boolean;
-  aboutSection: boolean;
-  searchSection: boolean;
-  filteredArt: Artwork[];
+  aboutOpen: boolean;
+  paintingsOpen: boolean;
+
   setFilter: (filter: string) => void;
-  toggleRecent: () => void;
-  toggleOg: () => void;
+  toggleLatest: () => void;
+  toggleOldest: () => void;
   toggleRandom: () => void;
   toggleAbout: () => void;
-  toggleSearch: () => void;
+  togglePaintings: () => void;
 }
 
 // Create the context with default values
@@ -45,12 +47,11 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     typeof window !== 'undefined' ? window.innerWidth : 1024
   );
 
-
-  const [recentChecked, setRecentChecked] = useState<boolean>(true);
-  const [ogChecked, setOgChecked] = useState<boolean>(false);
+  const [latestChecked, setLatestChecked] = useState<boolean>(true);
+  const [oldestChecked, setOldestChecked] = useState<boolean>(false);
   const [randomChecked, setRandomChecked] = useState<boolean>(false);
-  const [aboutSection, setAboutSection] = useState<boolean>(false);
-  const [searchSection, setSearchSection] = useState<boolean>(false);
+  const [aboutOpen, setAboutOpen] = useState<boolean>(false);
+  const [paintingsOpen, setPaintingsOpen] = useState<boolean>(false);
 
   // GraphQL query to fetch artwork data
   const { loading, error, data } = useQuery(GET_ARTWORK, {
@@ -86,30 +87,32 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   // Toggle functions
-  const toggleRecent = () => {
-    setRecentChecked(true);
-    setOgChecked(false);
+  const toggleLatest = () => {
+    setLatestChecked(true);
+    setOldestChecked(false);
     setRandomChecked(false);
   };
 
-  const toggleOg = () => {
-    setRecentChecked(false);
-    setOgChecked(true);
+  const toggleOldest = () => {
+    setLatestChecked(false);
+    setOldestChecked(true);
     setRandomChecked(false);
   };
 
   const toggleRandom = () => {
-    setRecentChecked(false);
-    setOgChecked(false);
+    setLatestChecked(false);
+    setOldestChecked(false);
     setRandomChecked(true);
   };
 
   const toggleAbout = () => {
-    setAboutSection(!aboutSection);
+    console.log('toggled about')
+    setAboutOpen(!aboutOpen);
   };
 
-  const toggleSearch = () => {
-    setSearchSection(!searchSection);
+  const togglePaintings = () => {
+    console.log('toggled paintings')
+    setPaintingsOpen(!paintingsOpen);
   };
 
   // Compute filtered artwork
@@ -132,21 +135,21 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   // Context value
   const value = {
     artlist,
+    filteredArt,
     isLoading,
     filter,
     widthOfWindow,
-    recentChecked,
-    ogChecked,
+    latestChecked,
+    oldestChecked,
     randomChecked,
-    aboutSection,
-    searchSection,
-    filteredArt,
+    aboutOpen,
+    paintingsOpen,
     setFilter,
-    toggleRecent,
-    toggleOg,
+    toggleLatest,
+    toggleOldest,
     toggleRandom,
     toggleAbout,
-    toggleSearch,
+    togglePaintings
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

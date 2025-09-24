@@ -4,7 +4,7 @@
 @forward 'base/reset';
 
 // Import component styles
-@use 'components/about-search';
+// @use 'components/about-search';
 @use 'components/artwork';
 @use 'components/draggable-artwork';
 @use 'components/footer';
@@ -12,5 +12,8 @@
 @use 'components/language-switcher';
 @use 'components/loading-screen';
 @use 'components/markdown';
+@use 'components/nav';
+@use 'components/about';
+@use 'components/paintings';
 
 // Import UI style

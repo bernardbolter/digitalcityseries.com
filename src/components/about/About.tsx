@@ -1,29 +1,42 @@
 'use client';
 
+import { useRef, useEffect } from 'react';
 import { useAppContext } from '@/context/AppContext';
 import { useLocale } from '@/context/LocaleContext';
 import Image from 'next/image';
-import { useRef, useEffect } from 'react';
+import Close from '@/svg/close';
+
 
 const About = () => {
-  const { aboutSection, toggleAbout } = useAppContext();
+  const { 
+    aboutOpen, 
+    toggleAbout 
+  } = useAppContext();
+
+  console.log(aboutOpen)
+
   const { t } = useLocale();
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="about" ref={contentRef}>
-      <button 
-        className={`about__toggle ${aboutSection ? 'is-active' : ''}`}
-        onClick={toggleAbout}
-        aria-expanded={aboutSection}
-        aria-controls="about-content"
+    <div 
+      className={aboutOpen ? "about-container about-container__open" : "about-container"} 
+      ref={contentRef}
+    >
+      <div
+        onClick={() => {
+          toggleAbout()
+        }} 
+        className="about-close-container"
       >
-        {t('nav.about')}
-      </button>
+        <Close />
+      </div>
+      
+      {/* <div className="about-container__inside"> */}
       
       <div 
         id="about-content"
-        className={`about__content ${aboutSection ? 'is-open' : ''}`}
+        className={`about__content ${aboutOpen ? 'is-open' : ''}`}
       >
         <h2 className="about__title">{t('about.title')}</h2>
         <div className="about__section">
@@ -51,6 +64,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      {/* </div> */}
     </div>
   );
 };

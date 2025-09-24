@@ -12,10 +12,10 @@
     "description": "Istraživanje urbanih okruženja kroz digitalnu umjetnost"
   },
   "navigation": {
-    "home": "Početna",
-    "about": "O Nama",
-    "artwork": "Umjetnički Radovi",
-    "contact": "Kontakt"
+      "about": "O nama",
+      "paintings": "Slike",
+      "businessPlan": "Poslovni plan",
+      "contact": "Kontakt"
   },
   "hero": {
     "title": "Digitalna Gradska Serija",

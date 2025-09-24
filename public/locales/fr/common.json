@@ -12,10 +12,10 @@
     "description": "Explorer les environnements urbains à travers l'art numérique"
   },
   "navigation": {
-    "home": "Accueil",
-    "about": "À propos",
-    "artwork": "Œuvres d'art",
-    "contact": "Contact"
+      "about": "À propos",
+      "paintings": "Peintures",
+      "businessPlan": "Plan d'affaires",
+      "contact": "Contact"
   },
   "hero": {
     "title": "Série Ville Numérique",

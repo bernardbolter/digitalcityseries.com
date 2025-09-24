@@ -12,10 +12,10 @@
     "description": "Udforskning af bymiljører gennem digital kunst"
   },
   "navigation": {
-    "home": "Hjem",
-    "about": "Om",
-    "artwork": "Kunstværker",
-    "contact": "Kontakt"
+      "about": "Om os",
+      "paintings": "Malerier",
+      "businessPlan": "Forretningsplan",
+      "contact": "Kontakt"
   },
   "hero": {
     "title": "Digital By-serie",

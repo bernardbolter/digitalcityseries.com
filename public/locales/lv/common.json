@@ -12,10 +12,10 @@
     "description": "Pilsētvides izpēte ar digitālās mākslas palīdzību"
   },
   "navigation": {
-    "home": "Sākums",
-    "about": "Par mums",
-    "artwork": "Mākslas darbi",
-    "contact": "Kontakti"
+      "about": "Par mums",
+      "paintings": "Gleznojumi",
+      "businessPlan": "Biznesa plāns",
+      "contact": "Kontakti"
   },
   "hero": {
     "title": "Digitālo Pilsētu Sērija",

@@ -12,10 +12,10 @@
     "description": "Explorando entornos urbanos a través del arte digital"
   },
   "navigation": {
-    "home": "Inicio",
-    "about": "Acerca de",
-    "artwork": "Obras de arte",
-    "contact": "Contacto"
+      "about": "Acerca de",
+      "paintings": "Pinturas",
+      "businessPlan": "Plan de Negocios",
+      "contact": "Contacto"
   },
   "hero": {
     "title": "Serie Ciudad Digital",

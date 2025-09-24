@@ -12,9 +12,9 @@
     "description": "Explorando ambientes urbanos através da arte digital"
   },
   "navigation": {
-    "home": "Início",
     "about": "Sobre",
-    "artwork": "Obras",
+    "paintings": "Pinturas",
+    "businessPlan": "Plano de Negócios",
     "contact": "Contato"
   },
   "hero": {

@@ -41,6 +41,7 @@ export default function BasicForm() {
 
 
   return (
+    <div className="contact-form-container" id="contact-form">
     <form onSubmit={(e) => onSubmit(e)}>
     
       <div className="formcarry-block">
@@ -63,5 +64,6 @@ export default function BasicForm() {
       </div>
       {error.length > 0 && <p>{error}</p>}
     </form>
+    </div>
   )
 }

@@ -4,6 +4,8 @@ import { useLocale } from '@/context/LocaleContext';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 import { usePathname } from 'next/navigation';
 
+import Nav from '@/components/header/Nav'
+
 const Header = () => {
   const { t } = useLocale();
   const pathname = usePathname();
@@ -21,6 +23,7 @@ const Header = () => {
         )}
       </div>
       <LanguageSwitcher />
+      <Nav />
     </header>
   );
 };
