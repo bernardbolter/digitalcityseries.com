@@ -1,0 +1,824 @@
+@use 'sass:color';
+
+// A4 dimensions and variables
+$a4-width: 210mm;
+$a4-height: 297mm;
+$a4-margin: 20mm;
+$print-font-size: 12pt;
+$print-line-height: 1.6;
+
+// Colors
+$primary-color: #2c3e50;
+$secondary-color: #34495e;
+$accent-color: #3498db;
+$border-color: #e1e8ed;
+$code-bg: #f8f9fa;
+$error-color: #e74c3c;
+$success-color: #27ae60;
+
+// Typography
+$font-family-serif: 'Georgia', 'Times New Roman', serif;
+$font-family-sans: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+$font-family-mono: 'JetBrains Mono', 'Monaco', 'Menlo', monospace;
+
+// Mixins
+@mixin page-break-avoid {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+@mixin page-break-after-avoid {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+// Markdown content styles
+.markdown-content {
+  font-family: $font-family-serif;
+  font-size: 16px;
+  line-height: $print-line-height;
+  color: $primary-color;
+
+  // Headings with anchor links
+  .md-h1, .md-h2, .md-h3, .md-h4, .md-h5, .md-h6 {
+    position: relative;
+
+    .heading-anchor {
+      color: inherit;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &:hover::after {
+      content: '🔗';
+      position: absolute;
+      margin-left: 0.5rem;
+      color: $accent-color;
+      opacity: 0.6;
+      font-size: 0.7em;
+      cursor: pointer;
+    }
+  }
+
+  // Individual heading styles
+  .md-h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    color: $primary-color;
+    border-bottom: 3px solid $accent-color;
+    padding-bottom: 0.75rem;
+    @include page-break-after-avoid;
+  }
+
+  .md-h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+    color: $secondary-color;
+    @include page-break-after-avoid;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .md-h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
+    color: $secondary-color;
+    @include page-break-after-avoid;
+  }
+
+  .md-h4 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 1rem 0 0.5rem 0;
+    color: $secondary-color;
+    @include page-break-after-avoid;
+  }
+
+  .md-h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1rem 0 0.5rem 0;
+    color: $secondary-color;
+    @include page-break-after-avoid;
+  }
+
+  .md-h6 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 1rem 0 0.5rem 0;
+    color: $secondary-color;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    @include page-break-after-avoid;
+  }
+}
+    // styles/components/_markdown-viewer.scss
+
+
+// Main container
+.markdown-viewer-container {
+  min-height: 100vh;
+  background: color.scale($border-color, $lightness: 60%);
+  padding: 2rem 0;
+  font-family: $font-family-sans;
+  position: relative;
+
+  // Sidebar layout
+  &.with-sidebar-toc {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  // Fixed print button
+  .print-button-fixed {
+    position: fixed;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    z-index: 1000;
+    padding: 1rem 1.5rem;
+    background: $success-color;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px color.scale($success-color, $alpha: -60%);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover:not(:disabled) {
+      background: color.scale($success-color, $lightness: -10%);
+      transform: translateY(-50%) scale(1.05);
+      box-shadow: 0 6px 20px color.scale($success-color, $alpha: -50%);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: translateY(-50%) scale(1);
+    }
+
+    &:active {
+      transform: translateY(-50%) scale(0.98);
+    }
+  }
+
+  // Sidebar TOC
+  .toc-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+  }
+
+  // Document container
+  .document-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    flex: 1;
+
+    .with-sidebar-toc & {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  // A4 page
+  .a4-page {
+    width: $a4-width;
+    min-height: $a4-height;
+    background: white;
+    box-shadow: 0 8px 30px color.scale(black, $alpha: -85%),
+                0 4px 12px color.scale(black, $alpha: -90%);
+    border-radius: 8px;
+    padding: $a4-margin;
+    box-sizing: border-box;
+    margin: 0 auto;
+    @include page-break-avoid;
+
+    .with-sidebar-toc & {
+      margin: 0;
+    }
+  }
+
+  // Document title (screen only)
+  .document-title {
+    color: $accent-color;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid color.scale($border-color, $lightness: 20%);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  // Loading state
+  .loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    color: $secondary-color;
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid color.scale($border-color, $lightness: 20%);
+      border-top: 4px solid $accent-color;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+  }
+
+  // Error overlay
+  .error-overlay {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: color.scale($error-color, $lightness: 30%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    z-index: 999;
+    box-shadow: 0 4px 12px color.scale($error-color, $alpha: -70%);
+
+    p {
+      margin: 0;
+      font-weight: 500;
+    }
+  }
+}
+
+// Table of Contents styles
+.table-of-contents {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px color.scale(black, $alpha: -90%);
+  border: 1px solid $border-color;
+  margin-bottom: 2rem;
+
+  .toc-title {
+    margin: 0 0 1rem 0;
+    color: $primary-color;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-bottom: 2px solid $accent-color;
+    padding-bottom: 0.5rem;
+  }
+
+  .toc-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .toc-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: $secondary-color;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    line-height: 1.4;
+
+    &:hover {
+      background: color.scale($accent-color, $alpha: -90%);
+      color: $accent-color;
+      transform: translateX(4px);
+    }
+
+    &:active {
+      transform: translateX(2px);
+    }
+
+    // Different levels of indentation
+    &.toc-level-1 {
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding-left: 0.75rem;
+    }
+
+    &.toc-level-2 {
+      font-weight: 500;
+      padding-left: 1.5rem;
+    }
+
+    &.toc-level-3 {
+      padding-left: 2.25rem;
+      font-size: 0.8125rem;
+    }
+
+    &.toc-level-4 {
+      padding-left: 3rem;
+      font-size: 0.8125rem;
+      opacity: 0.8;
+    }
+
+    &.toc-level-5 {
+      padding-left: 3.75rem;
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+
+    &.toc-level-6 {
+      padding-left: 4.5rem;
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+  }
+}
+
+// Top TOC specific styles
+.toc-top {
+  .table-of-contents {
+    margin-bottom: 3rem;
+    
+    .toc-nav {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+  }
+}
+
+// Markdown content styles
+.markdown-content {
+  font-family: $font-family-serif;
+  font-size: 16px;
+  line-height: $print-line-height;
+  color: $primary-color;
+
+  // Headings
+  .md-h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    color: $primary-color;
+    border-bottom: 3px solid $accent-color;
+    padding-bottom: 0.75rem;
+    @include page-break-after-avoid;
+  }
+
+  .md-h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+    color: $secondary-color;
+    @include page-break-after-avoid;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .md-h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
+    color: $secondary-color;
+    @include page-break-after-avoid;
+  }
+
+  .md-h4 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 1rem 0 0.5rem 0;
+    color: $secondary-color;
+    @include page-break-after-avoid;
+  }
+
+  // Paragraphs
+  .md-paragraph {
+    margin: 0 0 1rem 0;
+    text-align: justify;
+    orphans: 3;
+    widows: 3;
+    line-height: 1.7;
+  }
+
+  // Lists
+  .md-list {
+    margin: 0 0 1rem 0;
+    padding-left: 1.5rem;
+
+    .md-list-item {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+      @include page-break-avoid;
+    }
+
+    &.md-list-ordered {
+      list-style-type: decimal;
+    }
+
+    // Nested lists
+    .md-list {
+      margin: 0.5rem 0;
+    }
+  }
+
+  // Links
+  .md-link {
+    color: $accent-color;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-bottom-color: $accent-color;
+    }
+  }
+
+  // Tables
+  .md-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+    @include page-break-avoid;
+
+    .md-table-header {
+      background: color.scale($border-color, $lightness: 30%);
+      border: 1px solid $border-color;
+      padding: 0.75rem;
+      text-align: left;
+      font-weight: 600;
+      color: $primary-color;
+    }
+
+    .md-table-cell {
+      border: 1px solid $border-color;
+      padding: 0.75rem;
+      vertical-align: top;
+    }
+
+    .md-table-row {
+      &:nth-child(even) {
+        .md-table-cell {
+          background: color.scale($border-color, $lightness: 50%);
+        }
+      }
+    }
+  }
+
+  // Code blocks
+  pre {
+    margin: 1.5rem 0 !important;
+    border-radius: 6px !important;
+    font-size: 0.8rem !important;
+    @include page-break-avoid;
+    box-shadow: 0 2px 8px color.scale(black, $alpha: -92%);
+
+    code {
+      font-family: $font-family-mono !important;
+    }
+  }
+
+  // Inline code
+  code:not(pre code) {
+    background: color.scale($code-bg, $lightness: -5%);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: $font-family-mono;
+    font-size: 0.875em;
+    border: 1px solid color.scale($border-color, $lightness: -10%);
+    color: $secondary-color;
+  }
+
+  // Blockquotes
+  .md-blockquote {
+    border-left: 4px solid $accent-color;
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background: color.scale($code-bg, $lightness: 20%);
+    font-style: italic;
+    color: $secondary-color;
+    border-radius: 0 4px 4px 0;
+    @include page-break-avoid;
+
+    .md-paragraph {
+      margin: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Images
+  .md-image {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px color.scale(black, $alpha: -85%);
+    @include page-break-avoid;
+    display: block;
+
+    // Center images by default
+    &:not(.inline) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    // Custom image classes
+    &.full-width {
+      width: 100%;
+    }
+
+    &.thumbnail {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    &.small {
+      max-width: 300px;
+    }
+
+    &.medium {
+      max-width: 500px;
+    }
+
+    &.large {
+      max-width: 700px;
+    }
+
+    // Circular images (for profile photos)
+    &.circular {
+      border-radius: 50%;
+    }
+
+    // No shadow variant
+    &.no-shadow {
+      box-shadow: none;
+    }
+
+    // Border variant
+    &.bordered {
+      border: 2px solid $border-color;
+    }
+  }
+
+  // Image captions (for images followed by em text)
+  .md-image + em {
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+    color: $secondary-color;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  // Horizontal rules
+  .md-divider {
+    border: none;
+    border-top: 2px solid $border-color;
+    margin: 2rem 0;
+  }
+
+  // Strong and emphasis
+  strong {
+    color: $primary-color;
+    font-weight: 600;
+  }
+
+  em {
+    color: $secondary-color;
+  }
+}
+
+// Animations
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Print-specific styles
+@media print {
+  // Hide non-printable elements
+  .no-print {
+    display: none !important;
+  }
+
+  // Page setup
+  @page {
+    size: A4;
+    margin: $a4-margin;
+  }
+
+  // Reset container for print
+  .markdown-viewer-container {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    .document-container {
+      max-width: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    .a4-page {
+      width: 100% !important;
+      min-height: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+    }
+  }
+
+  // Optimize typography for print
+  .markdown-content {
+    font-size: $print-font-size !important;
+    
+    .md-h1 {
+      font-size: 20pt !important;
+      margin-top: 0 !important;
+      page-break-after: avoid !important;
+      page-break-inside: avoid !important;
+    }
+
+    .md-h2 {
+      font-size: 16pt !important;
+      page-break-after: avoid !important;
+      page-break-inside: avoid !important;
+      // Force page break before major sections (optional)
+      // page-break-before: always !important;
+    }
+
+    .md-h3 {
+      font-size: 14pt !important;
+      page-break-after: avoid !important;
+      page-break-inside: avoid !important;
+    }
+
+    .md-h4 {
+      font-size: 13pt !important;
+      page-break-after: avoid !important;
+      page-break-inside: avoid !important;
+    }
+
+    // Page break controls for content elements
+    .md-paragraph {
+      orphans: 3 !important;
+      widows: 3 !important;
+    }
+
+    .md-table {
+      font-size: 10pt !important;
+      page-break-inside: avoid !important;
+      
+      // If table is too large, allow breaking
+      &.allow-break {
+        page-break-inside: auto !important;
+      }
+    }
+
+    .md-blockquote {
+      page-break-inside: avoid !important;
+    }
+
+    .md-list {
+      // Avoid breaking lists unless necessary
+      page-break-inside: avoid !important;
+      
+      &.allow-break {
+        page-break-inside: auto !important;
+      }
+    }
+
+    .md-list-item {
+      page-break-inside: avoid !important;
+    }
+
+    pre, .code-block {
+      font-size: 9pt !important;
+      page-break-inside: avoid !important;
+      
+      // For very long code blocks
+      &.allow-break {
+        page-break-inside: auto !important;
+      }
+    }
+
+    .md-image {
+      page-break-inside: avoid !important;
+      page-break-after: auto !important;
+      
+      // Force page break after certain images
+      &.page-break-after {
+        page-break-after: always !important;
+      }
+      
+      // Force page break before certain images  
+      &.page-break-before {
+        page-break-before: always !important;
+      }
+    }
+
+    // Custom page break classes (use in HTML within markdown)
+    .page-break {
+      page-break-before: always !important;
+    }
+
+    .page-break-after {
+      page-break-after: always !important;
+    }
+
+    .page-break-avoid {
+      page-break-inside: avoid !important;
+    }
+
+    .page-break-auto {
+      page-break-inside: auto !important;
+    }
+
+    // Keep sections together
+    .keep-together {
+      page-break-inside: avoid !important;
+    }
+
+    // Always start new page
+    .new-page {
+      page-break-before: always !important;
+    }
+
+    // Avoid page break before this element
+    .no-break-before {
+      page-break-before: avoid !important;
+    }
+
+    // Avoid page break after this element
+    .no-break-after {
+      page-break-after: avoid !important;
+    }
+  }
+
+  // Print-specific link handling
+  .md-link[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .markdown-viewer-container {
+    padding: 1rem 0;
+
+    .document-container {
+      padding: 0 1rem;
+    }
+
+    .a4-page {
+      width: 100%;
+      padding: 1.5rem;
+    }
+
+    .print-button-fixed {
+      right: 1rem;
+      padding: 0.875rem 1.25rem;
+      font-size: 0.8rem;
+    }
+  }
+}

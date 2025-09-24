@@ -1,4 +1,3 @@
-import { get } from 'lodash';
 import React, { useRef, useCallback, useEffect, useState } from 'react';
 
 interface DraggableArtworkProps {

@@ -1,3 +1,5 @@
+@use '../base/vars.scss' as *;
+
 // Loading Screen Styles
 .loading-screen {
   position: fixed;
@@ -77,5 +79,16 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+.loading-image-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  p {
+    color: $text-light;
   }
 }

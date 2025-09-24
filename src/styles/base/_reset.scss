@@ -1,3 +1,14 @@
+@use './vars.scss' as *;
+
+#html-tag {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+}
+
+#html-tag::-webkit-scrollbar { 
+    display: none;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;

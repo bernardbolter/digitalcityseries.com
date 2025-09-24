@@ -45,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" id="html-tag">
       <body className={`${notoSans.variable} ${notoSansSC.variable} ${notoSansTC.variable} ${notoSansThai.variable}`}>
         <LocaleProvider>
           <AppProvider>

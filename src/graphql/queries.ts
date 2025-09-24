@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 export const GET_ARTWORK = gql`
 query GetDCSartwork {
   allArtwork(
-    where: {categoryName: "Digital City Series", title: "BERLIN germany"}
+    where: {categoryName: "Digital City Series"}
     first: 100
   ) {
     nodes {
@@ -25,19 +25,23 @@ query GetDCSartwork {
         country
         dcsFlags {
           sourceUrl(size: MEDIUM)
+          srcSet(size: MEDIUM)
         }
         dcsPhoto {
           sourceUrl(size: LARGE)
+          srcSet(size: LARGE)
         }
+        dcsPhotoTitle
         dcsRaw {
           sourceUrl(size: LARGE)
+          srcSet(size: LARGE)
         }
         dcsSatellite {
           sourceUrl(size: LARGE)
+          srcSet(size: LARGE)
         }
         density
         elevation
-        extraimages
         fieldGroupName
         forsale
         height
@@ -47,7 +51,6 @@ query GetDCSartwork {
         metadescription
         metakeywords
         orientation
-        performance
         population
         proportion
         series

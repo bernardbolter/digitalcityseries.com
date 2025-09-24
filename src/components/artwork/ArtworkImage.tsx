@@ -17,7 +17,7 @@ const ArtworkImage: React.FC<ArtworkImageProps> = (props) => {
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
   const [draggableBoundsValue, setDraggableBoundsValue] = useState({ left: 0, right: 0, top: 0, bottom: 0 });
   const [imageURLToRender, setImageURLToRender] = useState<string | null>(null);
-  const [isGlobePreloader, setIsGlobePreloader] = useState(true);
+  // const [isGlobePreloader, setIsGlobePreloader] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
@@ -69,14 +69,14 @@ const ArtworkImage: React.FC<ArtworkImageProps> = (props) => {
   }, [props.imageSRC]);
 
   // Effect for setting the preloader type
-  useEffect(() => {
-    const compositeViews = ['composite', 'magnify', 'satellite', 'photo'];
-    if (compositeViews.includes(props.view)) {
-      setIsGlobePreloader(true);
-    } else {
-      setIsGlobePreloader(false);
-    }
-  }, [props.view]);
+  // useEffect(() => {
+  //   const compositeViews = ['composite', 'magnify', 'satellite', 'photo'];
+  //   if (compositeViews.includes(props.view)) {
+  //     setIsGlobePreloader(true);
+  //   } else {
+  //     setIsGlobePreloader(false);
+  //   }
+  // }, [props.view]);
 
   const handleLoadingComplete = () => {
     setIsLoading(false);

@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useAppContext } from '@/context/AppContext';
-import { useLocale } from '@/context/LocaleContext';
+import { useAppContext } from '@/context/AppContext'
+import { useLocale } from '@/context/LocaleContext'
+import ContactForm from '@/components/ContactForm'
 
 const Footer = () => {
   const { toggleAbout } = useAppContext();  
@@ -52,6 +53,8 @@ const Footer = () => {
           </nav>
         </div>
       </div>
+
+      <ContactForm />
       
       <div className="footer__copyright">
         {t('footer.copyright')}

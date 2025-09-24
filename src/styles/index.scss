@@ -1,15 +1,16 @@
 // import base styles
-@import 'base/vars';
-@import 'base/font';
-@import 'base/reset';
+@use 'base/vars' as *;
+@use 'base/font' as *;
+@forward 'base/reset';
 
 // Import component styles
-@import 'components/about-search';
-@import 'components/artwork';
-@import 'components/draggable-artwork';
-@import 'components/footer';
-@import 'components/header';
-@import 'components/language-switcher';
-@import 'components/loading-screen';
+@use 'components/about-search';
+@use 'components/artwork';
+@use 'components/draggable-artwork';
+@use 'components/footer';
+@use 'components/header';
+@use 'components/language-switcher';
+@use 'components/loading-screen';
+@use 'components/markdown';
 
 // Import UI style
