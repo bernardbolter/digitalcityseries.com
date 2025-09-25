@@ -17,6 +17,12 @@
       "businessPlan": "Poslovni plan",
       "contact": "Kontakt"
   },
+  "filters": {
+      "oldest": "Najstarije",
+      "latest": "Najnovije",
+      "random": "Nasumično",
+      "selectACity": "Odaberi grad"
+  },
   "hero": {
     "title": "Digitalna Gradska Serija",
     "subtitle": "Istraživanje urbanih okruženja kroz digitalnu umjetnost",

@@ -17,6 +17,12 @@
       "businessPlan": "Biznesa plāns",
       "contact": "Kontakti"
   },
+  "filters": {
+      "oldest": "Vecākais",
+      "latest": "Jaunākais",
+      "random": "Nejaušs",
+      "selectACity": "Izvēlēties pilsētu"
+  },
   "hero": {
     "title": "Digitālo Pilsētu Sērija",
     "subtitle": "Pilsētvides izpēte ar digitālās mākslas palīdzību",

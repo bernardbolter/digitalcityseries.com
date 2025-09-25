@@ -63,6 +63,7 @@ query GetDCSartwork {
       slug
       content(format: RENDERED)
       databaseId
+      date
     }
   }
 }

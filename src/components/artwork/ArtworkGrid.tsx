@@ -5,7 +5,7 @@ import Artwork from './Artwork';
 
 const ArtworkGrid = () => {
   const { filteredArt, isLoading } = useAppContext();
-  console.log(filteredArt);
+  // console.log(filteredArt);
 
   if (isLoading) {
     return (

@@ -17,6 +17,12 @@
       "businessPlan": "Geschäftsplan",
       "contact": "Kontakt"
   },
+  "filters": {
+      "oldest": "Älteste",
+      "latest": "Neueste",
+      "random": "Zufällig",
+      "selectACity": "Stadt auswählen"
+  },
   "hero": {
     "title": "Digitale Städteserie",
     "subtitle": "Erkundung städtischer Umgebungen durch digitale Kunst",

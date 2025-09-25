@@ -17,6 +17,12 @@
       "businessPlan": "Plan de Negocios",
       "contact": "Contacto"
   },
+  "filters": {
+      "oldest": "Más Antiguo",
+      "latest": "Más Reciente",
+      "random": "Aleatorio",
+      "selectACity": "Selecciona una ciudad"
+  },
   "hero": {
     "title": "Serie Ciudad Digital",
     "subtitle": "Explorando entornos urbanos a través del arte digital",

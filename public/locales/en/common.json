@@ -14,9 +14,11 @@
     "businessPlan" : "Business Plan",
     "contact" : "Contact"
   },
-  "nav": {
-    "about": "About",
-    "search": "Search"
+  "filters": {
+    "oldest" : "Oldest",
+    "latest" : "Latest",
+    "random" : "Random",
+    "selectACity" : "Select a City"
   },
   "hero": {
     "title": "Digital City Series",

@@ -17,6 +17,12 @@
       "businessPlan": "Affärsplan",
       "contact": "Kontakt"
   },
+  "filters": {
+      "oldest": "Äldsta",
+      "latest": "Nyaste",
+      "random": "Slumpmässig",
+      "selectACity": "Välj en stad"
+  },
   "hero": {
     "title": "Digitala Städer-serien",
     "subtitle": "Utforska urbana miljöer genom digital konst",

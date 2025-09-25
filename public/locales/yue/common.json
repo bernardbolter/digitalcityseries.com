@@ -17,6 +17,12 @@
       "businessPlan": "商業計劃",
       "contact": "聯絡"
   },
+  "filters": {
+      "oldest": "最舊",
+      "latest": "最新",
+      "random": "隨機",
+      "selectACity": "選擇城市"
+  },
   "hero": {
     "title": "數碼城市系列",
     "subtitle": "通過數碼藝術探索城市環境",

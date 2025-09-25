@@ -9,6 +9,10 @@
     display: none;
 }
 
+.layout__main {
+  overflow: hidden;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;

@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="hero">
+      <div className="hero" id="hero-top">
         <h1>
           {t('header.digital')}<br />
           {t('header.city')}<br />

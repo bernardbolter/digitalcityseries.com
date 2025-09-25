@@ -9,67 +9,7 @@ import LoadingImage from '@/components/ui/LoadingImage'
 import HandDrag from '@/svg/HandDrag'
 import { toCamelCase } from '@/helpers'
 
-// --- TypeScript Interfaces ---
-interface ImageSrc {
-  __typename: string;
-  sourceUrl: string | null;
-  srcSet: string | null;
-  uri: string | null;
-}
-
-interface ArtworkLink {
-  url: string;
-  title: string;
-  target: string;
-}
-
-interface ArtworkFields {
-  __typename: string;
-  area?: string | null;
-  artworkImage?: ImageSrc | null;
-  artworklink?: ArtworkLink | null;
-  city?: string | null;
-  coordinates?: string | null;
-  country?: string | null;
-  databaseId?: number | null;
-  dcsFlags?: ImageSrc | null; // Note: Original plan used dcsSatellite for 2nd complementary. This is dcsFlags.
-  dcsPhoto?: ImageSrc | null;
-  dcsPhotoTitle?: string | null;
-  dcsRaw?: ImageSrc | null;
-  dcsSatellite?: ImageSrc | null;
-  density?: string | null;
-  elevation?: string | null;
-  fieldGroupName?: string | null;
-  forsale?: boolean | null;
-  height?: string | null; // e.g., "48\""
-  lat?: number | null;
-  lng?: number | null;
-  medium?: string | null;
-  metadescription?: string | null;
-  metakeywords?: string | null;
-  orientation?: string | null;
-  population?: string | null;
-  proportion?: number | null;
-  series?: string | null;
-  size?: string | null; // e.g., "48 x 48 in"
-  slug?: string | null;
-  style?: string | null;
-  width?: string | null; // e.g., "48\""
-  year?: string | null;
-}
-
-interface ArtworkNode {
-  id: string;
-  title: string | null;
-  artworkFields?: ArtworkFields | null;
-  slug?: string | null;
-  content?: string | null;
-  databaseId?: number | null;
-}
-
-interface ArtworkProps {
-  artwork: ArtworkNode;
-}
+import { ArtworkProps } from '@/types/artworkTypes'
 
 
 // Helper function to create responsive sizes attribute
@@ -93,12 +33,11 @@ const handleImageError = (imageSrc: string, imageType: string) => {
 
 // --- Functional Component ---
 const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
+  console.log(artwork)
   const { t } = useLocale();
   const [selectArtworkView, setSelectArtworkView] = useState<string>('composite')
   const [fadeOut, setFadeOut] = useState<boolean>(false)
-  // const [fadeRaw, setFadeRaw] = useState<boolean>(false)
   const [toggleMagnify, setToggleMagnify] = useState<boolean>(false)
-  // console.log("artwork", artwork)
   const artworkContainerRef = useRef<HTMLDivElement>(null)
   const [handDragVisible, setHandDragVisible] = useState<boolean>(false)
   const [handDragCount, setHandDragCount] = useState<number>(0)
@@ -174,10 +113,6 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
       setFadeOut(false);
     }, 500);
   };
-
-  // const clickRaw = () => {
-  //   setFadeRaw(prevFadeRaw => !prevFadeRaw);
-  // };
 
   // --- Helper Rendering Functions ---
   const showCompositeImage = () => { 

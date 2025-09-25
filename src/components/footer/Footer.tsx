@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useAppContext } from '@/context/AppContext'
 import { useLocale } from '@/context/LocaleContext'
 import ContactForm from '@/components/footer/ContactForm'
+import { Link as ScrollLink} from 'react-scroll';
 
 const Footer = () => {
   const { toggleAbout } = useAppContext();  
@@ -55,6 +56,13 @@ const Footer = () => {
       </div>
 
       <ContactForm />
+
+      <ScrollLink
+        className="footer-back-to-top"
+        to="hero-top"
+        smooth={true}
+        duration={2000}
+      >Back to Top</ScrollLink>
       
       <div className="footer__copyright">
         {t('footer.copyright')}

@@ -1,21 +1,16 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useQuery, gql } from '@apollo/client';
-import { filter, shuffle, isEmpty } from 'lodash';
+import { useQuery } from '@apollo/client';
 import { client } from '../lib/apollo-client';
 import { GET_ARTWORK } from '../graphql/queries';
-
-// Define types for our artwork data
-interface Artwork {
-  id: string;
-  title: string;
-}
+import { ArtworkNode } from '@/types/artworkTypes';
+import { shuffleArray } from '@/helpers';
 
 // Define the context state type
 interface AppContextState {
-  artlist: Artwork[];
-  filteredArt: Artwork[];
+  artlist: ArtworkNode[];
+  filteredArt: ArtworkNode[];
   isLoading: boolean;
   filter: string;
   widthOfWindow: number;
@@ -32,6 +27,7 @@ interface AppContextState {
   toggleRandom: () => void;
   toggleAbout: () => void;
   togglePaintings: () => void;
+  selectArtwork: (id: string) => void;
 }
 
 // Create the context with default values
@@ -39,8 +35,8 @@ const AppContext = createContext<AppContextState | undefined>(undefined);
 
 // Provider component
 export const AppProvider = ({ children }: { children: ReactNode }) => {
-  const [artlist, setArtlist] = useState<Artwork[]>([]);
-  const [filteredArt, setFilteredArt] = useState<Artwork[]>([]);
+  const [artlist, setArtlist] = useState<ArtworkNode[]>([]);
+  const [filteredArt, setFilteredArt] = useState<ArtworkNode[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [filter, setFilter] = useState<string>('');
   const [widthOfWindow, setWidthOfWindow] = useState<number>(
@@ -86,6 +82,41 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
+  useEffect(() => {
+    let newFilteredArt = [...artlist];
+
+    if (latestChecked) {
+      newFilteredArt.sort((a, b) => {
+        const dateA = a.date ? new Date(a.date).getTime() : 0;
+        const dateB = b.date ? new Date(b.date).getTime() : 0;
+        const yearA = parseInt(a.artworkFields?.year || '0');
+        const yearB = parseInt(b.artworkFields?.year || '0');
+        
+        if (dateA && dateB) {
+            return dateB - dateA;
+        }
+        return yearB - yearA;
+      });
+    } else if (oldestChecked) {
+      newFilteredArt.sort((a, b) => {
+        const dateA = a.date ? new Date(a.date).getTime() : 0;
+        const dateB = b.date ? new Date(b.date).getTime() : 0;
+        const yearA = parseInt(a.artworkFields?.year || '0');
+        const yearB = parseInt(b.artworkFields?.year || '0');
+        
+        if (dateA && dateB) {
+            return dateA - dateB;
+        }
+        return yearA - yearB;
+      });
+    } else if (randomChecked) {
+      newFilteredArt = shuffleArray(newFilteredArt);
+    }
+
+    setFilteredArt(newFilteredArt);
+
+  }, [artlist, latestChecked, oldestChecked, randomChecked]);
+
   // Toggle functions
   const toggleLatest = () => {
     setLatestChecked(true);
@@ -115,22 +146,21 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setPaintingsOpen(!paintingsOpen);
   };
 
-  // Compute filtered artwork
-  // const filteredArt = (() => {
-  //   const matchesFilter = new RegExp(filter, 'i');
-  //   let artworkFiltered = artlist.filter(art => {
-  //     const title = art.title || '';
-  //     return !filter || matchesFilter.test(title);
-  //   });
-    
-  //   if (ogChecked) {
-  //     return [...artworkFiltered].reverse();
-  //   } else if (randomChecked) {
-  //     return shuffle(artworkFiltered);
-  //   } else {
-  //     return artworkFiltered;
-  //   }
-  // })();
+  const selectArtwork = (id: string) => {
+    setFilteredArt(currentFilteredArt => {
+      const selectedArtworkIndex = currentFilteredArt.findIndex(artwork => artwork.id === id);
+      if (selectedArtworkIndex === -1) {
+        return currentFilteredArt;
+      }
+
+      const newArray = [...currentFilteredArt];
+      const [selectedArtwork] = newArray.splice(selectedArtworkIndex, 1);
+      newArray.unshift(selectedArtwork);
+      
+      return newArray;
+    });
+  };
+
 
   // Context value
   const value = {
@@ -149,7 +179,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     toggleOldest,
     toggleRandom,
     toggleAbout,
-    togglePaintings
+    togglePaintings,
+    selectArtwork
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

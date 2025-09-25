@@ -17,6 +17,12 @@
       "businessPlan": "商业计划",
       "contact": "联系"
   },
+  "filters": {
+      "oldest": "最旧",
+      "latest": "最新",
+      "random": "随机",
+      "selectACity": "选择一个城市"
+  },
   "hero": {
     "title": "数字城市系列",
     "subtitle": "通过数字艺术探索城市环境",

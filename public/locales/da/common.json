@@ -17,6 +17,12 @@
       "businessPlan": "Forretningsplan",
       "contact": "Kontakt"
   },
+  "filters": {
+      "oldest": "Ældste",
+      "latest": "Nyeste",
+      "random": "Tilfældig",
+      "selectACity": "Vælg en by"
+  },
   "hero": {
     "title": "Digital By-serie",
     "subtitle": "Udforskning af bymiljører gennem digital kunst",

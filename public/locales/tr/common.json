@@ -17,6 +17,12 @@
       "businessPlan": "İş Planı",
       "contact": "İletişim"
   },
+  "filters": {
+      "oldest": "En Eski",
+      "latest": "En Yeni",
+      "random": "Rastgele",
+      "selectACity": "Bir Şehir Seçin"
+  },
   "hero": {
     "title": "Dijital Şehir Serisi",
     "subtitle": "Dijital sanat aracılığıyla kentsel ortamları keşfetmek",
