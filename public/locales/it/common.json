@@ -29,12 +29,16 @@
     "viewArtwork": "Vedi le Opere"
   },
   "about": {
-    "title": "Informazioni su Digital City Series",
-    "intro": "Digital City Series è un progetto artistico che crea ritratti di città. Invece di mostrare una singola foto di un edificio famoso, ogni ritratto combina centinaia di foto a livello stradale in un'unica immagine quadrata. Il risultato è una visione unica di una città che trasmette la sensazione di muoversi attraverso di essa.",
-    "method": "Il progetto è iniziato nel 2007. Utilizzo uno skateboard per esplorare le città, offrendo una prospettiva rapida e fluida. Durante questi viaggio scatto migliaia di foto. Tornato in studio, unisco queste foto in un'unica composizione senza soluzione di continuità.",
-    "philosophy": "Questo metodo è ispirato ai pittori cubisti, che mostravano oggetti da più angolazioni contemporaneamente. Il mio lavoro fa qualcosa di simile per la città moderna, utilizzando strumenti digitali. Questo processo, che chiamo **Smoothism**, utilizza la tecnologia per gestire e trovare connessioni in tutte le informazioni visive.",
-    "collaborations": "Nel corso degli anni, il progetto è cresciuto includendo collaborazioni con pittori tradizionali a olio in Cina, trasformando le immagini digitali in dipinti fisici. Questo collega la nuova tecnologia con competenze artistiche classiche.",
-    "relaunch": "Il progetto riparte ora perché il mondo è più pronto ad accoglierlo. Le persone sono interessate a come arte e tecnologia possono lavorare insieme e vogliono storie autentiche dagli artisti. Dopo anni di sviluppo, è il momento giusto per condividere questi ritratti urbani con un pubblico più ampio.",
+    "intro": "Informazioni sulla Serie",
+    "method": "Il Metodo",
+    "philosophy": "Filosofia & Smoothism",
+    "collaborations": "Collaborazioni",
+    "relaunch": "Il Rilancio",
+    "introText": "Digital City Series è un progetto artistico che crea ritratti di città. Invece di mostrare una singola foto di un edificio famoso, ogni ritratto combina centinaia di foto a livello stradale in un'unica immagine quadrata. Il risultato è una visione unica di una città che trasmette la sensazione di muoversi attraverso di essa.",
+    "methodText": "Il progetto è iniziato nel 2007. Utilizzo uno skateboard per esplorare le città, offrendo una prospettiva rapida e fluida. Durante questi viaggio scatto migliaia di foto. Tornato in studio, unisco queste foto in un'unica composizione senza soluzione di continuità.",
+    "philosophyText": "Questo metodo è ispirato ai pittori cubisti, che mostravano oggetti da più angolazioni contemporaneamente. Il mio lavoro fa qualcosa di simile per la città moderna, utilizzando strumenti digitali. Questo processo, che chiamo **Smoothism**, utilizza la tecnologia per gestire e trovare connessioni in tutte le informazioni visive.",
+    "collaborationsText": "Nel corso degli anni, il progetto è cresciuto includendo collaborazioni con pittori tradizionali a olio in Cina, trasformando le immagini digitali in dipinti fisici. Questo collega la nuova tecnologia con competenze artistiche classiche.",
+    "relaunchText": "Il progetto riparte ora perché il mondo è più pronto ad accoglierlo. Le persone sono interessate a come arte e tecnologia possono lavorare insieme e vogliono storie autentiche dagli artisti. Dopo anni di sviluppo, è il momento giusto per condividere questi ritratti urbani con un pubblico più ampio.",
     "signature": "— Bernard Bolter, Berlino 2024"
   },
   "search": {

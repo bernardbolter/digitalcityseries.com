@@ -6,10 +6,18 @@
     left: 0;
     transform: translateX(-100%);
     width: 100%;
-    background: grey;
+    max-width: 800px;
+    background: $about-background;
     z-index: 1000;
     height: 100vh;
     transition: transform .7s ease-in-out;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.about-container::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
 }
 
 .about-container__open {

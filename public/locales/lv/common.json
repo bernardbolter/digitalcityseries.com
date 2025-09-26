@@ -29,12 +29,16 @@
     "viewArtwork": "Skatīt Mākslas Darbus"
   },
   "about": {
-    "title": "Par Digital City Series",
-    "intro": "Digital City Series ir mākslas projekts, kas rada pilsētu portretus. Tā vietā, lai rādītu vienu slavenas ēkas fotogrāfiju, katrs portrets apvieno simtiem ielu līmeņa fotoattēlu vienā kvadrātveida attēlā. Rezultāts ir unikāls pilsētas skats, kas rada sajūtu it kā pārvietotos caur to.",
-    "method": "Projekts sākās 2007. gadā. Es izmantoju skrituļdēli, lai izpētītu pilsētas, kas nodrošina ātru, plūstošu perspektīvu. Šajos braucienos es uzņemu tūkstošiem fotogrāfiju. Atgriezies studijā, es apvienoju šīs fotogrāfijas vienā nevainojamā kompozīcijā.",
-    "philosophy": "Šī metode ir iedvesmojusies no kubisma gleznotājiem, kuri attēloja objektus no vairākiem skatu punktiem vienlaikus. Mans darbs dara kaut ko līdzīgu mūsdienu pilsētai, izmantojot digitālos rīkus. Šo procesu, ko es dēvēju par **Smoothism**, izmanto tehnoloģijas, lai pārvaldītu un atrastu savienojumus visā vizuālajā informācijā.",
-    "collaborations": "Gadu gaitā projekts ir izaugis, iekļaujot sadarbību ar tradicionāliem eļlas gleznotājiem Ķīnā, pārvēršot digitālos attēlus fiziskos gleznu darbos. Tas savieno jaunās tehnoloģijas ar klasiskajām mākslas prasmēm.",
-    "relaunch": "Projekts tagad tiek atsākts, jo pasaule tam ir vairāk gatava. Cilvēkus interesē, kā māksla un tehnoloģija var strādāt kopā, un viņi vēlas autentiskus stāstus no māksliniekiem. Pēc gadu ilgas attīstības ir pienācis laiks dalīties šajos pilsētu portretos ar plašāku auditoriju.",
+    "intro": "Par Sēriju",
+    "method": "Metode",
+    "philosophy": "Filozofija & Smoothism",
+    "collaborations": "Sadarbība",
+    "relaunch": "Atkārtotais Starts",
+    "introText": "Digital City Series ir mākslas projekts, kas rada pilsētu portretus. Tā vietā, lai rādītu vienu slavenas ēkas fotogrāfiju, katrs portrets apvieno simtiem ielu līmeņa fotoattēlu vienā kvadrātveida attēlā. Rezultāts ir unikāls pilsētas skats, kas rada sajūtu it kā pārvietotos caur to.",
+    "methodText": "Projekts sākās 2007. gadā. Es izmantoju skrituļdēli, lai izpētītu pilsētas, kas nodrošina ātru, plūstošu perspektīvu. Šajos braucienos es uzņemu tūkstošiem fotogrāfiju. Atgriezies studijā, es apvienoju šīs fotogrāfijas vienā nevainojamā kompozīcijā.",
+    "philosophyText": "Šī metode ir iedvesmojusies no kubisma gleznotājiem, kuri attēloja objektus no vairākiem skatu punktiem vienlaikus. Mans darbs dara kaut ko līdzīgu mūsdienu pilsētai, izmantojot digitālos rīkus. Šo procesu, ko es dēvēju par **Smoothism**, izmanto tehnoloģijas, lai pārvaldītu un atrastu savienojumus visā vizuālajā informācijā.",
+    "collaborationsText": "Gadu gaitā projekts ir izaugis, iekļaujot sadarbību ar tradicionāliem eļlas gleznotājiem Ķīnā, pārvēršot digitālos attēlus fiziskos gleznu darbos. Tas savieno jaunās tehnoloģijas ar klasiskajām mākslas prasmēm.",
+    "relaunchText": "Projekts tagad tiek atsākts, jo pasaule tam ir vairāk gatava. Cilvēkus interesē, kā māksla un tehnoloģija var strādāt kopā, un viņi vēlas autentiskus stāstus no māksliniekiem. Pēc gadu ilgas attīstības ir pienācis laiks dalīties šajos pilsētu portretos ar plašāku auditoriju.",
     "signature": "— Bernard Bolter, Berlīne 2024"
   },
   "search": {

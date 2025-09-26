@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { useAppContext } from '@/context/AppContext';
 import { useLocale } from '@/context/LocaleContext';
 import Image from 'next/image';

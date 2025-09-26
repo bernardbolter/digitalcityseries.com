@@ -29,12 +29,16 @@
     "viewArtwork": "Kunstwerke ansehen"
   },
   "about": {
-    "title": "Über die Digital City Series",
-    "intro": "Die Digital City Series ist ein Kunstprojekt, das Stadtporträts erschafft. Anstatt ein einzelnes Foto eines berühmten Gebäudes zu zeigen, kombiniert jedes Porträt Hunderte von Straßenfotos zu einem quadratischen Bild. Das Ergebnis ist eine einzigartige Ansicht einer Stadt, die sich anfühlt, als bewege man sich durch sie hindurch.",
-    "method": "Das Projekt begann im Jahr 2007. Ich benutze ein Skateboard, um Städte zu erkunden, was eine schnelle, fließende Perspektive bietet. Auf diesen Reisen mache ich Tausende von Fotos. Zurück im Studio füge ich diese Fotos zu einer einzigen, nahtlosen Komposition zusammen.",
-    "philosophy": "Diese Methode ist von kubistischen Malern inspiriert, die Objekte aus mehreren Blickwinkeln gleichzeitig zeigten. Meine Arbeit macht etwas Ähnliches für die moderne Stadt, unter Verwendung digitaler Werkzeuge. Dieser Prozess, den ich **Smoothism** nenne, nutzt Technologie, um die visuellen Informationen zu verwalten und Verbindungen in ihnen zu finden.",
-    "collaborations": "Im Laufe der Jahre ist das Projekt gewachsen und umfasst nun Zusammenarbeiten mit traditionellen Ölmalern in China, die die digitalen Bilder in physische Gemälde verwandeln. Dies verbindet neue Technologie mit klassischen Kunstfertigkeiten.",
-    "relaunch": "Das Projekt startet jetzt neu, weil die Welt mehr dafür bereit ist. Menschen interessieren sich dafür, wie Kunst und Technologie zusammenarbeiten können, und sie wollen authentische Geschichten von Künstlern. Nach Jahren der Entwicklung ist die Zeit reif, diese Stadtporträts mit einem breiteren Publikum zu teilen.",
+    "intro": "Über die Serie",
+    "method": "Die Methode",
+    "philosophy": "Philosophie & Smoothism",
+    "collaborations": "Zusammenarbeiten",
+    "relaunch": "Der Neustart",
+    "introText": "Die Digital City Series ist ein Kunstprojekt, das Stadtporträts erschafft. Anstatt ein einzelnes Foto eines berühmten Gebäudes zu zeigen, kombiniert jedes Porträt Hunderte von Straßenfotos zu einem quadratischen Bild. Das Ergebnis ist eine einzigartige Ansicht einer Stadt, die sich anfühlt, als bewege man sich durch sie hindurch.",
+    "methodText": "Das Projekt begann im Jahr 2007. Ich benutze ein Skateboard, um Städte zu erkunden, was eine schnelle, fließende Perspektive bietet. Auf diesen Reisen mache ich Tausende von Fotos. Zurück im Studio füge ich diese Fotos zu einer einzigen, nahtlosen Komposition zusammen.",
+    "philosophyText": "Diese Methode ist von kubistischen Malern inspiriert, die Objekte aus mehreren Blickwinkeln gleichzeitig zeigten. Meine Arbeit macht etwas Ähnliches für die moderne Stadt, unter Verwendung digitaler Werkzeuge. Dieser Prozess, den ich **Smoothism** nenne, nutzt Technologie, um die visuellen Informationen zu verwalten und Verbindungen in ihnen zu finden.",
+    "collaborationsText": "Im Laufe der Jahre ist das Projekt gewachsen und umfasst nun Zusammenarbeiten mit traditionellen Ölmalern in China, die die digitalen Bilder in physische Gemälde verwandeln. Dies verbindet neue Technologie mit klassischen Kunstfertigkeiten.",
+    "relaunchText": "Das Projekt startet jetzt neu, weil die Welt mehr dafür bereit ist. Menschen interessieren sich dafür, wie Kunst und Technologie zusammenarbeiten können, und sie wollen authentische Geschichten von Künstlern. Nach Jahren der Entwicklung ist die Zeit reif, diese Stadtporträts mit einem breiteren Publikum zu teilen.",
     "signature": "— Bernard Bolter, Berlin 2024"
   },
   "search": {

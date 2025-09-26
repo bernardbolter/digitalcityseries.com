@@ -29,12 +29,16 @@
     "viewArtwork": "Visa Konstverk"
   },
   "about": {
-    "title": "Om Digital City Series",
-    "intro": "Digital City Series är ett konstprojekt som skapar stadsskildringar. Istället för att visa ett enda foto av ett känt byggnadsverk kombinerar varje porträtt hundratals gatufoton till en enda kvadratisk bild. Resultatet är en unik vy över en stad som ger känslan av att röra sig genom den.",
-    "method": "Projektet startade 2007. Jag använder en skateboard för att utforska städer, vilket ger ett snabbt, flytande perspektiv. Jag tar tusentals bilder på dessa resor. Tillbaka i studiet kombinerar jag dessa foton till en enda sömlös komposition.",
-    "philosophy": "Denna metod är inspirerad av kubistiska målare, som visade objekt från flera vinklar samtidigt. Mitt arbete gör något liknande för den moderna staden, med hjälp av digitala verktyg. Denna process, som jag kallar **Smoothism**, använder teknologi för att hantera och hitta samband i all visuell information.",
-    "collaborations": "Under åren har projektet vuxit till att inkludera samarbeten med traditionella oljemålare i Kina, där de digitala bilderna omvandlas till fysiska målningar. Detta förenar ny teknologi med klassiska konstfärdigheter.",
-    "relaunch": "Projektet startas om nu eftersom världen är mer redo för det. Människor är intresserade av hur konst och teknologi kan arbeta tillsammans, och de vill ha autentiska berättelser från konstnärer. Efter år av utveckling är det dags att dela dessa stadsskildringar med en bredare publik.",
+    "intro": "Om Serien",
+    "method": "Metoden",
+    "philosophy": "Filosofi & Smoothism",
+    "collaborations": "Samarbeten",
+    "relaunch": "Omstarten",
+    "introText": "Digital City Series är ett konstprojekt som skapar stadsskildringar. Istället för att visa ett enda foto av ett känt byggnadsverk kombinerar varje porträtt hundratals gatufoton till en enda kvadratisk bild. Resultatet är en unik vy över en stad som ger känslan av att röra sig genom den.",
+    "methodText": "Projektet startade 2007. Jag använder en skateboard för att utforska städer, vilket ger ett snabbt, flytande perspektiv. Jag tar tusentals bilder på dessa resor. Tillbaka i studiet kombinerar jag dessa foton till en enda sömlös komposition.",
+    "philosophyText": "Denna metod är inspirerad av kubistiska målare, som visade objekt från flera vinklar samtidigt. Mitt arbete gör något liknande för den moderna staden, med hjälp av digitala verktyg. Denna process, som jag kallar **Smoothism**, använder teknologi för att hantera och hitta samband i all visuell information.",
+    "collaborationsText": "Under åren har projektet vuxit till att inkludera samarbeten med traditionella oljemålare i Kina, där de digitala bilderna omvandlas till fysiska målningar. Detta förenar ny teknologi med klassiska konstfärdigheter.",
+    "relaunchText": "Projektet startas om nu eftersom världen är mer redo för det. Människor är intresserade av hur konst och teknologi kan arbeta tillsammans, och de vill ha autentiska berättelser från konstnärer. Efter år av utveckling är det dags att dela dessa stadsskildringar med en bredare publik.",
     "signature": "— Bernard Bolter, Berlin 2024"
   },
   "search": {

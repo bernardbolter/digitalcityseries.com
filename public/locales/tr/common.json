@@ -29,12 +29,16 @@
     "viewArtwork": "Sanat Eserlerini Görüntüle"
   },
   "about": {
-    "title": "Digital City Series Hakkında",
-    "intro": "Digital City Series, şehir portreleri oluşturan bir sanat projesidir. Ünlü bir binanın tek bir fotoğrafını göstermek yerine, her portre yüzlerce sokak seviyesi fotoğrafı tek bir kare görüntüde birleştirir. Ortaya çıkan sonuç, içinde hareket ediyormuş hissi veren benzersiz bir şehir manzarasıdır.",
-    "method": "Proje 2007'de başladı. Şehirleri keşfetmek için kaykay kullanıyorum, bu da hızlı ve akıcı bir perspektif sunuyor. Bu yolculuklarda binlerce fotoğraf çekiyorum. Stüdyoya döndüğümde, bu fotoğrafları tek bir sorunsuz kompozisyonda birleştiriyorum.",
-    "philosophy": "Bu yöntem, nesneleri aynı anda birden fazla açıdan gösteren Kübist ressamların esin kaynağıdır. Benim çalışmam, dijital araçları kullanarak modern şehir için benzer bir şey yapıyor. **Smoothism** adını verdiğim bu süreç, tüm görsel bilgilerde bağlantıları yönetmek ve bulmak için teknolojiyi kullanır.",
-    "collaborations": "Yıllar içinde proje, dijital görüntüleri fiziksel tablolara dönüştüren Çin'deki geleneksel yağlı boya ressamları ile işbirliklerini de içerecek şekilde büyüdü. Bu, yeni teknolojiyi klasik sanat becerileriyle birleştirir.",
-    "relaunch": "Proje şimdi yeniden başlıyor çünkü dünya bunun için daha hazır. İnsanlar sanat ve teknolojinin nasıl birlikte çalışabileceğiyle ilgileniyor ve sanatçılardan otantik hikayeler istiyor. Yıllar süren geliştirmeden sonra, bu şehir portrelerini daha geniş bir kitleyle paylaşmanın zamanı geldi.",
+    "intro": "Seri Hakkında",
+    "method": "Yöntem",
+    "philosophy": "Felsefe & Smoothism",
+    "collaborations": "İşbirlikleri",
+    "relaunch": "Yeniden Başlatma",
+    "introText": "Digital City Series, şehir portreleri oluşturan bir sanat projesidir. Ünlü bir binanın tek bir fotoğrafını göstermek yerine, her portre yüzlerce sokak seviyesi fotoğrafı tek bir kare görüntüde birleştirir. Ortaya çıkan sonuç, içinde hareket ediyormuş hissi veren benzersiz bir şehir manzarasıdır.",
+    "methodText": "Proje 2007'de başladı. Şehirleri keşfetmek için kaykay kullanıyorum, bu da hızlı ve akıcı bir perspektif sunuyor. Bu yolculuklarda binlerce fotoğraf çekiyorum. Stüdyoya döndüğümde, bu fotoğrafları tek bir sorunsuz kompozisyonda birleştiriyorum.",
+    "philosophyText": "Bu yöntem, nesneleri aynı anda birden fazla açıdan gösteren Kübist ressamların esin kaynağıdır. Benim çalışmam, dijital araçları kullanarak modern şehir için benzer bir şey yapıyor. **Smoothism** adını verdiğim bu süreç, tüm görsel bilgilerde bağlantıları yönetmek ve bulmak için teknolojiyi kullanır.",
+    "collaborationsText": "Yıllar içinde proje, dijital görüntüleri fiziksel tablolara dönüştüren Çin'deki geleneksel yağlı boya ressamları ile işbirliklerini de içerecek şekilde büyüdü. Bu, yeni teknolojiyi klasik sanat becerileriyle birleştirir.",
+    "relaunchText": "Proje şimdi yeniden başlıyor çünkü dünya bunun için daha hazır. İnsanlar sanat ve teknolojinin nasıl birlikte çalışabileceğiyle ilgileniyor ve sanatçılardan otantik hikayeler istiyor. Yıllar süren geliştirmeden sonra, bu şehir portrelerini daha geniş bir kitleyle paylaşmanın zamanı geldi.",
     "signature": "— Bernard Bolter, Berlin 2024"
   },
   "search": {

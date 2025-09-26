@@ -29,12 +29,16 @@
     "viewArtwork": "Pogledajte Radove"
   },
   "about": {
-    "title": "O Digital City Series",
-    "intro": "Digital City Series je umjetnički projekt koji stvara portrete gradova. Umjesto prikazivanja jedne fotografije poznate zgrade, svaki portret kombinira stotine fotografija s razine ulice u jednu kvadratnu sliku. Rezultat je jedinstven pogled na grad koji daje osjećaj kretanja kroz njega.",
-    "method": "Projekt je započet 2007. godine. Koristim skateboard za istraživanje gradova, što pruža brzu, fluidnu perspektivu. Tijekom ovih putovanja snimam tisuće fotografija. Povratkom u studio, spajam ove fotografije u jednu jedinstvenu kompoziciju bez šavova.",
-    "philosophy": "Ova metoda je inspirirana kubističkim slikarima, koji su prikazivali objekte iz više kutova istovremeno. Moj rad čini nešto slično za moderni grad, koristeći digitalne alate. Ovaj proces, koji nazivam **Smoothismom**, koristi tehnologiju za upravljanje i pronalaženje veza u svim vizualnim informacijama.",
-    "collaborations": "Tijekom godina, projekt je narastao kako bi uključio suradnju s tradicionalnim kineskim slikarima uljanih boja, pretvarajući digitalne slike u fizičke slike. Ovo povezuje novu tehnologiju s klasičnim umjetničkim vještinama.",
-    "relaunch": "Projekt se sada ponovno pokreće jer je svijet spreman za njega. Ljudi su zainteresirani za to kako umjetnost i tehnologija mogu raditi zajedno, i žele autentične priče od umjetnika. Nakon godina razvoja, pravo je vrijeme da podijelim ove gradske portrete sa širom publikom.",
+    "intro": "O Seriji",
+    "method": "Metoda",
+    "philosophy": "Filozofija & Smoothism",
+    "collaborations": "Suradnje",
+    "relaunch": "Ponovno Pokretanje",
+    "introText": "Digital City Series je umjetnički projekt koji stvara portrete gradova. Umjesto prikazivanja jedne fotografije poznate zgrade, svaki portret kombinira stotine fotografija s razine ulice u jednu kvadratnu sliku. Rezultat je jedinstven pogled na grad koji daje osjećaj kretanja kroz njega.",
+    "methodText": "Projekt je započet 2007. godine. Koristim skateboard za istraživanje gradova, što pruža brzu, fluidnu perspektivu. Tijekom ovih putovanja snimam tisuće fotografija. Povratkom u studio, spajam ove fotografije u jednu jedinstvenu kompoziciju bez šavova.",
+    "philosophyText": "Ova metoda je inspirirana kubističkim slikarima, koji su prikazivali objekte iz više kutova istovremeno. Moj rad čini nešto slično za moderni grad, koristeći digitalne alate. Ovaj proces, koji nazivam **Smoothismom**, koristi tehnologiju za upravljanje i pronalaženje veza u svim vizualnim informacijama.",
+    "collaborationsText": "Tijekom godina, projekt je narastao kako bi uključio suradnju s tradicionalnim kineskim slikarima uljanih boja, pretvarajući digitalne slike u fizičke slike. Ovo povezuje novu tehnologiju s klasičnim umjetničkim vještinama.",
+    "relaunchText": "Projekt se sada ponovno pokreće jer je svijet spreman za njega. Ljudi su zainteresirani za to kako umjetnost i tehnologija mogu raditi zajedno, i žele autentične priče od umjetnika. Nakon godina razvoja, pravo je vrijeme da podijelim ove gradske portrete sa širom publikom.",
     "signature": "— Bernard Bolter, Berlin 2024"
   },
   "search": {
