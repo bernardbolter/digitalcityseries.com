@@ -23,16 +23,14 @@
       "random": "Aléatoire",
       "selectACity": "Sélectionner une ville"
   },
-  "hero": {
-    "title": "Série Ville Numérique",
-    "subtitle": "Explorer les environnements urbains à travers l'art numérique",
-    "viewArtwork": "Voir les œuvres"
-  },
   "about": {
-    "title": "À propos de la série",
-    "description": "La Série Ville Numérique est une collection d'œuvres d'art numériques de Bernard Bolter qui explore les environnements urbains à travers un regard artistique unique.",
-    "artist": "À propos de l'artiste",
-    "artistDescription": "Bernard Bolter est un natif de San Francisco qui vit à Copenhague depuis 2009. Son travail explore l'intersection des environnements urbains et de l'art numérique."
+    "title": "À propos de Digital City Series",
+    "intro": "Digital City Series est un projet artistique qui crée des portraits de villes. Au lieu de montrer une simple photo d'un bâtiment célèbre, chaque portrait combine des centaines de photos de rue en une seule image carrée. Le résultat est une vision unique d'une ville qui donne la sensation de se déplacer à travers elle.",
+    "method": "Le projet a débuté en 2007. J'utilise un skateboard pour explorer les villes, ce qui offre une perspective rapide et fluide. Je prends des milliers de photos lors de ces parcours. De retour en studio, je fusionne ces photos en une composition unique et homogène.",
+    "philosophy": "Cette méthode s'inspire des peintres cubistes, qui montraient les objets sous plusieurs angles simultanément. Mon travail fait de même pour la ville moderne, en utilisant des outils numériques. Ce processus, que j'appelle le **Smoothism**, utilise la technologie pour gérer et trouver des connexions dans toutes les informations visuelles.",
+    "collaborations": "Au fil des années, le projet s'est développé pour inclure des collaborations avec des peintres traditionnels à l'huile en Chine, transformant les images numériques en peintures physiques. Cela connecte la nouvelle technologie avec des compétences artistiques classiques.",
+    "relaunch": "Le projet redémarre maintenant car le monde y est plus préparé. Les gens s'intéressent à la façon dont l'art et la technologie peuvent travailler ensemble, et ils veulent des histoires authentiques venant des artistes. Après des années de développement, le moment est venu de partager ces portraits urbains avec un public plus large.",
+    "signature": "— Bernard Bolter, Berlin 2024"
   },
   "search": {
     "placeholder": "Rechercher des œuvres...",

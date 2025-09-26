@@ -29,10 +29,13 @@
     "viewArtwork": "Ver Obras"
   },
   "about": {
-    "title": "Sobre a Série",
-    "description": "A Série Cidade Digital é uma coleção de obras de arte digital de Bernard Bolter que explora ambientes urbanos através de uma perspectiva artística única.",
-    "artist": "Sobre o Artista",
-    "artistDescription": "Bernard Bolter, natural de São Francisco, vive em Copenhague desde 2009. Seu trabalho explora a interseção entre ambientes urbanos e arte digital."
+    "title": "Sobre a Digital City Series",
+    "intro": "A Digital City Series é um projeto artístico que cria retratos de cidades. Em vez de mostrar uma única foto de um edifício famoso, cada retrato combina centenas de fotos tiradas ao nível da rua em uma única imagem quadrada. O resultado é uma visão única de uma cidade que transmite a sensação de se mover através dela.",
+    "method": "O projeto começou em 2007. Eu uso um skate para explorar cidades, o que oferece uma perspectiva rápida e fluida. Tiro milhares de fotos nessas jornadas. De volta ao estúdio, combino essas fotos em uma única composição sem emendas.",
+    "philosophy": "Este método é inspirado nos pintores cubistas, que mostravam objetos de múltiplos ângulos simultaneamente. Meu trabalho faz algo similar para a cidade moderna, usando ferramentas digitais. Este processo, que chamo de **Smoothism**, usa a tecnologia para ajudar a gerenciar e encontrar conexões em todas as informações visuais.",
+    "collaborations": "Ao longo dos anos, o projeto cresceu para incluir colaborações com pintores tradicionais a óleo na China, transformando as imagens digitais em pinturas físicas. Isso conecta a nova tecnologia com habilidades artísticas clássicas.",
+    "relaunch": "O projeto está reiniciando agora porque o mundo está mais preparado para ele. As pessoas estão interessadas em como a arte e a tecnologia podem trabalhar juntas, e querem histórias autênticas dos artistas. Após anos de desenvolvimento, é o momento certo para compartilhar esses retratos urbanos com um público mais amplo.",
+    "signature": "— Bernard Bolter, Berlim 2024"
   },
   "search": {
     "placeholder": "Pesquisar obras...",

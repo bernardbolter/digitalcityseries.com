@@ -29,10 +29,13 @@
     "viewArtwork": "Ver obras de arte"
   },
   "about": {
-    "title": "Acerca de la serie",
-    "description": "La Serie Ciudad Digital es una colección de obras de arte digitales de Bernard Bolter que explora los entornos urbanos a través de una perspectiva artística única.",
-    "artist": "Acerca del artista",
-    "artistDescription": "Bernard Bolter es un nativo de San Francisco que vive en Copenhague desde 2009. Su trabajo explora la intersección de los entornos urbanos y el arte digital."
+    "title": "Sobre Digital City Series",
+    "intro": "Digital City Series es un proyecto artístico que crea retratos de ciudades. En lugar de mostrar una sola foto de un edificio famoso, cada retrato combina cientos de fotos a nivel de la calle en una única imagen cuadrada. El resultado es una visión única de una ciudad que transmite la sensación de moverse a través de ella.",
+    "method": "El proyecto comenzó en 2007. Utilizo una patineta para explorar ciudades, lo que ofrece una perspectiva rápida y fluida. Tomo miles de fotos en estos recorridos. De vuelta en el estudio, combino estas fotos en una única composición sin costuras.",
+    "philosophy": "Este método está inspirado en los pintores cubistas, que mostraban objetos desde múltiples ángulos simultáneamente. Mi trabajo hace algo similar para la ciudad moderna, utilizando herramientas digitales. Este proceso, que llamo **Smoothism**, utiliza la tecnología para ayudar a gestionar y encontrar conexiones en toda la información visual.",
+    "collaborations": "A lo largo de los años, el proyecto ha crecido para incluir colaboraciones con pintores tradicionales al óleo en China, transformando las imágenes digitales en pinturas físicas. Esto conecta la nueva tecnología con habilidades artísticas clásicas.",
+    "relaunch": "El proyecto se reinicia ahora porque el mundo está más preparado para ello. La gente está interesada en cómo el arte y la tecnología pueden trabajar juntos, y quiere historias auténticas de los artistas. Después de años de desarrollo, es el momento adecuado para compartir estos retratos urbanos con un público más amplio.",
+    "signature": "— Bernard Bolter, Berlín 2024"
   },
   "search": {
     "placeholder": "Buscar obras de arte...",
