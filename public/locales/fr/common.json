@@ -36,6 +36,12 @@
     "relaunchText": "Le projet redémarre maintenant car le monde y est plus préparé. Les gens s'intéressent à la façon dont l'art et la technologie peuvent travailler ensemble, et ils veulent des histoires authentiques venant des artistes. Après des années de développement, le moment est venu de partager ces portraits urbains avec un public plus large.",
     "signature": "— Bernard Bolter, Berlin 2024"
   },
+  "paintings": {
+    "aboutThePaintings" : "À propos des peintures",
+    "originStory": "Le voyage à Da Fen a commencé par une question : comment mes compositions numériques de villes pourraient-elles exister dans le monde physique ? J'ai voyagé jusqu'au célèbre village de peinture à l'huile de Shenzhen, un lieu vibrant d'énergie artistique, et je me suis retrouvé à partager un repas avec un artiste nommé Sanzi (Wang Xiaolong). Sans langue commune, nous nous sommes connectés à travers les images sur mon ordinateur portable. Cette rencontre a donné naissance à notre première collaboration - une magnifique peinture à l'huile de Los Angeles - et a jeté les bases d'un pont interculturel unique.",
+    "collaborationProcess": "Aujourd'hui, cette connexion initiale est devenue une partie essentielle de Digital City Series. Nous collaborons avec des maîtres artistes de Da Fen pour traduire nos visions numériques 'Smoothist' en peintures à l'huile uniques. Ce n'est pas une simple reproduction ; c'est une réinterprétation. Les artistes apportent leur compréhension profonde de la texture, de la lumière et de la physicalité de la peinture, ajoutant une nouvelle dimension tactile à l'œuvre numérique originale.",
+    "artisticSignificance": "Ces collaborations représentent une fusion unique entre les mondes de l'art numérique et traditionnel. Elles témoignent de l'idée que l'innovation et l'héritage peuvent coexister, créant quelque chose de totalement nouveau. Chaque peinture est un pont - connectant ma perspective numérique avec des siècles de savoir-faire analogique, et reliant l'élan vers l'avant de Berlin aux mains habiles de Da Fen."
+  },
   "search": {
     "placeholder": "Rechercher des œuvres...",
     "filter": "Filtrer",

@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { useAppContext } from '@/context/AppContext';
 import { useLocale } from '@/context/LocaleContext';
 import Image from 'next/image';
-import Close from '@/svg/close';
+import CloseIcon from '@/svg/CloseIcon'
 
 
 const About = () => {
@@ -29,42 +29,62 @@ const About = () => {
         }} 
         className="about-close-container"
       >
-        <Close />
+        <CloseIcon />
       </div>
       
-      {/* <div className="about-container__inside"> */}
-      
-      <div 
-        id="about-content"
-        className={`about__content ${aboutOpen ? 'is-open' : ''}`}
-      >
-        <h2 className="about__title">{t('about.title')}</h2>
-        <div className="about__section">
-          <div className="about__text">
-            <p>
-              {t('about.description')}
-            </p>
-            <p>
-              Each artwork is created using a unique process that involves photography, digital collage, and 
-              various digital painting techniques.
-            </p>
-            <h3>{t('about.artist')}</h3>
-            <p>
-              {t('about.artistDescription')}
-            </p>
-          </div>
-          <div className="about__image-container">
-            <Image 
-              src="https://www.bernardbolter.com/artwork/wp-content/uploads/2019/01/bernard-bolter.jpg" 
-              alt="Bernard Bolter" 
-              width={500} 
-              height={600}
-              className="about__image"
-            />
-          </div>
-        </div>
+      <div className="about__content">
+        <h1>{t('about.intro')}</h1>
+        <p>{t('about.introText')}</p>
       </div>
-      {/* </div> */}
+
+        <figure className="about-photo__container">
+          <Image
+            src="/images/bernard_bolter_portrait.jpg"
+            alt="Bernard Bolter at the exhibition of the Digital City Series @ Book & Job Gallery. SF 2013."
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+          <figcaption className="about-photo__caption">Bernard Bolter at the exhibition of the Digital City Series. Book & Job Gallery, SF 2013.</figcaption>
+        </figure>
+        
+
+      <div className="about__content">
+        <h2>{t('about.method')}</h2>
+        <p>{t('about.methodText')}</p>
+      </div>
+
+        <figure className="about-photo__container">
+          <Image
+            src="/images/bernard-bolter-skaing-in-san-francisco-1989.jpg"
+            alt="Bernard Bolter skating in San Francisco on a SHUT board in 1989"
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+          <figcaption className="about-photo__caption">Bernard Bolter skating in San Francisco on a SHUT board in 1989.</figcaption>
+        </figure>
+
+      <div className="about__content">
+        <h2>{t('about.philosophy')}</h2>
+        <p>{t('about.philosophyText')}</p>
+      </div>
+
+      <figure className="about-photo__container">
+          <Image
+            src="/images/cutting-cultures-amsterdam-2009.jpg"
+            alt="Exhibition of the Digital City Series at Cutting Cultures Gallery. Amsterdam 2009."
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+          <figcaption className="about-photo__caption">Exhibition of the Digital City Series at Cutting Cultures Gallery. Amsterdam 2009.</figcaption>
+        </figure>
+
+      <div className="about__content">
+        <h2>{t('about.collaborations')}</h2>
+        <p>{t('about.collaborationsText')}</p>
+        <h2>{t('about.relaunch')}</h2>
+        <p>{t('about.relaunchText')}</p>
+        <p className="about__signature">{t('about.signature')}</p>
+      </div>
     </div>
   );
 };

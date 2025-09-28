@@ -41,6 +41,12 @@
     "relaunchText": "Il progetto riparte ora perché il mondo è più pronto ad accoglierlo. Le persone sono interessate a come arte e tecnologia possono lavorare insieme e vogliono storie autentiche dagli artisti. Dopo anni di sviluppo, è il momento giusto per condividere questi ritratti urbani con un pubblico più ampio.",
     "signature": "— Bernard Bolter, Berlino 2024"
   },
+  "paintings": {
+    "aboutThePaintings" : "Informazioni sui dipinti",
+    "originStory": "Il viaggio a Da Fen è iniziato con una domanda: come potrebbero le mie composizioni digitali di città esistere nel mondo fisico? Sono andato nel famoso villaggio di pittura ad olio di Shenzhen, un luogo pulsante di energia artistica, e mi sono trovato a condividere un pasto con un artista di nome Sanzi (Wang Xiaolong). Senza una lingua comune, ci siamo connessi attraverso le immagini sul mio laptop. Questo incontro ha dato vita alla nostra prima collaborazione - un bellissimo dipinto ad olio di Los Angeles - e ha gettato le basi per un ponte unico tra culture.",
+    "collaborationProcess": "Oggi, quella connessione iniziale si è evoluta in una parte fondamentale di Digital City Series. Collaboriamo con artisti maestri di Da Fen per tradurre le nostre visioni digitali 'Smoothist' in dipinti ad olio unici. Questa non è una semplice riproduzione; è una reinterpretazione. Gli artisti portano la loro profonda comprensione della texture, della luce e della fisicità della pittura, aggiungendo un nuovo strato tattile all'opera digitale originale.",
+    "artisticSignificance": "Queste collaborazioni rappresentano una fusione unica tra i mondi dell'arte digitale e tradizionale. Sono una testimonianza dell'idea che innovazione e tradizione possano coesistere, creando qualcosa di completamente nuovo. Ogni dipinto è un ponte - che collega la mia prospettiva digitale con secoli di artigianato analogico, e unisce lo slancio in avanti di Berlino con le abili mani di Da Fen."
+  },
   "search": {
     "placeholder": "Cerca opere...",
     "filter": "Filtra",

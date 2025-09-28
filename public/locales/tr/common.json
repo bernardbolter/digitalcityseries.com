@@ -41,6 +41,12 @@
     "relaunchText": "Proje şimdi yeniden başlıyor çünkü dünya bunun için daha hazır. İnsanlar sanat ve teknolojinin nasıl birlikte çalışabileceğiyle ilgileniyor ve sanatçılardan otantik hikayeler istiyor. Yıllar süren geliştirmeden sonra, bu şehir portrelerini daha geniş bir kitleyle paylaşmanın zamanı geldi.",
     "signature": "— Bernard Bolter, Berlin 2024"
   },
+  "paintings": {
+    "aboutThePaintings" : "Tablolar Hakkında",
+    "originStory": "Da Fen yolculuğu bir soruyla başladı: dijital şehir kompozisyonlarım fiziksel dünyada nasıl var olabilirdi? Shenzhen'deki ünlü yağlı boya resim köyüne, sanatsal enerjiyle dolu bir yere gittim ve kendimi Sanzi (Wang Xiaolong) adlı bir sanatçıyla yemek yerken buldum. Ortak bir dilimiz olmamasına rağmen, dizüstü bilgisayarımdaki görüntüler aracılığıyla bağlantı kurduk. Bu buluşma, Los Angeles'ın güzel bir yağlı boya resmi olan ilk işbirliğimizi ateşledi ve benzersiz bir kültürler arası köprünün temelini attı.",
+    "collaborationProcess": "Bugün, bu ilk bağlantı Digital City Series'in temel bir parçası haline geldi. Dijital 'Smoothist' vizyonlarımızı benzersiz yağlı boya tablolara dönüştürmek için Da Fen'deki usta sanatçılarla işbirliği yapıyoruz. Bu sadece bir reprodüksiyon değil; bir yeniden yorumlamadır. Sanatçılar, doku, ışık ve boyanın fizikselliği konusundaki derin anlayışlarını getirerek orijinal dijital çalışmaya yeni, dokunsal bir katman ekliyorlar.",
+    "artisticSignificance": "Bu işbirlikleri, dijital ve geleneksel sanat dünyalarının benzersiz bir birleşimini temsil edmektedir. Yenilik ve mirasın bir arada var olabileceği ve tamamen yeni bir şeyler yaratabileceği fikrinin bir kanıtıdır. Her resim bir köprüdür - dijital perspektifimi yüzyılların analog zanaatkarlığıyla bağlar ve Berlin'in ileri hareketliliğini Da Fen'in yetenekli elleriyle birleştirir."
+  },
   "search": {
     "placeholder": "Sanat eserlerinde ara...",
     "filter": "Filtrele",

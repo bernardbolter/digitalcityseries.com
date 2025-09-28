@@ -41,6 +41,12 @@
     "relaunchText": "Projekts tagad tiek atsākts, jo pasaule tam ir vairāk gatava. Cilvēkus interesē, kā māksla un tehnoloģija var strādāt kopā, un viņi vēlas autentiskus stāstus no māksliniekiem. Pēc gadu ilgas attīstības ir pienācis laiks dalīties šajos pilsētu portretos ar plašāku auditoriju.",
     "signature": "— Bernard Bolter, Berlīne 2024"
   },
+  "paintings": {
+    "aboutThePaintings" : "Par gleznām",
+    "originStory": "Ceļojums uz Da Fenu sākās ar jautājumu: kā mana digitālā pilsētu kompozīcija varētu pastāvēt fiziskajā pasaulē? Es devos uz slaveno eļļas glezniecības ciematu Šendženā, vietu, kurā pulsa mākslinieciska enerģija, un atradās kopā ar mākslinieku vārdā Sanzi (Vans Sjaoluns), daloties maltītē. Bez kopīgas valodas mēs savienojāmies caur attēliem manā klēpjdatorā. Šī tikšanās aizsāka mūsu pirmo sadarbību — skaistu eļļas gleznu par Losandželosu — un lika pamatus unikālam starpkultūru tiltam.",
+    "collaborationProcess": "Šodien šī sākotnējā saikne ir kļuvusi par Digital City Series neatņemamu daļu. Mēs sadarbojamies ar Da Fena amatnieku māksliniekiem, lai pārvērstu mūsu digitālās 'Smoothist' vīzijas unikālās eļļas gleznās. Tā nav tikai reproducēšana; tā ir atkārtota interpretācija. Mākslinieki ienes savu dziļo izpratni par tekstūru, gaismu un krāsas fiziskumu, pievienojot jaunu, taustāmu slāni oriģinālajam digitālajam darbam.",
+    "artisticSignificance": "Šīs sadarbības atspoguļo unikālu digitālās un tradicionālās mākslas pasaulu saplūšanu. Tās ir liecība idejai, ka inovācija un mantojums var līdzās pastāvēt, radot kaut ko pilnīgi jaunu. Katra glezna ir tilts — savienojot manu digitālo perspektīvu ar gadsimtu senu analogā amatniecību un savienojot Berlines virzību uz priekšu ar Da Fena prasmīgajām rokām."
+  },
   "search": {
     "placeholder": "Meklēt mākslas darbus...",
     "filter": "Filtrs",

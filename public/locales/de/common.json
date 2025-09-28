@@ -41,6 +41,12 @@
     "relaunchText": "Das Projekt startet jetzt neu, weil die Welt mehr dafür bereit ist. Menschen interessieren sich dafür, wie Kunst und Technologie zusammenarbeiten können, und sie wollen authentische Geschichten von Künstlern. Nach Jahren der Entwicklung ist die Zeit reif, diese Stadtporträts mit einem breiteren Publikum zu teilen.",
     "signature": "— Bernard Bolter, Berlin 2024"
   },
+  "paintings": {
+    "aboutThePaintings" : "Über die Gemälde",
+    "originStory": "Die Reise nach Da Fen begann mit einer Frage: Wie könnten meine digitalen Stadtkompositionen in der physischen Welt existieren? Ich reiste in das berühmte Ölmalerdorf in Shenzhen, einen Ort voller künstlerischer Energie, und fand mich beim Teilen einer Mahlzeit mit einem Künstler namens Sanzi (Wang Xiaolong) wieder. Ohne gemeinsame Sprache verbanden wir uns durch die Bilder auf meinem Laptop. Dieses Treffen löste unsere erste Zusammenarbeit aus - ein wunderschönes Ölgemälde von Los Angeles - und legte den Grundstein für eine einzigartige Brücke zwischen den Kulturen.",
+    "collaborationProcess": "Heute hat sich diese anfängliche Verbindung zu einem Kernstück der Digital City Series entwickelt. Wir arbeiten mit Meisterkünstlern in Da Fen zusammen, um unsere digitalen 'Smoothist'-Visionen in einzigartige Ölgemälde zu übersetzen. Dies ist keine bloße Reproduktion; es ist eine Neuinterpretation. Die Künstler bringen ihr tiefes Verständnis für Textur, Licht und die Körperlichkeit der Farbe ein und fügen der originalen digitalen Arbeit eine neue, haptische Ebene hinzu.",
+    "artisticSignificance": "Diese Zusammenarbeit repräsentiert eine einzigartige Fusion der digitalen und der traditionellen Kunstwelt. Sie sind ein Beweis für die Idee, dass Innovation und Tradition koexistieren und etwas völlig Neues schaffen können. Jedes Gemälde ist eine Brücke - es verbindet meine digitale Perspektive mit jahrhundertealtem analogen Handwerk und verknüpft den Vorwärtsdrang Berlins mit den geschickten Händen von Da Fen."
+  },
   "search": {
     "placeholder": "Kunstwerke durchsuchen...",
     "filter": "Filter",

@@ -41,6 +41,12 @@
     "relaunchText": "Projekt se sada ponovno pokreće jer je svijet spreman za njega. Ljudi su zainteresirani za to kako umjetnost i tehnologija mogu raditi zajedno, i žele autentične priče od umjetnika. Nakon godina razvoja, pravo je vrijeme da podijelim ove gradske portrete sa širom publikom.",
     "signature": "— Bernard Bolter, Berlin 2024"
   },
+  "paintings": {
+    "aboutThePaintings" : "O slikama",
+    "originStory": "Putovanje u Da Fen počelo je pitanjem: kako bi moje digitalne kompozicije gradova mogle postojati u fizičkom svijetu? Otputovao sam u poznato selo uljanih slika u Shenzhenu, mjesto puno umjetničke energije, i našao se kako dijelim obrok s umjetnikom po imenu Sanzi (Wang Xiaolong). Bez zajedničkog jezika, povezali smo se preko slika na mom laptopu. Taj susret pokrenuo je našu prvu suradnju - prekrasnu uljanu sliku Los Angelesa - i postavio temelj za jedinstven most između kultura.",
+    "collaborationProcess": "Danas je ta početna veza evoluirala u središnji dio Digital City Series. Surađujemo s majstorskim umjetnicima u Da Fenu kako bismo pretočili naše digitalne 'Smoothist' vizije u jedinstvene uljane slike. Ovo nije puko reprodukcija; to je reinterpretacija. Umjetnici donose svoje duboko razumijevanje teksture, svjetla i fizičke prirode boje, dodajući novi, taktilni sloj originalnom digitalnom djelu.",
+    "artisticSignificance": "Ove suradnje predstavljaju jedinstvenu fuziju digitalnog i tradicionalnog umjetničkog svijeta. Svjedočanstvo su ideje da inovacija i naslijeđe mogu koegzistirati, stvarajući nešto potpuno novo. Svaka slika je most - povezuje moju digitalnu perspektivu sa stoljećima analognog zanata i povezuje zamah naprijed Berlina s vještim rukama Da Fena."
+  },
   "search": {
     "placeholder": "Pretraži umjetničke radove...",
     "filter": "Filtriraj",

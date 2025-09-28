@@ -41,6 +41,12 @@
     "relaunchText": "Projektet startas om nu eftersom världen är mer redo för det. Människor är intresserade av hur konst och teknologi kan arbeta tillsammans, och de vill ha autentiska berättelser från konstnärer. Efter år av utveckling är det dags att dela dessa stadsskildringar med en bredare publik.",
     "signature": "— Bernard Bolter, Berlin 2024"
   },
+  "paintings": {
+    "aboutThePaintings" : "Om målningarna",
+    "originStory": "Resan till Da Fen började med en fråga: hur skulle mina digitala stadskompositioner kunna existera i den fysiska världen? Jag reste till den kända byn för oljemålning i Shenzhen, en plats pulserande av konstnärlig energi, och befann mig dela en måltid med en konstnär vid namn Sanzi (Wang Xiaolong). Utan ett gemensamt språk kopplade vi samman genom bilderna på min laptop. Detta mötte utlöste vårt första samarbete - en vacker oljemålning av Los Angeles - och lade grunden för en unik bro mellan kulturer.",
+    "collaborationProcess": "Idag har den ursprungliga förbindelsen utvecklats till en kärndel av Digital City Series. Vi samarbetar med mästarkonstnärer i Da Fen för att översätta våra digitala 'Smoothist'-visioner till unika oljemålningar. Detta är inte bara reproduktion; det är en tolkning. Konstnärerna tar med sig sin djupa förståelse för textur, ljus och färgens fysikalitet, och lägger till ett nytt, taktilt lager till det ursprungliga digitala verket.",
+    "artisticSignificance": "Dessa samarbeten representerar en unik fusion av den digitala och den traditionella konstvärlden. De är ett vittnesbörd om idén att innovation och arv kan samexistera, och skapa något helt nytt. Varje målning är en bro - som förbinder mitt digitala perspektiv med århundraden av analogt hantverk, och länkar Berlins framåtdriv med Da Fens skickliga händer."
+  },
   "search": {
     "placeholder": "Sök konstverk...",
     "filter": "Filtrera",

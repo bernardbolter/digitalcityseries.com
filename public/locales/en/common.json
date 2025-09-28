@@ -29,7 +29,7 @@
     "intro" : "About the Series",
     "method" : "The Method",
     "philosophy" : "Philosophy & Smoothism",
-    "Collaborations" : "Collaborations",
+    "collaborations" : "Collaborations",
     "relaunch" : "The Relaunch",
     "introText": "The Digital City Series is an art project that creates portraits of cities. Instead of showing a single photo of a famous building, each portrait combines hundreds of street-level photos into one square image. The result is a unique view of a city that feels like moving through it.",
     "methodText": "The project started in 2007. I use a skateboard to explore cities, which gives a fast, fluid perspective. I take thousands of pictures on these journeys. Back in the studio, I blend these photos together into a single, seamless composition.",
@@ -58,6 +58,12 @@
     "medium": "Medium",
     "description": "Description",
     "backToCollection": "Back to Collection"
+  },
+  "paintings" : {
+    "aboutThePaintings" : "About the Paintings",
+    "originStory": "The journey to Da Fen began with a question: how could my digital city compositions exist in the physical world? I traveled to the renowned oil painting village in Shenzhen, a place pulsing with artistic energy, and found myself sharing a meal with an artist named Sanzi (Wang Xiaolong). Without a common language, we connected through the images on my laptop. This meeting sparked our first collaboration—a beautiful oil painting of Los Angeles—and laid the foundation for a unique cross-cultural bridge.",
+    "collaborationProcess": "Today, that initial connection has evolved into a core part of Digital City Series. We collaborate with master artists in Da Fen to translate our digital 'Smoothist' visions into one-of-a-kind oil paintings. This is not mere reproduction; it is a reinterpretation. The artists bring their profound understanding of texture, light, and the physicality of paint, adding a new, tactile layer to the original digital work.",
+    "artisticSignificance": "These collaborations represent a unique fusion of the digital and the traditional art worlds. They are a testament to the idea that innovation and legacy can coexist, creating something entirely new. Each painting is a bridge—connecting my digital perspective with centuries of analog craft, and linking the forward momentum of Berlin with the skilled hands of Da Fen."
   },
   "footer": {
     "copyright": "© 2025 Digital City Series. All rights reserved.",

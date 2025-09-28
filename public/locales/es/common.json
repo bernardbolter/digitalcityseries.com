@@ -41,6 +41,12 @@
     "relaunchText": "El proyecto se reinicia ahora porque el mundo está más preparado para ello. La gente está interesada en cómo el arte y la tecnología pueden trabajar juntos, y quiere historias auténticas de los artistas. Después de años de desarrollo, es el momento adecuado para compartir estos retratos urbanos con un público más amplio.",
     "signature": "— Bernard Bolter, Berlín 2024"
   },
+  "paintings": {
+    "aboutThePaintings" : "Sobre las pinturas",
+    "originStory": "El viaje a Da Fen comenzó con una pregunta: ¿cómo podrían mis composiciones digitales de ciudades existir en el mundo físico? Viajé al renombrado pueblo de pintura al óleo en Shenzhen, un lugar que palpita con energía artística, y me encontré compartiendo una comida con un artista llamado Sanzi (Wang Xiaolong). Sin un lenguaje común, nos conectamos a través de las imágenes en mi computadora portátil. Este encuentro dio lugar a nuestra primera colaboración—una hermosa pintura al óleo de Los Ángeles—y sentó las bases para un puente intercultural único.",
+    "collaborationProcess": "Hoy, esa conexión inicial ha evolucionado hasta convertirse en una parte central de Digital City Series. Colaboramos con artistas maestros en Da Fen para traducir nuestras visiones digitales 'Smoothist' en pinturas al óleo únicas. Esto no es mera reproducción; es una reinterpretación. Los artistas aportan su profunda comprensión de la textura, la luz y la fisicidad de la pintura, añadiendo una nueva capa táctil al trabajo digital original.",
+    "artisticSignificance": "Estas colaboraciones representan una fusión única entre los mundos del arte digital y tradicional. Son un testimonio de la idea de que la innovación y el legado pueden coexistir, creando algo completamente nuevo. Cada pintura es un puente—conectando mi perspectiva digital con siglos de artesanía analógica, y uniendo el impulso hacia adelante de Berlín con las hábiles manos de Da Fen."
+  },
   "search": {
     "placeholder": "Buscar obras de arte...",
     "filter": "Filtrar",
