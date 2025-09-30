@@ -66,10 +66,35 @@
     "description": "描述",
     "backToCollection": "返去作品集"
   },
-  "footer": {
-    "copyright": "© 2025 數碼城市系列 版權所有。",
-    "privacyPolicy": "私隱政策",
-    "termsOfService": "服務條款"
+  "contact": {
+    "label": {
+      "fullName": "全名",
+      "email": "您的電郵地址",
+      "message": "您的訊息"
+    },
+    "placeholder": {
+      "fullName": "您的名字及姓氏",
+      "email": "chan@siu-ming.hk",
+      "message": "請輸入您的訊息..."
+    },
+    "button": {
+      "sending": "正在傳送...",
+      "send": "傳送訊息"
+    },
+    "error": {
+      "nameRequired": "名字為必填項目",
+      "nameMinLength2": "名字最少要有 2 個字符", 
+      "emailRequired": "電郵為必填項目",
+      "emailInvalid": "請輸入有效的電郵地址",
+      "messageRequired": "訊息為必填項目",
+      "messageMinLength10": "訊息最少要有 10 個字符"
+    },
+    "serverError": {
+      "formCarry422": "表格提交失敗。請檢查您的資料後再試。",
+      "unknown": "發生咗一個未知嘅伺服器錯誤。請再試一次。",
+      "genericCatch": "發生咗網絡錯誤。請再試一次。"
+    },
+    "successMessage": "我哋收到您嘅訊息喇，多謝！"
   },
   "cities": {
     "basel": "巴塞爾",

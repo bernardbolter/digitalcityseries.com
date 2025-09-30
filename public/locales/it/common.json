@@ -66,10 +66,35 @@
     "description": "Descrizione",
     "backToCollection": "Torna alla Collezione"
   },
-  "footer": {
-    "copyright": "© 2025 Serie di Città Digitali. Tutti i diritti riservati.",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Termini di Servizio"
+  "contact": {
+    "label": {
+      "fullName": "Nome completo",
+      "email": "La tua email",
+      "message": "Il tuo messaggio"
+    },
+    "placeholder": {
+      "fullName": "Il tuo nome e cognome",
+      "email": "mario@rossi.it",
+      "message": "Inserisci il tuo messaggio..."
+    },
+    "button": {
+      "sending": "Invio in corso...",
+      "send": "Invia messaggio"
+    },
+    "error": {
+      "nameRequired": "Il nome è obbligatorio",
+      "nameMinLength2": "Il nome deve contenere almeno 2 caratteri", 
+      "emailRequired": "L'email è obbligatoria",
+      "emailInvalid": "Si prega di inserire un indirizzo email valido",
+      "messageRequired": "Il messaggio è obbligatorio",
+      "messageMinLength10": "Il messaggio deve contenere almeno 10 caratteri"
+    },
+    "serverError": {
+      "formCarry422": "L'invio del modulo non è riuscito. Si prega di controllare i dati e riprovare.",
+      "unknown": "Si è verificato un errore del server sconosciuto. Si prega di riprovare.",
+      "genericCatch": "Si è verificato un errore di rete. Si prega di riprovare."
+    },
+    "successMessage": "Abbiamo ricevuto la tua richiesta, grazie!"
   },
   "cities": {
     "basel": "Basilea",

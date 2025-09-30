@@ -66,10 +66,35 @@
     "description": "Apraksts",
     "backToCollection": "Atpakaļ uz Kolekciju"
   },
-  "footer": {
-    "copyright": "© 2025 Digitālo Pilsētu Sērija. Visas tiesības aizsargātas.",
-    "privacyPolicy": "Privātuma Politika",
-    "termsOfService": "Lietošanas Noteikumi"
+  "contact": {
+    "label": {
+      "fullName": "Pilns vārds",
+      "email": "Jūsu e-pasta adrese",
+      "message": "Jūsu ziņa"
+    },
+    "placeholder": {
+      "fullName": "Jūsu vārds un uzvārds",
+      "email": "janis@berzins.lv",
+      "message": "Ievadiet savu ziņu..."
+    },
+    "button": {
+      "sending": "Sūtīšana...",
+      "send": "Sūtīt ziņu"
+    },
+    "error": {
+      "nameRequired": "Vārds ir obligāts",
+      "nameMinLength2": "Vārdam jābūt vismaz 2 rakstzīmes garam", 
+      "emailRequired": "E-pasts ir obligāts",
+      "emailInvalid": "Lūdzu, ievadiet derīgu e-pasta adresi",
+      "messageRequired": "Ziņa ir obligāta",
+      "messageMinLength10": "Ziņai jābūt vismaz 10 rakstzīmes garai"
+    },
+    "serverError": {
+      "formCarry422": "Veidlapas iesniegšana neizdevās. Lūdzu, pārbaudiet datus un mēģiniet vēlreiz.",
+      "unknown": "Radās nezināma servera kļūda. Lūdzu, mēģiniet vēlreiz.",
+      "genericCatch": "Radās tīkla kļūda. Lūdzu, mēģiniet vēlreiz."
+    },
+    "successMessage": "Mēs esam saņēmuši jūsu iesniegumu, paldies!"
   },
   "cities": {
     "basel": "Bāzele",

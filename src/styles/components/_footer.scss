@@ -1,1 +1,143 @@
 @use '../base/vars.scss' as *;
+
+.footer-container {
+    width: 100%;
+    background: $background-dark-light;
+    border-top: 1px solid $text-light;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-portrait-up) {
+        flex-direction: row;
+    }
+}
+
+.footer__contact-container {
+    width: 100%;
+
+    @media (min-width: $tablet-portrait-up) {
+        width: 70%;
+    }
+}
+
+.footer__info {
+    width: 100%;
+
+    @media (min-width: $tablet-portrait-up) {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.footer__info--top {
+    flex-grow: 1;
+}
+
+.footer__info--bottom {
+    flex-grow: 0;
+}
+
+.footer__info--header {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 5%;
+
+    h3 {
+        font-size: 20px;
+        font-weight: 800;
+        margin: 0;
+        padding: 0;
+        color: $text-white;
+    }
+}
+
+.footer__logo-svg {
+    width: 26px;
+    height: 26px;
+    margin-left: 5px;
+
+    svg {
+        width: 100%;
+        fill: $text-white;
+    }
+}
+
+.footer__links--container {
+    width: 90%;
+    margin: 12px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer__link {
+    font-size: 15px;
+    font-weight: 200;
+    color: $text-light;
+    margin: 0;
+    padding: 3px 0;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        color: $text-white;
+    }
+}
+
+.footer__link--open {
+    color: $text-white;
+}
+
+.footer__social-link {
+    cursor: pointer;
+    margin-top: 7px;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        stroke: $text-light;
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            stroke: $text-white;
+        }
+    }
+}
+
+.footer__email {
+    font-size: 15px;
+    font-weight: 200;
+    color: $text-light;
+    margin: 0;
+    padding: 3px 0; 
+}
+
+.footer__line {
+    width: 30px;
+    margin: 10px auto;
+    height: 1px;
+    background: $text-light;
+}
+
+.footer__copyright {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0 24px;
+
+    p {
+        font-size: 11px;
+        color: $text-light;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+}

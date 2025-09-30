@@ -66,10 +66,35 @@
     "description": "Descripción",
     "backToCollection": "Volver a la colección"
   },
-  "footer": {
-    "copyright": "© 2025 Serie Ciudad Digital. Todos los derechos reservados.",
-    "privacyPolicy": "Política de privacidad",
-    "termsOfService": "Términos de servicio"
+  "contact": {
+    "label": {
+      "fullName": "Nombre completo",
+      "email": "Su dirección de correo electrónico",
+      "message": "Su mensaje"
+    },
+    "placeholder": {
+      "fullName": "Su nombre y apellido",
+      "email": "juan@doe.es",
+      "message": "Introduzca su mensaje..."
+    },
+    "button": {
+      "sending": "Enviando...",
+      "send": "Enviar mensaje"
+    },
+    "error": {
+      "nameRequired": "El nombre es obligatorio",
+      "nameMinLength2": "El nombre debe tener al menos 2 caracteres", 
+      "emailRequired": "El correo electrónico es obligatorio",
+      "emailInvalid": "Por favor, introduzca una dirección de correo electrónico válida",
+      "messageRequired": "El mensaje es obligatorio",
+      "messageMinLength10": "El mensaje debe tener al menos 10 caracteres"
+    },
+    "serverError": {
+      "formCarry422": "El envío del formulario falló. Por favor, revise sus datos e inténtelo de nuevo.",
+      "unknown": "Ha ocurrido un error de servidor desconocido. Por favor, inténtelo de nuevo.",
+      "genericCatch": "Ha ocurrido un error de red. Por favor, inténtelo de nuevo."
+    },
+    "successMessage": "Hemos recibido su envío, ¡gracias!"
   },
   "cities": {
     "basel": "Basilea",

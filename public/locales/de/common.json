@@ -66,10 +66,35 @@
     "description": "Beschreibung",
     "backToCollection": "Zurück zur Sammlung"
   },
-  "footer": {
-    "copyright": "© 2025 Digitale Städteserie. Alle Rechte vorbehalten.",
-    "privacyPolicy": "Datenschutzerklärung",
-    "termsOfService": "Nutzungsbedingungen"
+  "contact": {
+    "label": {
+      "fullName": "Vollständiger Name",
+      "email": "Ihre E-Mail-Adresse",
+      "message": "Ihre Nachricht"
+    },
+    "placeholder": {
+      "fullName": "Ihr Vor- und Nachname",
+      "email": "max@mustermann.de",
+      "message": "Geben Sie Ihre Nachricht ein..."
+    },
+    "button": {
+      "sending": "Senden...",
+      "send": "Nachricht senden"
+    },
+    "error": {
+      "nameRequired": "Name ist erforderlich",
+      "nameMinLength": "Der Name muss mindestens 2 Zeichen lang sein",
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "messageRequired": "Nachricht ist erforderlich",
+      "messageMinLength": "Die Nachricht muss mindestens 10 Zeichen lang sein"
+    },
+    "serverError": {
+      "formCarry422": "Das Absenden des Formulars ist fehlgeschlagen. Bitte überprüfen Sie Ihre Daten.",
+      "unknown": "Ein unbekannter Serverfehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      "genericCatch": "Ein Netzwerkfehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "successMessage": "Wir haben Ihre Nachricht erhalten, vielen Dank!"
   },
   "cities": {
     "basel": "Basel",

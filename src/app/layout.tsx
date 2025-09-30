@@ -37,6 +37,13 @@ const notoSansThai = Noto_Sans_Thai({
 export const metadata: Metadata = {
   title: "Digital City Series",
   description: "Exploring urban environments through digital art",
+  icons: {
+    // 1. Array for multiple standard favicons (SVG prioritized, then .ico)
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' }, // SVG (Prioritized for modern browsers)
+      { url: '/favicon.ico', sizes: 'any' },          // .ico (Fallback for broad compatibility)
+    ],
+  }
 };
 
 export default function RootLayout({

@@ -137,7 +137,7 @@
       display: flex;
       align-items: flex-end;
       background: $dropdown-background;
-      padding: 5px;
+      padding: 5px 10px 5px 5px;
       border-top-left-radius: 13px;
 }
 }
@@ -347,7 +347,7 @@
   transition: all .2s ease;
   
   @media (min-width: $tablet-portrait-up) {
-    padding: 5px 8px;
+    padding: 5px;
     font-size: 12px;
     flex-direction: column;
     align-items: flex-start;

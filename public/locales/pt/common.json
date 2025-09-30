@@ -66,10 +66,35 @@
     "description": "Descrição",
     "backToCollection": "Voltar para a Coleção"
   },
-  "footer": {
-    "copyright": "© 2025 Série Cidade Digital. Todos os direitos reservados.",
-    "privacyPolicy": "Política de Privacidade",
-    "termsOfService": "Termos de Serviço"
+  "contact": {
+    "label": {
+      "fullName": "Nome Completo",
+      "email": "Seu endereço de e-mail",
+      "message": "Sua mensagem"
+    },
+    "placeholder": {
+      "fullName": "Seu nome e sobrenome",
+      "email": "joao@silva.pt",
+      "message": "Digite sua mensagem..."
+    },
+    "button": {
+      "sending": "Enviando...",
+      "send": "Enviar Mensagem"
+    },
+    "error": {
+      "nameRequired": "O nome é obrigatório",
+      "nameMinLength2": "O nome deve ter pelo menos 2 caracteres", 
+      "emailRequired": "O e-mail é obrigatório",
+      "emailInvalid": "Por favor, insira um endereço de e-mail válido",
+      "messageRequired": "A mensagem é obrigatória",
+      "messageMinLength10": "A mensagem deve ter pelo menos 10 caracteres"
+    },
+    "serverError": {
+      "formCarry422": "O envio do formulário falhou. Verifique seus dados e tente novamente.",
+      "unknown": "Ocorreu um erro de servidor desconhecido. Por favor, tente novamente.",
+      "genericCatch": "Ocorreu um erro de rede. Por favor, tente novamente."
+    },
+    "successMessage": "Recebemos o seu envio, obrigado!"
   },
   "cities": {
     "basel": "Basileia",

@@ -66,10 +66,35 @@
     "description": "描述",
     "backToCollection": "返回作品集"
   },
-  "footer": {
-    "copyright": "© 2025 数字城市系列 保留所有权利。",
-    "privacyPolicy": "隐私政策",
-    "termsOfService": "服务条款"
+  "contact": {
+    "label": {
+      "fullName": "全名",
+      "email": "您的电子邮件地址",
+      "message": "您的留言"
+    },
+    "placeholder": {
+      "fullName": "您的名字和姓氏",
+      "email": "wang@ming.cn",
+      "message": "请输入您的留言..."
+    },
+    "button": {
+      "sending": "正在发送...",
+      "send": "发送留言"
+    },
+    "error": {
+      "nameRequired": "姓名是必填项",
+      "nameMinLength2": "姓名至少需要 2 个字符", 
+      "emailRequired": "电子邮件是必填项",
+      "emailInvalid": "请输入有效的电子邮件地址",
+      "messageRequired": "留言是必填项",
+      "messageMinLength10": "留言至少需要 10 个字符"
+    },
+    "serverError": {
+      "formCarry422": "表单提交失败。请检查您的数据并重试。",
+      "unknown": "发生了一个未知的服务器错误。请重试。",
+      "genericCatch": "发生了一个网络错误。请重试。"
+    },
+    "successMessage": "我们已收到您的提交，谢谢！"
   },
   "cities": {
     "basel": "巴塞尔",

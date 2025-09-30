@@ -5,8 +5,8 @@
     "series": "SERIES"
   },
   "site": {
-    "title": "Digital City Series",
-    "description": "Exploring urban environments through digital art"
+    "title": "Digital City Series: Capturing the Pulse of the Street",
+    "description": "From the streets of San Francisco and Berlin, artist Bernard Bolter transforms the chaos of the city into unified, high-definition art. This project is rooted in the kinetic energy of skateboarding, using a unique approach to gather visual data that goes beyond a single moment. The final artwork—from large-scale prints to masterfully executed oil paintings—is a cohesive narrative of the urban experience that you can own."
   },
   "navigation": {
     "about": "About",
@@ -65,10 +65,35 @@
     "collaborationProcess": "Today, that initial connection has evolved into a core part of Digital City Series. We collaborate with master artists in Da Fen to translate our digital 'Smoothist' visions into one-of-a-kind oil paintings. This is not mere reproduction; it is a reinterpretation. The artists bring their profound understanding of texture, light, and the physicality of paint, adding a new, tactile layer to the original digital work.",
     "artisticSignificance": "These collaborations represent a unique fusion of the digital and the traditional art worlds. They are a testament to the idea that innovation and legacy can coexist, creating something entirely new. Each painting is a bridge—connecting my digital perspective with centuries of analog craft, and linking the forward momentum of Berlin with the skilled hands of Da Fen."
   },
-  "footer": {
-    "copyright": "© 2025 Digital City Series. All rights reserved.",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service"
+  "contact": {
+    "label": {
+      "fullName": "Full Name",
+      "email": "Your Email Address",
+      "message": "Your Message"
+    },
+    "placeholder": {
+      "fullName": "Your first and last name",
+      "email": "name@mail.com",
+      "message": "Enter your message..."
+    },
+    "button": {
+      "sending": "Sending...",
+      "send": "Send Message"
+    },
+    "error": {
+      "nameRequired": "Name is required",
+      "nameMinLength": "Name must be at least 2 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters"
+    },
+    "serverError": {
+      "formCarry422": "Form submission failed. Please check your data and try again.",
+      "unknown": "An unknown server error occurred. Please try again.",
+      "genericCatch": "A network error occurred. Please try again."
+    },
+    "successMessage": "We received your submission, thank you!"
   },
   "languageSwitcher": {
     "currentLanguage": "Current Language"

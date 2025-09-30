@@ -66,10 +66,35 @@
     "description": "Beskrivelse",
     "backToCollection": "Tilbage til Samlingen"
   },
-  "footer": {
-    "copyright": "© 2025 Digital By-serie. Alle rettigheder forbeholdes.",
-    "privacyPolicy": "Privatlivspolitik",
-    "termsOfService": "Servicevilkår"
+  "contact": {
+    "label": {
+      "fullName": "Fulde navn",
+      "email": "Din e-mailadresse",
+      "message": "Din besked"
+    },
+    "placeholder": {
+      "fullName": "Dit for- og efternavn",
+      "email": "hans@hansen.dk",
+      "message": "Indtast din besked..."
+    },
+    "button": {
+      "sending": "Sender...",
+      "send": "Send besked"
+    },
+    "error": {
+      "nameRequired": "Navn er påkrævet",
+      "nameMinLength2": "Navnet skal være mindst 2 tegn", 
+      "emailRequired": "E-mail er påkrævet",
+      "emailInvalid": "Indtast venligst en gyldig e-mailadresse",
+      "messageRequired": "Besked er påkrævet",
+      "messageMinLength10": "Beskeden skal være mindst 10 tegn"
+    },
+    "serverError": {
+      "formCarry422": "Formularindsendelse mislykkedes. Kontroller dine data, og prøv igen.",
+      "unknown": "Der opstod en ukendt serverfejl. Prøv venligst igen.",
+      "genericCatch": "Der opstod en netværksfejl. Prøv venligst igen."
+    },
+    "successMessage": "Vi har modtaget din besked, tak!"
   },
   "cities": {
     "basel": "Basel",

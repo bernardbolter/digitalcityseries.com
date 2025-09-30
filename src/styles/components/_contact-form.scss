@@ -1,0 +1,167 @@
+@use '../base/vars.scss' as *;
+@use "sass:color";
+
+// Mixins
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+.contact-form-container {
+  background-color: $background-dark-light;
+  padding: 2rem;
+  margin: 0 auto;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .formcarry-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      color: $text-light;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+    }
+
+    input,
+    textarea {
+      background-color: $background-dark;
+      padding: 6px 11px;
+      font-size: 1rem;
+      color: $text-white;
+      border-bottom: 1px solid $text-light;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+
+      &::placeholder {
+        color: $text-light;
+        opacity: 0.7;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border: none; 
+      }
+
+      &.error {
+        border-color: $error-color;
+        
+        &:focus {
+          box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+        }
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.5;
+    }
+
+    .error-message {
+      color: $error-color;
+      font-size: 0.875rem;
+      margin-top: -0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      
+      &::before {
+        content: '⚠';
+        font-size: 0.875rem;
+      }
+    }
+
+    button {
+      background-color: $background-dark;
+      color: $text-light;
+      width:200px;
+      border: none;
+      border-radius: 2px;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      @include transition(background-color 0.3s ease, transform 0.1s ease);
+      letter-spacing: 0.5px;
+
+      &:hover:not(:disabled) {
+        // background-color: $button-hover;
+        transform: translateY(-1px);
+      }
+
+      &:active:not(:disabled) {
+        transform: translateY(0);
+      }
+
+      &:disabled {
+        background-color: #999;
+        cursor: not-allowed;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .alert {
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    animation: slideDown 0.3s ease;
+
+    .alert-icon {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    &.alert-error {
+      background-color: rgba(231, 76, 60, 0.1);
+      border: 1px solid rgba(231, 76, 60, 0.3);
+      color: color.adjust($error-color, $lightness: 20%);
+    }
+
+    &.alert-success {
+      background-color: rgba(39, 174, 96, 0.1);
+      border: 1px solid rgba(39, 174, 96, 0.3);
+      color: color.adjust($success-color, $lightness: 20%);
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive
+@media (max-width: 640px) {
+  .contact-form-container {
+    padding: 1.5rem;
+
+    form {
+      gap: 1.25rem;
+    }
+
+    .formcarry-block {
+      button {
+        padding: 0.875rem 1.5rem;
+      }
+    }
+  }
+}

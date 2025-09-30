@@ -66,10 +66,35 @@
     "description": "Açıklama",
     "backToCollection": "Koleksiyona Dön"
   },
-  "footer": {
-    "copyright": "© 2025 Dijital Şehir Serisi. Tüm hakları saklıdır.",
-    "privacyPolicy": "Gizlilik Politikası",
-    "termsOfService": "Kullanım Koşulları"
+  "contact": {
+    "label": {
+      "fullName": "Ad Soyad",
+      "email": "E-posta Adresiniz",
+      "message": "Mesajınız"
+    },
+    "placeholder": {
+      "fullName": "Adınız ve soyadınız",
+      "email": "ahmet@yilmaz.com",
+      "message": "Mesajınızı girin..."
+    },
+    "button": {
+      "sending": "Gönderiliyor...",
+      "send": "Mesaj Gönder"
+    },
+    "error": {
+      "nameRequired": "İsim gerekli",
+      "nameMinLength2": "İsim en az 2 karakter olmalıdır", 
+      "emailRequired": "E-posta gerekli",
+      "emailInvalid": "Lütfen geçerli bir e-posta adresi girin",
+      "messageRequired": "Mesaj gerekli",
+      "messageMinLength10": "Mesaj en az 10 karakter olmalıdır"
+    },
+    "serverError": {
+      "formCarry422": "Form gönderimi başarısız oldu. Lütfen verilerinizi kontrol edin ve tekrar deneyin.",
+      "unknown": "Bilinmeyen bir sunucu hatası oluştu. Lütfen tekrar deneyin.",
+      "genericCatch": "Bir ağ hatası oluştu. Lütfen tekrar deneyin."
+    },
+    "successMessage": "Gönderinizi aldık, teşekkür ederiz!"
   },
   "cities": {
     "basel": "Basel",

@@ -61,10 +61,35 @@
     "description": "Description",
     "backToCollection": "Retour à la collection"
   },
-  "footer": {
-    "copyright": "© 2025 Série Ville Numérique. Tous droits réservés.",
-    "privacyPolicy": "Politique de confidentialité",
-    "termsOfService": "Conditions d'utilisation"
+  "contact": {
+    "label": {
+      "fullName": "Nom complet",
+      "email": "Votre adresse e-mail",
+      "message": "Votre message"
+    },
+    "placeholder": {
+      "fullName": "Votre prénom et nom de famille",
+      "email": "jean@dupont.fr",
+      "message": "Saisissez votre message..."
+    },
+    "button": {
+      "sending": "Envoi...",
+      "send": "Envoyer le message"
+    },
+    "error": {
+      "nameRequired": "Le nom est obligatoire",
+      "nameMinLength2": "Le nom doit contenir au moins 2 caractères", 
+      "emailRequired": "L'e-mail est obligatoire",
+      "emailInvalid": "Veuillez saisir une adresse e-mail valide",
+      "messageRequired": "Le message est obligatoire",
+      "messageMinLength10": "Le message doit contenir au moins 10 caractères"
+    },
+    "serverError": {
+      "formCarry422": "L'envoi du formulaire a échoué. Veuillez vérifier vos données et réessayer.",
+      "unknown": "Une erreur de serveur inconnue s'est produite. Veuillez réessayer.",
+      "genericCatch": "Une erreur de réseau s'est produite. Veuillez réessayer."
+    },
+    "successMessage": "Nous avons bien reçu votre soumission, merci !"
   },
   "cities": {
     "basel": "Bâle",

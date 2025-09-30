@@ -66,10 +66,35 @@
     "description": "Beskrivning",
     "backToCollection": "Tillbaka till Samlingen"
   },
-  "footer": {
-    "copyright": "© 2025 Digitala Städer-serien. Alla rättigheter förbehållna.",
-    "privacyPolicy": "Integritetspolicy",
-    "termsOfService": "Användarvillkor"
+  "contact": {
+    "label": {
+      "fullName": "Fullständigt namn",
+      "email": "Din e-postadress",
+      "message": "Ditt meddelande"
+    },
+    "placeholder": {
+      "fullName": "Ditt för- och efternamn",
+      "email": "anna@svensson.se",
+      "message": "Skriv ditt meddelande..."
+    },
+    "button": {
+      "sending": "Skickar...",
+      "send": "Skicka meddelande"
+    },
+    "error": {
+      "nameRequired": "Namn är obligatoriskt",
+      "nameMinLength2": "Namnet måste vara minst 2 tecken långt", 
+      "emailRequired": "E-post är obligatoriskt",
+      "emailInvalid": "Vänligen ange en giltig e-postadress",
+      "messageRequired": "Meddelande är obligatoriskt",
+      "messageMinLength10": "Meddelandet måste vara minst 10 tecken långt"
+    },
+    "serverError": {
+      "formCarry422": "Formuläret misslyckades. Vänligen kontrollera dina uppgifter och försök igen.",
+      "unknown": "Ett okänt serverfel har inträffat. Vänligen försök igen.",
+      "genericCatch": "Ett nätverksfel har inträffat. Vänligen försök igen."
+    },
+    "successMessage": "Vi har mottagit din förfrågan, tack!"
   },
   "cities": {
     "basel": "Basel",

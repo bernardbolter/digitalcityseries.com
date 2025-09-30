@@ -66,10 +66,35 @@
     "description": "Opis",
     "backToCollection": "Povratak na Zbirku"
   },
-  "footer": {
-    "copyright": "© 2025 Digitalna Gradska Serija. Sva prava pridržana.",
-    "privacyPolicy": "Politika Privatnosti",
-    "termsOfService": "Uvjeti Korištenja"
+  "contact": {
+    "label": {
+      "fullName": "Puno ime",
+      "email": "Vaša adresa e-pošte",
+      "message": "Vaša poruka"
+    },
+    "placeholder": {
+      "fullName": "Vaše ime i prezime",
+      "email": "ivan@peric.hr",
+      "message": "Unesite svoju poruku..."
+    },
+    "button": {
+      "sending": "Slanje...",
+      "send": "Pošalji poruku"
+    },
+    "error": {
+      "nameRequired": "Ime je obavezno",
+      "nameMinLength2": "Ime mora imati najmanje 2 znaka", 
+      "emailRequired": "E-pošta je obavezna",
+      "emailInvalid": "Molimo unesite valjanu adresu e-pošte",
+      "messageRequired": "Poruka je obavezna",
+      "messageMinLength10": "Poruka mora imati najmanje 10 znakova"
+    },
+    "serverError": {
+      "formCarry422": "Slanje obrasca nije uspjelo. Provjerite svoje podatke i pokušajte ponovno.",
+      "unknown": "Došlo je do nepoznate pogreške poslužitelja. Molimo pokušajte ponovno.",
+      "genericCatch": "Došlo je do mrežne pogreške. Molimo pokušajte ponovno."
+    },
+    "successMessage": "Primili smo vašu poruku, hvala!"
   },
   "cities": {
     "basel": "Basel",
