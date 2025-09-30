@@ -89,7 +89,8 @@
       "unknown": "Une erreur de serveur inconnue s'est produite. Veuillez réessayer.",
       "genericCatch": "Une erreur de réseau s'est produite. Veuillez réessayer."
     },
-    "successMessage": "Nous avons bien reçu votre soumission, merci !"
+    "successMessage": "Nous avons bien reçu votre soumission, merci !",
+    "backToTop": "Retour en haut"
   },
   "cities": {
     "basel": "Bâle",

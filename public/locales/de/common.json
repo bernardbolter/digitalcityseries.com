@@ -94,7 +94,8 @@
       "unknown": "Ein unbekannter Serverfehler ist aufgetreten. Bitte versuchen Sie es erneut.",
       "genericCatch": "Ein Netzwerkfehler ist aufgetreten. Bitte versuchen Sie es erneut."
     },
-    "successMessage": "Wir haben Ihre Nachricht erhalten, vielen Dank!"
+    "successMessage": "Wir haben Ihre Nachricht erhalten, vielen Dank!",
+    "backToTop": "Zurück nach oben"
   },
   "cities": {
     "basel": "Basel",

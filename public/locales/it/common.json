@@ -94,7 +94,8 @@
       "unknown": "Si è verificato un errore del server sconosciuto. Si prega di riprovare.",
       "genericCatch": "Si è verificato un errore di rete. Si prega di riprovare."
     },
-    "successMessage": "Abbiamo ricevuto la tua richiesta, grazie!"
+    "successMessage": "Abbiamo ricevuto la tua richiesta, grazie!",
+    "backToTop": "Torna su"
   },
   "cities": {
     "basel": "Basilea",

@@ -94,7 +94,8 @@
       "unknown": "發生咗一個未知嘅伺服器錯誤。請再試一次。",
       "genericCatch": "發生咗網絡錯誤。請再試一次。"
     },
-    "successMessage": "我哋收到您嘅訊息喇，多謝！"
+    "successMessage": "我哋收到您嘅訊息喇，多謝！",
+    "backToTop": "返回頂部" 
   },
   "cities": {
     "basel": "巴塞爾",

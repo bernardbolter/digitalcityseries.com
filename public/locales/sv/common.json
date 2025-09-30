@@ -94,7 +94,8 @@
       "unknown": "Ett okänt serverfel har inträffat. Vänligen försök igen.",
       "genericCatch": "Ett nätverksfel har inträffat. Vänligen försök igen."
     },
-    "successMessage": "Vi har mottagit din förfrågan, tack!"
+    "successMessage": "Vi har mottagit din förfrågan, tack!",
+    "backToTop": "Tillbaka till toppen"
   },
   "cities": {
     "basel": "Basel",

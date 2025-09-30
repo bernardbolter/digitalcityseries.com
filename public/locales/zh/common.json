@@ -94,7 +94,8 @@
       "unknown": "发生了一个未知的服务器错误。请重试。",
       "genericCatch": "发生了一个网络错误。请重试。"
     },
-    "successMessage": "我们已收到您的提交，谢谢！"
+    "successMessage": "我们已收到您的提交，谢谢！",
+    "backToTop": "返回顶部"
   },
   "cities": {
     "basel": "巴塞尔",

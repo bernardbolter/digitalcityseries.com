@@ -94,7 +94,8 @@
       "unknown": "Ocorreu um erro de servidor desconhecido. Por favor, tente novamente.",
       "genericCatch": "Ocorreu um erro de rede. Por favor, tente novamente."
     },
-    "successMessage": "Recebemos o seu envio, obrigado!"
+    "successMessage": "Recebemos o seu envio, obrigado!",
+    "backToTop": "Voltar ao Início"
   },
   "cities": {
     "basel": "Basileia",

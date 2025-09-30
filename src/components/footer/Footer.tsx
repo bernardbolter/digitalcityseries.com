@@ -42,7 +42,7 @@ const Footer = () => {
               to="hero-top"
               smooth={true}
               duration={2000}
-            >{t('footer.backToTop')}</ScrollLink>
+            >{t('contact.backToTop')}</ScrollLink>
             <a href="https://www.instagram.com/bernardbolter" target="_blank" rel="noopener noreferrer" className="footer__social-link" aria-label="Instagram">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>

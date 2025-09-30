@@ -94,7 +94,8 @@
       "unknown": "Bilinmeyen bir sunucu hatası oluştu. Lütfen tekrar deneyin.",
       "genericCatch": "Bir ağ hatası oluştu. Lütfen tekrar deneyin."
     },
-    "successMessage": "Gönderinizi aldık, teşekkür ederiz!"
+    "successMessage": "Gönderinizi aldık, teşekkür ederiz!",
+    "backToTop": "Başa Dön"
   },
   "cities": {
     "basel": "Basel",

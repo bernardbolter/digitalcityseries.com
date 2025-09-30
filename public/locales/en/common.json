@@ -93,7 +93,8 @@
       "unknown": "An unknown server error occurred. Please try again.",
       "genericCatch": "A network error occurred. Please try again."
     },
-    "successMessage": "We received your submission, thank you!"
+    "successMessage": "We received your submission, thank you!",
+    "backToTop": "Back to Top"
   },
   "languageSwitcher": {
     "currentLanguage": "Current Language"

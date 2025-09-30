@@ -94,7 +94,8 @@
       "unknown": "Došlo je do nepoznate pogreške poslužitelja. Molimo pokušajte ponovno.",
       "genericCatch": "Došlo je do mrežne pogreške. Molimo pokušajte ponovno."
     },
-    "successMessage": "Primili smo vašu poruku, hvala!"
+    "successMessage": "Primili smo vašu poruku, hvala!",
+    "backToTop": "Povratak na vrh"
   },
   "cities": {
     "basel": "Basel",

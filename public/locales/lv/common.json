@@ -94,7 +94,8 @@
       "unknown": "Radās nezināma servera kļūda. Lūdzu, mēģiniet vēlreiz.",
       "genericCatch": "Radās tīkla kļūda. Lūdzu, mēģiniet vēlreiz."
     },
-    "successMessage": "Mēs esam saņēmuši jūsu iesniegumu, paldies!"
+    "successMessage": "Mēs esam saņēmuši jūsu iesniegumu, paldies!",
+    "backToTop": "Atgriezties augšup"
   },
   "cities": {
     "basel": "Bāzele",

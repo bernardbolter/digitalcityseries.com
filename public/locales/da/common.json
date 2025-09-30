@@ -94,7 +94,8 @@
       "unknown": "Der opstod en ukendt serverfejl. Prøv venligst igen.",
       "genericCatch": "Der opstod en netværksfejl. Prøv venligst igen."
     },
-    "successMessage": "Vi har modtaget din besked, tak!"
+    "successMessage": "Vi har modtaget din besked, tak!",
+    "backToTop": "Tilbage til toppen"
   },
   "cities": {
     "basel": "Basel",
