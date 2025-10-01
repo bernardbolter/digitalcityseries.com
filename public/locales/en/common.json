@@ -50,14 +50,36 @@
     "tryAdjusting": "Try adjusting your search or filters"
   },
   "artwork": {
-    "collection": "Artwork Collection",
-    "details": "Artwork Details",
-    "city": "City",
-    "year": "Year",
-    "dimensions": "Dimensions",
-    "medium": "Medium",
-    "description": "Description",
-    "backToCollection": "Back to Collection"
+    "alt": {
+      "composite": "Composite city portrait of {{city}} ({{year}})",
+      "photo": "Decisive moment photograph \"{{title}}\" from {{city}}",
+      "satellite": "Satellite view of {{city}}",
+      "flag": "Flag of {{country}}"
+    },
+    "loading": {
+      "composite": "Loading composite image",
+      "photo": "Loading photo image",
+      "satellite": "Loading satellite image"
+    },
+    "magnifyButton": "Magnify image",
+    "closeButton": "Close view",
+    "viewSatellite": "View satellite image",
+    "viewPhoto": "View decisive moment photograph",
+    "compositeTitle": "Composite City Portrait",
+    "digitalPhotography" : "Digital Photography",
+    "unknownMedium": "Unknown Medium",
+    "edition": "Edition of 3",
+    "available": "Available",
+    "notForSale": "Not for sale",
+    "printsAvailable" : "Prints Available",
+    "contactForDetails": "Contact for details",
+    "coordinates": "Coordinates",
+    "area": "Area",
+    "population": "Population",
+    "density": "Density",
+    "elevation": "Elevation",
+    "photograph": "Photograph",
+    "decisiveMoment": "The Decisive Moment Photograph"
   },
   "paintings" : {
     "aboutThePaintings" : "About the Paintings",

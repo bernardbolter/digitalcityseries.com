@@ -11,7 +11,6 @@ import { toCamelCase } from '@/helpers'
 
 import { ArtworkProps } from '@/types/artworkTypes'
 
-
 // Helper function to create responsive sizes attribute
 const getResponsiveSizes = (type: 'main' | 'thumbnail' | 'flag') => {
   switch (type) {
@@ -33,7 +32,7 @@ const handleImageError = (imageSrc: string, imageType: string) => {
 
 // --- Functional Component ---
 const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
-  // console.log(artwork)
+  console.log(artwork)
   const { t } = useLocale();
   const [selectArtworkView, setSelectArtworkView] = useState<string>('composite')
   const [fadeOut, setFadeOut] = useState<boolean>(false)
@@ -47,25 +46,49 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
 
   let handDragTimeoutId: NodeJS.Timeout | null;
 
-  let translatedCityName
-    if (artwork.artworkFields?.city) {
-        translatedCityName = t(`cities.${toCamelCase(artwork.artworkFields?.city)}`)
-    } else {
-        translatedCityName = ''
+  const translatedCityName = artwork.artworkFields?.city 
+    ? t(`cities.${toCamelCase(artwork.artworkFields.city)}`)
+    : '';
+  
+  const translatedCountryName = artwork.artworkFields?.country
+    ? t(`countries.${toCamelCase(artwork.artworkFields.country)}`)
+    : '';
+
+  // SEO-friendly alt text generator
+  const getAltText = (type: 'composite' | 'photo' | 'satellite' | 'flag') => {
+    const cityCountry = `${translatedCityName}${translatedCountryName ? ', ' + translatedCountryName : ''}`;
+    const fields = artwork.artworkFields;
+    
+    switch (type) {
+      case 'composite':
+        return t('artwork.alt.composite', { 
+          city: cityCountry,
+          year: fields?.year || ''
+        });
+        // Fallback if translation missing: `Composite city portrait of ${cityCountry} (${fields?.year})`
+      case 'photo':
+        return t('artwork.alt.photo', { 
+          city: cityCountry,
+          title: fields?.dcsPhotoTitle || 'decisive moment'
+        });
+        // Fallback: `Decisive moment photograph "${fields?.dcsPhotoTitle}" from ${cityCountry}`
+      case 'satellite':
+        return t('artwork.alt.satellite', { city: cityCountry });
+        // Fallback: `Satellite view of ${cityCountry}`
+      case 'flag':
+        return t('artwork.alt.flag', { country: translatedCountryName });
+        // Fallback: `Flag of ${translatedCountryName}`
+      default:
+        return cityCountry;
     }
-  let translatedCountryName
-  if (artwork.artworkFields?.country) {
-    translatedCountryName = t(`countries.${toCamelCase(artwork.artworkFields?.country)}`)
-  } else {
-    translatedCountryName = ''
-  }
+  };
 
   // --- Event Handlers ---
   const clickComposite = () => {
     setFadeOut(true);
     setTimeout(() => {
       setSelectArtworkView('composite');
-      setToggleMagnify(false); // Ensure magnify is off when returning to composite
+      setToggleMagnify(false);
       setFadeOut(false);
     }, 500);
   };
@@ -82,7 +105,6 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
         setToggleMagnify(false);
       }
       setFadeOut(false);
-
     }, 500);
   };
 
@@ -99,15 +121,15 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
 
   function clearTheTimeout(handDragTimeoutId: NodeJS.Timeout | null): void {
     if (handDragTimeoutId !== null) {
-        clearTimeout(handDragTimeoutId);
-      }
+      clearTimeout(handDragTimeoutId);
     }
+  }
 
   const clickSatellite = () => {
     setFadeOut(true);
     setTimeout(() => {
       setSelectArtworkView('satellite');
-      setToggleMagnify(false); // Ensure magnify is off
+      setToggleMagnify(false);
       setFadeOut(false);
     }, 500);
   };
@@ -116,7 +138,7 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
     setFadeOut(true);
     setTimeout(() => {
       setSelectArtworkView('photo');
-      setToggleMagnify(false); // Ensure magnify is off
+      setToggleMagnify(false);
       setFadeOut(false);
     }, 500);
   };
@@ -130,141 +152,146 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
 
     const handleMainLoad = () => {
       console.log('image loaded')
-        setIsLoadingMain(false);
+      setIsLoadingMain(false);
     };
 
     if (selectArtworkView === 'magnify') {
       return (
-          <DraggableArtwork
-            src={compositeData?.sourceUrl || '' }
-            artworkContainerRef={artworkContainerRef}
-            alt="new artwork"
-          />
+        <DraggableArtwork
+          src={compositeData?.sourceUrl || '' }
+          artworkContainerRef={artworkContainerRef}
+          alt={getAltText('composite')}
+        />
       )
     } else if (selectArtworkView === 'photo') {
       return (
-          <>
-            {isLoadingMain && <LoadingImage loadingImageText={'loading ' + selectArtworkView + ' image' } />}
-            <img
-              src={photoData?.sourceUrl || undefined}
-              alt={artwork.title + ' decisive moment photograph'}
-              srcSet={photoData?.srcSet || undefined}
-              sizes={getResponsiveSizes('main')}
-              loading="eager"
-              decoding="async"
-              onLoad={handleMainLoad}
-              onError={() => {
-                handleImageError(photoData?.sourceUrl || '', 'photo')
-                handleMainLoad()
-              }}
-              style={{
-                width: '100%',
-                height: 'auto',
-                objectFit: 'contain'
-              }}
-            />
-          </>
+        <>
+          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading', { type: selectArtworkView }) || 'loading photo image'} />}
+          <img
+            src={photoData?.sourceUrl || undefined}
+            alt={getAltText('photo')}
+            srcSet={photoData?.srcSet || undefined}
+            sizes={getResponsiveSizes('main')}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            onLoad={handleMainLoad}
+            onError={() => {
+              handleImageError(photoData?.sourceUrl || '', 'photo')
+              handleMainLoad()
+            }}
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
+          />
+        </>
       )
     } else if (selectArtworkView === 'satellite') {
       return (
-          <>
-            {isLoadingMain && <LoadingImage loadingImageText={'loading ' + selectArtworkView + ' image' } />}
-              <img
-                src={satelliteData?.sourceUrl || undefined}
-                alt={artwork.title + ' satellite image'}
-                srcSet={satelliteData?.srcSet || undefined}
-                sizes={getResponsiveSizes('main')}
-                loading="eager"
-                decoding="async"
-                onError={() => handleImageError(satelliteData?.sourceUrl || '', 'satellite')}
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  objectFit: 'contain'
-                }}
-              />
-          </>
+        <>
+          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading', { type: selectArtworkView }) || 'loading satellite image'} />}
+          <img
+            src={satelliteData?.sourceUrl || undefined}
+            alt={getAltText('satellite')}
+            srcSet={satelliteData?.srcSet || undefined}
+            sizes={getResponsiveSizes('main')}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            onError={() => handleImageError(satelliteData?.sourceUrl || '', 'satellite')}
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
+          />
+        </>
       )
     } else if (selectArtworkView === 'raw') {
       return (
-            <img
-              src={rawData?.sourceUrl || undefined}
-              alt={artwork.title + ' raw'}
-              srcSet={rawData?.srcSet || undefined}
-              sizes={getResponsiveSizes('main')}
-              loading="eager"
-              decoding="async"
-              onError={() => handleImageError(rawData?.sourceUrl || '', 'raw')}
-              style={{
-                width: '100%',
-                height: 'auto',
-                objectFit: 'contain'
-              }}
-            />
+        <img
+          src={rawData?.sourceUrl || undefined}
+          alt={getAltText('composite')}
+          srcSet={rawData?.srcSet || undefined}
+          sizes={getResponsiveSizes('main')}
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          onError={() => handleImageError(rawData?.sourceUrl || '', 'raw')}
+          style={{
+            width: '100%',
+            height: 'auto',
+            objectFit: 'contain'
+          }}
+        />
       )
     } else {
       return (
-          <>
-            {isLoadingMain && <LoadingImage loadingImageText={'loading ' + selectArtworkView + ' image' } />}
-            <img
-              src={compositeData?.sourceUrl || undefined}
-              alt={artwork.title + ' composite image'}
-              srcSet={compositeData?.srcSet || undefined}
-              sizes={getResponsiveSizes('main')}
-              loading="lazy"
-              decoding="async"
-              onLoad={handleMainLoad}
-              onError={() => {
-                  handleImageError(compositeData?.sourceUrl || '', 'compositeData')
-                  handleMainLoad()
-                }}
-              style={{
-                width: '100%',
-                height: 'auto',
-                objectFit: 'contain'
-              }}
-            />
-          </>
+        <>
+          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading', { type: selectArtworkView }) || 'loading composite image'} />}
+          <img
+            src={compositeData?.sourceUrl || undefined}
+            alt={getAltText('composite')}
+            srcSet={compositeData?.srcSet || undefined}
+            sizes={getResponsiveSizes('main')}
+            loading="lazy"
+            decoding="async"
+            onLoad={handleMainLoad}
+            onError={() => {
+              handleImageError(compositeData?.sourceUrl || '', 'composite')
+              handleMainLoad()
+            }}
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
+          />
+        </>
       )
     }
   };
 
-  const showMagnifyButtonAndInfo = () => { // Renamed from showMagnify
-    // const fields = artwork.artworkFields;
+  const showMagnifyButtonAndInfo = () => {
     if (selectArtworkView === 'composite') {
       return (
-        <div 
-          className="magnify-button" 
+        <button 
+          className="magnify-button"
           onClick={() => {
             clickMagnify()
             clickHandDragVisible()
           }}
+          aria-label={t('artwork.magnifyButton') || 'Magnify image'}
+          type="button"
         >
-          <svg className={toggleMagnify ? 'magnify-svg magnify-svg-on' : 'magnify-svg'} id="magnify-svg-button" height="40px" width="40px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <svg className={toggleMagnify ? 'magnify-svg magnify-svg-on' : 'magnify-svg'} id="magnify-svg-button" height="40px" width="40px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <line id="magnify-svg-vertical-line" stroke="currentColor" strokeWidth="2" x1={24} y1={12} x2={24} y2={22} />
             <line id="magnify-svg-horizontal-line" stroke="currentColor" strokeWidth="2" x1={19} y1={17} x2={29} y2={17} />
             <line id="magnify-svg-handle-line" stroke="currentColor" strokeWidth="2" x1={17} y1={23} x2={8} y2={32} />
             <circle id="magnify-svg-circle" cx="24" cy="17" r="10" fill="transparent" stroke="currentColor" strokeWidth="2" />
           </svg>
-        </div>
+        </button>
       );
     } else if (selectArtworkView === 'magnify') {
-      // setHandDragVisible(true)
       return (
         <>
-          <div 
+          <button 
             className="magnify-button" 
             onClick={clickMagnify}
+            aria-label={t('artwork.closeButton') || 'Close magnified view'}
+            type="button"
           >
-            <svg className={toggleMagnify ? 'magnify-svg magnify-svg-on' : 'magnify-svg'} id="magnify-svg-button" height="40px" width="40px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <svg className={toggleMagnify ? 'magnify-svg magnify-svg-on' : 'magnify-svg'} id="magnify-svg-button" height="40px" width="40px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <line id="magnify-svg-vertical-line" stroke="currentColor" strokeWidth="2" x1={24} y1={12} x2={24} y2={22} />
               <line id="magnify-svg-horizontal-line" stroke="currentColor" strokeWidth="2" x1={19} y1={17} x2={29} y2={17} />
               <line id="magnify-svg-handle-line" stroke="currentColor" strokeWidth="2" x1={17} y1={23} x2={8} y2={32} />
               <circle id="magnify-svg-circle" cx="24" cy="17" r="10" fill="transparent" stroke="currentColor" strokeWidth="2" />
             </svg>
-          </div>
+          </button>
           {handDragVisible && (
-            <div className="drag-hand-container">
+            <div className="drag-hand-container" aria-hidden="true">
               <HandDrag />
             </div>
           )}
@@ -274,18 +301,20 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
     return null;
   };
 
-  const showSatelliteViewExtras = () => { // Renamed from showSatellite
+  const showSatelliteViewExtras = () => {
     const satelliteData = artwork.artworkFields?.dcsSatellite
 
     if (selectArtworkView === 'composite') {
       return (
-        <div 
-          className="artwork-satellite" 
+        <button 
+          className="artwork-satellite"
           onClick={clickSatellite}
+          aria-label={t('artwork.viewSatellite') || 'View satellite image'}
+          type="button"
         >
           <img
             src={satelliteData?.sourceUrl || undefined}
-            alt={artwork.title + ' satellite image'}
+            alt={getAltText('satellite')}
             srcSet={satelliteData?.srcSet || undefined}
             sizes={getResponsiveSizes('thumbnail')}
             loading="lazy"
@@ -297,76 +326,83 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
               objectFit: 'contain'
             }}
           />
-        </div>
+        </button>
       );
     } else if (selectArtworkView === 'magnify') {
-      return null; // Extras for magnify are handled by showPhotoViewExtras (raw image)
+      return null;
     } else if (selectArtworkView === 'satellite' || selectArtworkView === 'photo') {
-      // Close button for satellite and photo views (when they are the main view)
       return (
-        <div className="close-button-container" onClick={clickComposite}>
-          <svg className='close-button-svg' id="close-button-svg-button" height="40px" width="40px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <button 
+          className="close-button-container" 
+          onClick={clickComposite}
+          aria-label={t('artwork.closeButton') || 'Close and return to composite view'}
+          type="button"
+        >
+          <svg className='close-button-svg' id="close-button-svg-button" height="40px" width="40px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <line id="close-button-svg-cross-one" stroke="currentColor" strokeWidth="2" x1={15} y1={25} x2={25} y2={15} />
             <line id="close-button-svg-cross-two" stroke="currentColor" strokeWidth="2" x1={25} y1={25} x2={15} y2={15} />
             <circle id="close-button-svg-circle" cx="20" cy="20" r="16" fill="transparent" stroke="currentColor" strokeWidth="2" />
           </svg>
-        </div>
+        </button>
       );
     }
     return null;
   };
 
-  const showPhotoViewExtras = () => { // Renamed from showPhoto
+  const showPhotoViewExtras = () => {
     const photoData = artwork.artworkFields?.dcsPhoto;
     const fields = artwork.artworkFields
 
     if (selectArtworkView === 'composite') {
       return (
-        <div className="artwork-photo" onClick={clickPhoto}>
+        <button 
+          className="artwork-photo" 
+          onClick={clickPhoto}
+          aria-label={t('artwork.viewPhoto') || 'View decisive moment photograph'}
+          type="button"
+        >
           <img
             src={photoData?.sourceUrl || undefined}
-            alt={artwork.title + ' decisive moment photo'}
+            alt={getAltText('photo')}
             srcSet={photoData?.srcSet || undefined}
             sizes={getResponsiveSizes('thumbnail')}
             loading="lazy"
             decoding="async"
-            onError={() => handleImageError(photoData?.sourceUrl || '', 'satellite')}
+            onError={() => handleImageError(photoData?.sourceUrl || '', 'photo')}
             style={{
               width: '100%',
               height: 'auto',
               objectFit: 'contain'
             }}
           />
-        </div>
+        </button>
       );
     } else if (selectArtworkView === 'magnify') {
-        return (
-            <div className={fields?.dcsRaw?.sourceUrl ? 'artwork-composite-info' : 'artwork-composite-info artwork-composite-full'}>
-              <h1>Composite City Portrait</h1>
-              <h2>{`${fields?.width || ''} x ${fields?.height || ''}`} | {fields?.year || 'N/A'}</h2>
-              <h3>{fields?.medium || 'Unknown Medium'}</h3>
-              <h3>edition of 3</h3> 
-              <h4>{fields?.forsale ? 'Available' : 'Not for sale'}</h4>
-              <h4>Contact for details</h4>
-            </div> 
-        )
+      return (
+        <div className={fields?.dcsRaw?.sourceUrl ? 'artwork-composite-info' : 'artwork-composite-info artwork-composite-full'}>
+          <h2>{t('artwork.compositeTitle') || 'Composite City Portrait'}</h2>
+          <h3>{`${fields?.width || ''} x ${fields?.height || ''}`} | {fields?.year || 'N/A'}</h3>
+          <h4>{t('artwork.digitalPhotography') || 'Digital Photography'}</h4>
+          <h4>{t('artwork.edition') || 'Edition of 3'}</h4> 
+          <p>{fields?.forsale ? (t('artwork.available') || 'Available') : (t('artwork.notForSale') || 'Not for sale')}</p>
+          <p>{t('artwork.contactForDetails') || 'Contact for details'}</p>
+        </div> 
+      )
     } else if (selectArtworkView === 'satellite') {
-      // City information for satellite view
       return (
         <div className="city-info">
-          <p>Coordinates: {fields?.coordinates || 'N/A'}</p>
-          <p>Area: {fields?.area || 'N/A'}</p>
-          <p>Population: {fields?.population || 'N/A'}</p>
-          <p>Density: {fields?.density || 'N/A'}</p>
-          <p>Elevation: {fields?.elevation || 'N/A'}</p>
+          <p>{t('artwork.coordinates') || 'Coordinates'}: {fields?.coordinates || 'N/A'}</p>
+          <p>{t('artwork.area') || 'Area'}: {fields?.area || 'N/A'}</p>
+          <p>{t('artwork.population') || 'Population'}: {fields?.population || 'N/A'}</p>
+          <p>{t('artwork.density') || 'Density'}: {fields?.density || 'N/A'}</p>
+          <p>{t('artwork.elevation') || 'Elevation'}: {fields?.elevation || 'N/A'}</p>
         </div>
       );
     } else if (selectArtworkView === 'photo') {
-      // Photo details for photo view
       return (
         <div className="photo-info">
-          <h2>&quot;{fields?.dcsPhotoTitle || 'Photograph'}&quot;</h2> {/* Using style as a placeholder for photo title */}
-          <h4>The Decisive Moment Photograph</h4>
+          <h2>&quot;{fields?.dcsPhotoTitle || t('artwork.photograph') || 'Photograph'}&quot;</h2>
+          <h4>{t('artwork.decisiveMoment') || 'The Decisive Moment Photograph'}</h4>
           <h3>{fields?.year || 'N/A'}</h3>
         </div>
       );
@@ -385,12 +421,14 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
           <h1>{translatedCityName} <span>{translatedCountryName}</span></h1>
         </div>
         {artwork.artworkFields?.dcsFlags?.sourceUrl && (
-          <img 
-            src={artwork.artworkFields?.dcsFlags.sourceUrl} 
-            alt={'flags from ' + artwork.title } 
+          <img
+            src={artwork.artworkFields.dcsFlags.sourceUrl}
+            alt={getAltText('flag')}
+            sizes="200px"
+            loading="lazy"
+            decoding="async"
           />
         )}
-        
       </div>
       <div className="artwork-container">
         <div 
@@ -398,7 +436,6 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
             fadeOut 
             ? 'artwork-composite artwork-composite-fade' 
             : 'artwork-composite'}
-          ref={artworkContainerRef}
         >
           {showMagnifyButtonAndInfo()}
           {showCompositeImage()}

@@ -19,34 +19,51 @@ import hrTranslations from '../../public/locales/hr/common.json';
 import zhTranslations from '../../public/locales/zh/common.json';
 import thTranslations from '../../public/locales/th/common.json';
 
-type Translations = {
-  [key: string]: any;
-};
+// --- NEW/UPDATED TYPES FOR TRANSLATIONS ---
+
+/** Defines the value of a translation entry: either a string or another object (for nesting). */
+type TranslationValue = string | TranslationMap;
+
+/** Defines the structure of a translation object (recursive map of keys to values). */
+interface TranslationMap {
+  [key: string]: TranslationValue;
+}
+
+// /** Alias for use where a generic translation object is needed. */
+// type Translations = TranslationMap; 
+
+/** Defines the shape of the variables object passed for string interpolation. */
+type InterpolationVariables = {
+    [key: string]: string | number;
+}
+// ----------------------------------------
 
 type LocaleContextType = {
   locale: string;
   setLocale: (locale: string) => void;
-  t: (key: string) => string;
+  // Updated 't' signature to accept optional variables for interpolation
+  t: (key: string, variables?: InterpolationVariables) => string; 
   locales: string[];
   defaultLocale: string;
   getLocalizedPath: (path: string) => string;
 };
 
-const translations: { [key: string]: Translations } = {
-  en: enTranslations,
-  fr: frTranslations,
-  es: esTranslations,
-  de: deTranslations,
-  it: itTranslations,
-  yue: yueTranslations, // Cantonese
-  sv: svTranslations,   // Swedish
-  pt: ptTranslations,   // Portuguese
-  da: daTranslations,   // Danish
-  lv: lvTranslations,   // Latvian
-  tr: trTranslations,   // Turkish
-  hr: hrTranslations,   // Croatian
-  zh: zhTranslations,   // Mandarin
-  th: thTranslations    // Thai
+// Use the strongly typed TranslationMap for the imports
+const translations: { [key: string]: TranslationMap } = {
+  en: enTranslations as TranslationMap, // Cast to enforce type and remove 'any'
+  fr: frTranslations as TranslationMap,
+  es: esTranslations as TranslationMap,
+  de: deTranslations as TranslationMap,
+  it: itTranslations as TranslationMap,
+  yue: yueTranslations as TranslationMap, 
+  sv: svTranslations as TranslationMap,   
+  pt: ptTranslations as TranslationMap,   
+  da: daTranslations as TranslationMap,   
+  lv: lvTranslations as TranslationMap,   
+  tr: trTranslations as TranslationMap,   
+  hr: hrTranslations as TranslationMap,   
+  zh: zhTranslations as TranslationMap,   
+  th: thTranslations as TranslationMap    
 };
 
 const defaultLocale = process.env.DEFAULT_LOCALE || 'en';
@@ -57,7 +74,7 @@ const supportedLocales = process.env.SUPPORTED_LOCALES ?
 const LocaleContext = createContext<LocaleContextType>({
   locale: defaultLocale,
   setLocale: () => {},
-  t: () => '',
+  t: () => '', 
   locales: supportedLocales,
   defaultLocale,
   getLocalizedPath: () => '',
@@ -98,7 +115,7 @@ export const LocaleProvider = ({ children }: { children: ReactNode }) => {
     if (newLocale !== locale) {
       setLocaleState(newLocale);
     }
-  }, [pathname]);
+  }, [pathname, locale]);
 
   // Custom setLocale function that navigates to the localized route
   const setLocale = (newLocale: string) => {
@@ -110,21 +127,17 @@ export const LocaleProvider = ({ children }: { children: ReactNode }) => {
     // Get the current path without the locale
     let newPath = removeLocaleFromPath(pathname);
     
-    // If we're not already on the default locale and switching to default
+    // Logic to construct the new path based on locale change
     if (newLocale === defaultLocale) {
-      // If we're on the root path of a non-default language
       if (pathname === `/${locale}`) {
         newPath = '/';
       }
     } else {
-      // If we're on the root path
       if (pathname === '/') {
         newPath = `/${newLocale}`;
       } else if (supportedLocales.includes(pathname.split('/')[1])) {
-        // If we're on a path with a locale, replace it
         newPath = `/${newLocale}${newPath}`;
       } else {
-        // If we're on a path without a locale, add the new locale
         newPath = `/${newLocale}${pathname}`;
       }
     }
@@ -133,7 +146,6 @@ export const LocaleProvider = ({ children }: { children: ReactNode }) => {
     if (newPath !== pathname) {
       router.push(newPath);
     } else {
-      // If the path wouldn't change but the locale does, just update the state
       setLocaleState(newLocale);
     }
   };
@@ -151,31 +163,52 @@ export const LocaleProvider = ({ children }: { children: ReactNode }) => {
     return locale === defaultLocale ? path : `/${locale}${path}`;
   };
 
-  // Translation function
-  const t = (key: string): string => {
+  // Translation function with Interpolation
+  const t = (key: string, variables?: InterpolationVariables): string => {
     const keys = key.split('.');
-    let value = translations[locale];
+    let value: TranslationValue = translations[locale]; // Use TranslationValue type
     
+    // Logic to find the translation value
     for (const k of keys) {
-      if (value && typeof value === 'object' && k in value) {
+      // Check if value is a TranslationMap (object) before accessing the key
+      if (typeof value === 'object' && value && k in value) {
         value = value[k];
       } else {
-        // Fallback to default locale if key not found
-        let fallbackValue = translations[defaultLocale];
+        // Fallback to default locale
+        let fallbackValue: TranslationValue = translations[defaultLocale];
         for (const fk of keys) {
-          if (fallbackValue && typeof fallbackValue === 'object' && fk in fallbackValue) {
+          if (typeof fallbackValue === 'object' && fallbackValue && fk in fallbackValue) {
             fallbackValue = fallbackValue[fk];
           } else {
-            return key; // Return the key if not found in default locale either
+            return key; // Return the key if not found in default
           }
         }
-        return typeof fallbackValue === 'string' ? fallbackValue : key;
+        value = fallbackValue;
+        break; // Stop searching in the current locale once fallback is found
       }
     }
     
-    return typeof value === 'string' ? value : key;
-  };
+    // Final check and type guard: value must be a string to be interpolated
+    if (typeof value !== 'string') {
+        return key; // Return key if translation is not found or is not a string
+    }
 
+    // Interpolation logic
+    let translatedString: string = value; // Explicitly assign as string (no 'any' issue)
+    
+    if (variables) {
+        // Simple string replacement for {{variable}} placeholders
+        for (const varKey in variables) {
+            // Use a regular expression to replace all occurrences of the placeholder
+            const placeholder = new RegExp(`{{${varKey}}}`, 'g');
+            // Ensure the variable value is converted to a string
+            translatedString = translatedString.replace(placeholder, String(variables[varKey]));
+        }
+    }
+    
+    return translatedString; // Return the interpolated string
+  };
+    
   return (
     <LocaleContext.Provider value={{ 
       locale, 
