@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useRef } from 'react'
 import { useLocale } from '@/context/LocaleContext';
 
 import DraggableArtwork from './DraggableArtwork'
@@ -8,7 +8,6 @@ import LoadingImage from '@/components/ui/LoadingImage'
 
 import HandDrag from '@/svg/HandDrag'
 import { toCamelCase } from '@/helpers'
-import useWindowSize from '@/hooks/useWindowSize'
 
 import { ArtworkProps } from '@/types/artworkTypes'
 
@@ -36,92 +35,30 @@ const handleImageError = (imageSrc: string, imageType: string) => {
 const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
   // console.log(artwork)
   const { t } = useLocale();
-  const size = useWindowSize()
-  // console.log('win size: ', size)
   const [selectArtworkView, setSelectArtworkView] = useState<string>('composite')
   const [fadeOut, setFadeOut] = useState<boolean>(false)
   const [toggleMagnify, setToggleMagnify] = useState<boolean>(false)
 
   const artworkContainerRef = useRef<HTMLDivElement>(null)
-  const componentRef = useRef<HTMLElement>(null)
-  const ghostRef = useRef<HTMLElement>(null)
-  const [componentWidth, setComponentWidth] = useState<string>('100%')
-  const [isConstrained, setIsConstrained] = useState<boolean>(false)
-  const [isMeasuring, setIsMeasuring] = useState<boolean>(false)
 
   const [handDragVisible, setHandDragVisible] = useState<boolean>(false)
   const [handDragCount, setHandDragCount] = useState<number>(0)
   const [isLoadingMain, setIsLoadingMain] = useState<boolean>(true)
+
   let handDragTimeoutId: NodeJS.Timeout | null;
 
-  const translatedCityName = t(`cities.${toCamelCase(artwork.artworkFields?.city)}`);
+  let translatedCityName
+    if (artwork.artworkFields?.city) {
+        translatedCityName = t(`cities.${toCamelCase(artwork.artworkFields?.city)}`)
+    } else {
+        translatedCityName = ''
+    }
   let translatedCountryName
   if (artwork.artworkFields?.country) {
     translatedCountryName = t(`countries.${toCamelCase(artwork.artworkFields?.country)}`)
   } else {
     translatedCountryName = ''
   }
-
-  // Memoized function for the core calculation
-  const checkAndCalculateSize = useCallback(() => {
-    const isDesktop = window.matchMedia(`(min-width: 1024px)`).matches; // Use your actual desktop breakpoint
-
-    if (!isDesktop || !artworkContainerRef.current) {
-      // Reset on mobile or if ref isn't ready
-      setComponentWidth('100%');
-      setIsConstrained(false);
-      setIsMeasuring(false); // Stop measuring
-      return;
-    }
-
-    const viewportHeight = window.innerHeight;
-    const targetMaxHeight = (95 / 100) * viewportHeight;
-
-    // Phase 1: Ensure it's rendered unconstrained (isMeasuring is true, width is 100%)
-    if (isMeasuring) {
-        // We ensure the width is 100% when measuring. The `useEffect` below will run immediately after this render.
-        // We need to wait for the next render loop to get the height.
-        setIsMeasuring(false); // Signal the transition to the calculation phase
-        return; // Skip calculation this cycle
-    }
-
-    // Phase 2: Calculation (Runs after isMeasuring is set to false)
-    // The component is rendered at its full unconstrained height because `componentWidth` was 100% in the last cycle.
-    const naturalHeight = artworkContainerRef.current.scrollHeight;
-    
-    if (naturalHeight > targetMaxHeight) {
-      const scaleFactor = targetMaxHeight / naturalHeight;
-      const newWidthPercentage = scaleFactor * 100;
-      
-      // Apply the constraints
-      setComponentWidth(`${newWidthPercentage}%`);
-      setIsConstrained(true);
-    } else {
-      // No shrinking needed
-      setComponentWidth('100%');
-      setIsConstrained(false);
-    }
-  }, [isMeasuring]); // Reruns when isMeasuring changes
-
-  // --- Effect Hook for Sizing ---
-  useEffect(() => {
-    // Run the check when the view changes or the measurement state updates
-    checkAndCalculateSize();
-    
-    // Also re-check on window resize
-    const resizeListener = () => {
-        // Reset to measuring phase on resize to force a fresh, unconstrained measurement
-        setIsMeasuring(true); 
-    };
-    
-    window.addEventListener('resize', resizeListener);
-
-    return () => {
-      window.removeEventListener('resize', resizeListener);
-    };
-    // Dependency on selectArtworkView ensures new content height is measured
-  }, [selectArtworkView, checkAndCalculateSize]);
-
 
   // --- Event Handlers ---
   const clickComposite = () => {
@@ -156,7 +93,7 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
         setHandDragVisible(false)
         setHandDragCount(1)
         clearTheTimeout(handDragTimeoutId)
-      }, 2000)
+      }, 4000)
     }
   }
 
@@ -439,27 +376,9 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
 
   // --- Main Render ---
   return (
-    <>
     <section 
-        ref={ghostRef} 
-        aria-hidden="true"
-        style={{
-          position: 'fixed', // Not absolute, but fixed is safest
-          top: '-9999px', 
-          left: '0', 
-          width: '100vw', // Must use a fixed, known unconstrained width for accurate measurement
-          visibility: 'hidden', // Hide it
-          pointerEvents: 'none', // Ensure it doesn't interfere with interaction
-          opacity: 0
-        }}
-        className='artwork' // Use the same base class for accurate padding/margin/font-size
-    />
-    <section 
-      className={`artwork ${isConstrained ? 'artwork-constrained' : ''}`}
+      className="artwork"
       ref={artworkContainerRef}
-      style={{
-        width: componentWidth
-      }}
     >
       <div className="artwork-header">
         <div className="artwork-title">
@@ -490,7 +409,6 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
         </div>
       </div>
     </section>
-    </>
   );
 };
 

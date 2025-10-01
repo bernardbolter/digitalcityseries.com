@@ -61,7 +61,10 @@
   flex-direction: column;
 
   @media (min-width: $tablet-portrait-up) {
-    width: 100%;
+    width: fit-content;
+    max-height: 109vh;
+    aspect-ratio: 1.5 / 1;
+    max-width: 100%;
     padding: 3%;
   }
 }

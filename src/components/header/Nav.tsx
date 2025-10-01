@@ -48,6 +48,8 @@ const Nav = () => {
                 <Link
                     className="nav-link"
                     href="/business-plan"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >{t('navigation.businessPlan')}
                     <span>{pathname !== '/' ? '(English)' : ''}</span>
                 </Link>
@@ -126,8 +128,12 @@ const Nav = () => {
                 </div>
                     <div className={citiesOpen ? 'nav-city-list nav-city-list__open' : 'nav-city-list'}>
                         {artlist.map((city: ArtworkNode, index) => {
-                            // console.log(city)
-                            const translatedCityName = t(`cities.${toCamelCase(city.artworkFields?.city)}`);
+                            let translatedCityName
+                            if (city.artworkFields?.city) {
+                                translatedCityName = t(`cities.${toCamelCase(city.artworkFields?.city)}`)
+                            } else {
+                                translatedCityName = ''
+                            }
                             let translatedCountryName
                             if (city.artworkFields?.country) {
                             translatedCountryName = t(`countries.${toCamelCase(city.artworkFields?.country)}`)
