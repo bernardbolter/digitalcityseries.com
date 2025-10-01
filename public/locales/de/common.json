@@ -57,14 +57,36 @@
     "tryAdjusting": "Passen Sie Ihre Suche oder Filter an"
   },
   "artwork": {
-    "collection": "Kunstwerksammlung",
-    "details": "Kunstwerkdetails",
-    "city": "Stadt",
-    "year": "Jahr",
-    "dimensions": "Abmessungen",
-    "medium": "Medium",
-    "description": "Beschreibung",
-    "backToCollection": "Zurück zur Sammlung"
+    "alt": {
+      "composite": "Zusammengesetztes Stadtporträt von {{city}} ({{year}})",
+      "photo": "Fotografie des entscheidenden Moments \"{{title}}\" aus {{city}}",
+      "satellite": "Satellitenansicht von {{city}}",
+      "flag": "Flagge von {{country}}"
+    },
+    "loading": {
+      "composite": "Lade zusammengesetztes Bild",
+      "photo": "Lade Fotobild",
+      "satellite": "Lade Satellitenbild"
+    },
+    "magnifyButton": "Bild vergrößern",
+    "closeButton": "Ansicht schließen",
+    "viewSatellite": "Satellitenansicht anzeigen",
+    "viewPhoto": "Fotografie des entscheidenden Moments anzeigen",
+    "compositeTitle": "Zusammengesetztes Stadtporträt",
+    "digitalPhotography": "Digitale Fotografie",
+    "unknownMedium": "Unbekanntes Medium",
+    "edition": "Auflage von 3",
+    "available": "Verfügbar",
+    "notForSale": "Nicht zum Verkauf",
+    "printsAvailable": "Drucke verfügbar",
+    "contactForDetails": "Kontakt für Details",
+    "coordinates": "Koordinaten",
+    "area": "Fläche",
+    "population": "Bevölkerung",
+    "density": "Dichte",
+    "elevation": "Höhe",
+    "photograph": "Fotografie",
+    "decisiveMoment": "Die Fotografie des entscheidenden Moments"
   },
   "contact": {
     "label": {

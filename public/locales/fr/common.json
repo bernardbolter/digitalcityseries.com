@@ -52,14 +52,36 @@
     "tryAdjusting": "Essayez d'ajuster votre recherche ou vos filtres"
   },
   "artwork": {
-    "collection": "Collection d'œuvres d'art",
-    "details": "Détails de l'œuvre",
-    "city": "Ville",
-    "year": "Année",
-    "dimensions": "Dimensions",
-    "medium": "Médium",
-    "description": "Description",
-    "backToCollection": "Retour à la collection"
+    "alt": {
+      "composite": "Portrait de ville composite de {{city}} ({{year}})",
+      "photo": "Photographie du moment décisif « {{title}} » de {{city}}",
+      "satellite": "Vue satellite de {{city}}",
+      "flag": "Drapeau de {{country}}"
+    },
+    "loading": {
+      "composite": "Chargement de l'image composite",
+      "photo": "Chargement de l'image photo",
+      "satellite": "Chargement de l'image satellite"
+    },
+    "magnifyButton": "Agrandir l'image",
+    "closeButton": "Fermer la vue",
+    "viewSatellite": "Voir l'image satellite",
+    "viewPhoto": "Voir la photographie du moment décisif",
+    "compositeTitle": "Portrait de Ville Composite",
+    "digitalPhotography": "Photographie Numérique",
+    "unknownMedium": "Support Inconnu",
+    "edition": "Édition de 3",
+    "available": "Disponible",
+    "notForSale": "Non disponible à la vente",
+    "printsAvailable": "Tirages disponibles",
+    "contactForDetails": "Contactez-nous pour les détails",
+    "coordinates": "Coordonnées",
+    "area": "Superficie",
+    "population": "Population",
+    "density": "Densité",
+    "elevation": "Altitude",
+    "photograph": "Photographie",
+    "decisiveMoment": "La Photographie du Moment Décisif"
   },
   "contact": {
     "label": {

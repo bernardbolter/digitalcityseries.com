@@ -57,14 +57,36 @@
     "tryAdjusting": "Tente ajustar sua pesquisa ou filtros"
   },
   "artwork": {
-    "collection": "Coleção de Obras",
-    "details": "Detalhes da Obra",
-    "city": "Cidade",
-    "year": "Ano",
-    "dimensions": "Dimensões",
-    "medium": "Técnica",
-    "description": "Descrição",
-    "backToCollection": "Voltar para a Coleção"
+    "alt": {
+      "composite": "Retrato composto da cidade de {{city}} ({{year}})",
+      "photo": "Fotografia de momento decisivo \"{{title}}\" de {{city}}",
+      "satellite": "Vista de satélite de {{city}}",
+      "flag": "Bandeira de {{country}}"
+    },
+    "loading": {
+      "composite": "A carregar imagem composta",
+      "photo": "A carregar imagem fotográfica",
+      "satellite": "A carregar imagem de satélite"
+    },
+    "magnifyButton": "Ampliar imagem",
+    "closeButton": "Fechar vista",
+    "viewSatellite": "Ver imagem de satélite",
+    "viewPhoto": "Ver fotografia de momento decisivo",
+    "compositeTitle": "Retrato Composto da Cidade",
+    "digitalPhotography": "Fotografia Digital",
+    "unknownMedium": "Meio Desconhecido",
+    "edition": "Edição de 3",
+    "available": "Disponível",
+    "notForSale": "Não está à venda",
+    "printsAvailable": "Impressões disponíveis",
+    "contactForDetails": "Contacte para detalhes",
+    "coordinates": "Coordenadas",
+    "area": "Área",
+    "population": "População",
+    "density": "Densidade",
+    "elevation": "Elevação",
+    "photograph": "Fotografia",
+    "decisiveMoment": "A Fotografia do Momento Decisivo"
   },
   "contact": {
     "label": {

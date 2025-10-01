@@ -57,14 +57,36 @@
     "tryAdjusting": "Pokušajte prilagoditi svoju pretragu ili filtere"
   },
   "artwork": {
-    "collection": "Zbirka Umjetnina",
-    "details": "Detalji Umjetničkog Djela",
-    "city": "Grad",
-    "year": "Godina",
-    "dimensions": "Dimenzije",
-    "medium": "Tehnika",
-    "description": "Opis",
-    "backToCollection": "Povratak na Zbirku"
+    "alt": {
+      "composite": "Kompozitni gradski portret od {{city}} ({{year}})",
+      "photo": "Fotografija odlučujućeg trenutka \"{{title}}\" iz {{city}}",
+      "satellite": "Satelitski prikaz od {{city}}",
+      "flag": "Zastava od {{country}}"
+    },
+    "loading": {
+      "composite": "Učitavam kompozitnu sliku",
+      "photo": "Učitavam fotografsku sliku",
+      "satellite": "Učitavam satelitsku sliku"
+    },
+    "magnifyButton": "Povećaj sliku",
+    "closeButton": "Zatvori prikaz",
+    "viewSatellite": "Pogledaj satelitsku sliku",
+    "viewPhoto": "Pogledaj fotografiju odlučujućeg trenutka",
+    "compositeTitle": "Kompozitni Gradski Portret",
+    "digitalPhotography": "Digitalna Fotografija",
+    "unknownMedium": "Nepoznati Medij",
+    "edition": "Izdanje od 3",
+    "available": "Dostupno",
+    "notForSale": "Nije za prodaju",
+    "printsAvailable": "Grafike su dostupne",
+    "contactForDetails": "Kontakt za detalje",
+    "coordinates": "Koordinate",
+    "area": "Područje",
+    "population": "Populacija",
+    "density": "Gustoća",
+    "elevation": "Nadmorska visina",
+    "photograph": "Fotografija",
+    "decisiveMoment": "Fotografija Odlučujućeg Trenutka"
   },
   "contact": {
     "label": {

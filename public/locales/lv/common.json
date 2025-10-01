@@ -57,14 +57,36 @@
     "tryAdjusting": "Mēģiniet mainīt meklēšanas kritērijus vai filtrus"
   },
   "artwork": {
-    "collection": "Mākslas Kolekcija",
-    "details": "Mākslas Darba Detaļas",
-    "city": "Pilsēta",
-    "year": "Gads",
-    "dimensions": "Izmēri",
-    "medium": "Tehnika",
-    "description": "Apraksts",
-    "backToCollection": "Atpakaļ uz Kolekciju"
+    "alt": {
+      "composite": "Kompozīts pilsētas portrets no {{city}} ({{year}})",
+      "photo": "Izšķirošā momenta fotogrāfija \"{{title}}\" no {{city}}",
+      "satellite": "Satelītattēls no {{city}}",
+      "flag": "Karogs no {{country}}"
+    },
+    "loading": {
+      "composite": "Ielādē kompozītu attēlu",
+      "photo": "Ielādē fotoattēlu",
+      "satellite": "Ielādē satelītattēlu"
+    },
+    "magnifyButton": "Palielināt attēlu",
+    "closeButton": "Aizvērt skatu",
+    "viewSatellite": "Skatīt satelītattēlu",
+    "viewPhoto": "Skatīt izšķirošā momenta fotogrāfiju",
+    "compositeTitle": "Kompozīts Pilsētas Portrets",
+    "digitalPhotography": "Digitālā Fotogrāfija",
+    "unknownMedium": "Nezināms Medijs",
+    "edition": "Izdevums 3 eksemplāros",
+    "available": "Pieejams",
+    "notForSale": "Nav pārdošanā",
+    "printsAvailable": "Drukas pieejamas",
+    "contactForDetails": "Sazināties par detaļām",
+    "coordinates": "Koordinātes",
+    "area": "Platība",
+    "population": "Iedzīvotāju skaits",
+    "density": "Blīvums",
+    "elevation": "Augstums virs jūras līmeņa",
+    "photograph": "Fotogrāfija",
+    "decisiveMoment": "Izšķirošā Momenta Fotogrāfija"
   },
   "contact": {
     "label": {

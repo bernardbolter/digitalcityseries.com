@@ -57,14 +57,36 @@
     "tryAdjusting": "Aramanızı veya filtrelerinizi ayarlamayı deneyin"
   },
   "artwork": {
-    "collection": "Sanat Koleksiyonu",
-    "details": "Sanat Eseri Detayları",
-    "city": "Şehir",
-    "year": "Yıl",
-    "dimensions": "Boyutlar",
-    "medium": "Teknik",
-    "description": "Açıklama",
-    "backToCollection": "Koleksiyona Dön"
+    "alt": {
+      "composite": "{{city}} şehrinin kompozit portresi ({{year}})",
+      "photo": "{{city}} şehrinden \"{{title}}\" adlı belirleyici an fotoğrafı",
+      "satellite": "{{city}} şehrinin uydu görüntüsü",
+      "flag": "{{country}} bayrağı"
+    },
+    "loading": {
+      "composite": "Kompozit görüntü yükleniyor",
+      "photo": "Fotoğraf görüntüsü yükleniyor",
+      "satellite": "Uydu görüntüsü yükleniyor"
+    },
+    "magnifyButton": "Görüntüyü büyüt",
+    "closeButton": "Görünümü kapat",
+    "viewSatellite": "Uydu görüntüsünü görüntüle",
+    "viewPhoto": "Belirleyici an fotoğrafını görüntüle",
+    "compositeTitle": "Kompozit Şehir Portresi",
+    "digitalPhotography": "Dijital Fotoğrafçılık",
+    "unknownMedium": "Bilinmeyen Ortam",
+    "edition": "3. Baskı",
+    "available": "Mevcut",
+    "notForSale": "Satılık değil",
+    "printsAvailable": "Baskılar Mevcut",
+    "contactForDetails": "Detaylar için iletişime geçin",
+    "coordinates": "Koordinatlar",
+    "area": "Alan",
+    "population": "Nüfus",
+    "density": "Yoğunluk",
+    "elevation": "Rakım",
+    "photograph": "Fotoğraf",
+    "decisiveMoment": "Belirleyici An Fotoğrafı"
   },
   "contact": {
     "label": {

@@ -57,14 +57,36 @@
     "tryAdjusting": "Prova a modificare la tua ricerca o i filtri"
   },
   "artwork": {
-    "collection": "Collezione d'Arte",
-    "details": "Dettagli Opera",
-    "city": "Città",
-    "year": "Anno",
-    "dimensions": "Dimensioni",
-    "medium": "Tecnica",
-    "description": "Descrizione",
-    "backToCollection": "Torna alla Collezione"
+    "alt": {
+      "composite": "Ritratto composito della città di {{city}} ({{year}})",
+      "photo": "Fotografia del momento decisivo \"{{title}}\" da {{city}}",
+      "satellite": "Vista satellitare di {{city}}",
+      "flag": "Bandiera di {{country}}"
+    },
+    "loading": {
+      "composite": "Caricamento immagine composita",
+      "photo": "Caricamento immagine fotografica",
+      "satellite": "Caricamento immagine satellitare"
+    },
+    "magnifyButton": "Ingrandisci immagine",
+    "closeButton": "Chiudi vista",
+    "viewSatellite": "Visualizza immagine satellitare",
+    "viewPhoto": "Visualizza fotografia del momento decisivo",
+    "compositeTitle": "Ritratto Composto della Città",
+    "digitalPhotography": "Fotografia Digitale",
+    "unknownMedium": "Supporto Sconosciuto",
+    "edition": "Edizione di 3",
+    "available": "Disponibile",
+    "notForSale": "Non in vendita",
+    "printsAvailable": "Stampe disponibili",
+    "contactForDetails": "Contattare per i dettagli",
+    "coordinates": "Coordinate",
+    "area": "Area",
+    "population": "Popolazione",
+    "density": "Densità",
+    "elevation": "Altitudine",
+    "photograph": "Fotografia",
+    "decisiveMoment": "La Fotografia del Momento Decisivo"
   },
   "contact": {
     "label": {

@@ -23,6 +23,8 @@ interface Velocity {
   y: number;
 }
 
+const MAGNIFIED_SIZE = 1500; // Use a constant for the fixed magnified size
+
 const DraggableArtwork: React.FC<DraggableArtworkProps> = ({
   src,
   alt,
@@ -44,22 +46,46 @@ const DraggableArtwork: React.FC<DraggableArtworkProps> = ({
     initialImagePosition: { x: 0, y: 0 }
   });
 
-    // Calculate boundaries to keep image within container
+  // Calculate boundaries to keep image within container
   const getBoundaries = useCallback((): { minX: number; maxX: number; minY: number; maxY: number } => {
-    if (!artworkContainerRef.current || !imageRef.current) {
+    if (!artworkContainerRef.current) {
       return { minX: 0, maxX: 0, minY: 0, maxY: 0 };
     }
 
     const containerRect = artworkContainerRef.current.getBoundingClientRect();
-    const imageRect = imageRef.current.getBoundingClientRect();
     
-    const minX = Math.min(0, containerRect.width - imageRect.width);
-    const maxX = Math.max(0, containerRect.width - imageRect.width);
-    const minY = Math.min(0, containerRect.height - imageRect.height);
-    const maxY = Math.max(0, containerRect.height - imageRect.height);
+    // Use the fixed magnified size for boundary calculations
+    const imageWidth = MAGNIFIED_SIZE;
+    const imageHeight = MAGNIFIED_SIZE;
+    const containerWidth = containerRect.width;
+    const containerHeight = containerRect.height;
+    
+    let finalMinX, finalMaxX, finalMinY, finalMaxY;
+    
+    // --- X-axis Boundary ---
+    if (imageWidth > containerWidth) {
+        // Image is larger: Allow dragging
+        finalMinX = containerWidth - imageWidth; // Negative value (most left position)
+        finalMaxX = 0;                          // 0 (most right position)
+    } else {
+        // Image is smaller: Center it (no dragging needed)
+        finalMinX = (containerWidth - imageWidth) / 2;
+        finalMaxX = finalMinX;
+    }
+    
+    // --- Y-axis Boundary ---
+    if (imageHeight > containerHeight) {
+        // Image is larger: Allow dragging
+        finalMinY = containerHeight - imageHeight; // Negative value (most up position)
+        finalMaxY = 0;                           // 0 (most down position)
+    } else {
+        // Image is smaller: Center it (no dragging needed)
+        finalMinY = (containerHeight - imageHeight) / 2;
+        finalMaxY = finalMinY;
+    }
 
-    return { minX, maxX, minY, maxY };
-  }, [artworkContainerRef]);
+    return { minX: finalMinX, maxX: finalMaxX, minY: finalMinY, maxY: finalMaxY };
+  }, [artworkContainerRef]); // Removed imageRef.current from dependencies as we use MAGNIFIED_SIZE
 
   // Constrain position within boundaries
   const constrainPosition = useCallback((pos: Position): Position => {
@@ -71,15 +97,15 @@ const DraggableArtwork: React.FC<DraggableArtworkProps> = ({
   }, [getBoundaries]);
 
   // Center the image on initial load and when resized
-    useEffect(() => {
+  useEffect(() => {
     const centerImage = () => {
-        if (!artworkContainerRef.current || !imageRef.current) return;
+        if (!artworkContainerRef.current) return;
 
         const containerRect = artworkContainerRef.current.getBoundingClientRect();
-        const imageRect = imageRef.current.getBoundingClientRect();
-
-        const x = (containerRect.width - imageRect.width) / 2;
-        const y = (containerRect.height - imageRect.height) / 2;
+        
+        // Calculate centered position based on MAGNIFIED_SIZE
+        const x = (containerRect.width - MAGNIFIED_SIZE) / 2;
+        const y = (containerRect.height - MAGNIFIED_SIZE) / 2;
 
         const centered = constrainPosition({ x, y });
         setPosition(centered);
@@ -98,7 +124,7 @@ const DraggableArtwork: React.FC<DraggableArtworkProps> = ({
         window.removeEventListener('resize', centerImage);
         if (img) img.onload = null;
     };
-    }, [artworkContainerRef, constrainPosition, src]);
+  }, [artworkContainerRef, constrainPosition, src]);
 
 
   // Smooth animation loop with momentum
@@ -260,8 +286,9 @@ const handlePointerDown = useCallback((e: React.MouseEvent | React.TouchEvent) =
       className={`draggable-artwork ${dragState.isDragging ? 'draggable-image--dragging' : ''} ${className}`}
       style={{
         transform: `translate(${position.x}px, ${position.y}px)`,
-        width: '1500px',
-        height: '1500px',
+        // Keep fixed size for the magnified view
+        width: `${MAGNIFIED_SIZE}px`,
+        height: `${MAGNIFIED_SIZE}px`,
       }}
       onMouseDown={handlePointerDown}
       onTouchStart={handlePointerDown}

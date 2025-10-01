@@ -7,6 +7,7 @@ import DraggableArtwork from './DraggableArtwork'
 import LoadingImage from '@/components/ui/LoadingImage'
 
 import HandDrag from '@/svg/HandDrag'
+import PlusSvg from '@/svg/PlusSvg'
 import { toCamelCase } from '@/helpers'
 
 import { ArtworkProps } from '@/types/artworkTypes'
@@ -38,7 +39,8 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
   const [fadeOut, setFadeOut] = useState<boolean>(false)
   const [toggleMagnify, setToggleMagnify] = useState<boolean>(false)
 
-  const artworkContainerRef = useRef<HTMLDivElement>(null)
+  // FIX: Rename/Re-purpose the ref to point to the composite container
+  const compositeContainerRef = useRef<HTMLDivElement>(null)
 
   const [handDragVisible, setHandDragVisible] = useState<boolean>(false)
   const [handDragCount, setHandDragCount] = useState<number>(0)
@@ -159,7 +161,8 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
       return (
         <DraggableArtwork
           src={compositeData?.sourceUrl || '' }
-          artworkContainerRef={artworkContainerRef}
+          // FIX: Pass the new, correct ref here
+          artworkContainerRef={compositeContainerRef}
           alt={getAltText('composite')}
         />
       )
@@ -326,6 +329,9 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
               objectFit: 'contain'
             }}
           />
+          <div className="artwork-satellite__magnify">
+            <PlusSvg />
+          </div>
         </button>
       );
     } else if (selectArtworkView === 'magnify') {
@@ -375,6 +381,9 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
               objectFit: 'contain'
             }}
           />
+          <div className="artwork-satellite__magnify">
+            <PlusSvg />
+          </div>
         </button>
       );
     } else if (selectArtworkView === 'magnify') {
@@ -384,7 +393,7 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
           <h3>{`${fields?.width || ''} x ${fields?.height || ''}`} | {fields?.year || 'N/A'}</h3>
           <h4>{t('artwork.digitalPhotography') || 'Digital Photography'}</h4>
           <h4>{t('artwork.edition') || 'Edition of 3'}</h4> 
-          <p>{fields?.forsale ? (t('artwork.available') || 'Available') : (t('artwork.notForSale') || 'Not for sale')}</p>
+          <p>{(t('artwork.available') || 'Available')}</p>
           <p>{t('artwork.contactForDetails') || 'Contact for details'}</p>
         </div> 
       )
@@ -414,7 +423,6 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
   return (
     <section 
       className="artwork"
-      ref={artworkContainerRef}
     >
       <div className="artwork-header">
         <div className="artwork-title">
@@ -430,12 +438,13 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
           />
         )}
       </div>
-      <div className="artwork-container">
+      <div className={`artwork-container ${toggleMagnify ? 'artwork-container--magnified' : ''}`}>
         <div 
           className={
             fadeOut 
             ? 'artwork-composite artwork-composite-fade' 
             : 'artwork-composite'}
+          ref={compositeContainerRef}
         >
           {showMagnifyButtonAndInfo()}
           {showCompositeImage()}

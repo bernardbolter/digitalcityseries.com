@@ -57,14 +57,36 @@
     "tryAdjusting": "Prøv at justere din søgning eller filtre"
   },
   "artwork": {
-    "collection": "Kunstsamling",
-    "details": "Kunstværkdetaljer",
-    "city": "By",
-    "year": "År",
-    "dimensions": "Mål",
-    "medium": "Medium",
-    "description": "Beskrivelse",
-    "backToCollection": "Tilbage til Samlingen"
+    "alt": {
+      "composite": "Sammensat byportræt af {{city}} ({{year}})",
+      "photo": "Afgørende øjebliks fotografi \"{{title}}\" fra {{city}}",
+      "satellite": "Satellitbillede af {{city}}",
+      "flag": "Flag af {{country}}"
+    },
+    "loading": {
+      "composite": "Indlæser sammensat billede",
+      "photo": "Indlæser fotobillede",
+      "satellite": "Indlæser satellitbillede"
+    },
+    "magnifyButton": "Forstør billede",
+    "closeButton": "Luk visning",
+    "viewSatellite": "Se satellitbillede",
+    "viewPhoto": "Se fotografi af afgørende øjeblik",
+    "compositeTitle": "Sammensat Byportræt",
+    "digitalPhotography": "Digital Fotografi",
+    "unknownMedium": "Ukendt Medie",
+    "edition": "Oplag på 3",
+    "available": "Tilgængelig",
+    "notForSale": "Ikke til salg",
+    "printsAvailable": "Tryk er tilgængelige",
+    "contactForDetails": "Kontakt for detaljer",
+    "coordinates": "Koordinater",
+    "area": "Areal",
+    "population": "Befolkning",
+    "density": "Tæthed",
+    "elevation": "Højde",
+    "photograph": "Fotografi",
+    "decisiveMoment": "Fotografiet af det Afgørende Øjeblik"
   },
   "contact": {
     "label": {

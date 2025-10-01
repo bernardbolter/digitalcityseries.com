@@ -9,6 +9,11 @@ import ArrowSvg from '@/svg/ArrowSvg'
 import RandomSvg from '@/svg/RandomSvg'
 import ListSvg from '@/svg/ListSvg'
 
+import PaintBrushSvg from '@/svg/PaintBrushSvg'
+import AboutSvg from '@/svg/AboutSvg'
+import PlanSvg from '@/svg/PlanSvg'
+import ContactSvg from '@/svg/ContactSvg'
+
 import { toCamelCase } from '@/helpers'
 
 import { ArtworkNode } from '@/types/artworkTypes'
@@ -37,28 +42,48 @@ const Nav = () => {
     return (
         <div className="nav-container">
             <div className="nav-links">
-            <p
-                    onClick={toggleAbout}
-                    className={aboutOpen ? 'nav-link nav-link__open' : 'nav-link'}
-                >{t('navigation.about')}</p>
-                <p
-                    onClick={togglePaintings}
-                    className={paintingsOpen ? 'nav-link nav-link__open' : 'nav-link'}
-                >{t('navigation.paintings')}</p>
-                <Link
-                    className="nav-link"
-                    href="/business-plan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >{t('navigation.businessPlan')}
-                    <span>{pathname !== '/' ? '(English)' : ''}</span>
-                </Link>
-                <ScrollLink
-                    className="nav-link"
-                    to="contact-form"
-                    smooth={true}
-                    duration={2000}
-                >{t('navigation.contact')}</ScrollLink>
+                <div className="nav-link__container">
+                    <div className="nav-link__svg">
+                        <AboutSvg />
+                    </div>
+                    <p
+                        onClick={toggleAbout}
+                        className={aboutOpen ? 'nav-link nav-link__open' : 'nav-link'}
+                    >{t('navigation.about')}</p>
+                </div>
+                <div className="nav-link__container">
+                    <div className="nav-link__svg">
+                        <PaintBrushSvg />
+                    </div>
+                    <p
+                        onClick={togglePaintings}
+                        className={paintingsOpen ? 'nav-link nav-link__open' : 'nav-link'}
+                    >{t('navigation.paintings')}</p>
+                </div>
+                <div className="nav-link__container">
+                    <div className="nav-link__svg">
+                        <PlanSvg />
+                    </div>
+                    <Link
+                        className="nav-link"
+                        href="/business-plan"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >{t('navigation.businessPlan')}
+                        <span>{pathname !== '/' ? '(English)' : ''}</span>
+                    </Link>
+                </div>
+                <div className="nav-link__container">
+                    <div className="nav-link__svg">
+                        <ContactSvg />
+                    </div>
+                    <ScrollLink
+                        className="nav-link"
+                        to="contact-form"
+                        smooth={true}
+                        duration={2000}
+                    >{t('navigation.contact')}</ScrollLink>
+                </div>
             </div>
             <div className="nav-filter-container">
                 <div

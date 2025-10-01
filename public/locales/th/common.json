@@ -57,14 +57,36 @@
     "tryAdjusting": "ลองปรับการค้นหาหรือตัวกรองของคุณ"
   },
   "artwork": {
-    "collection": "คอลเล็กชันผลงานศิลปะ",
-    "details": "รายละเอียดผลงานศิลปะ",
-    "city": "เมือง",
-    "year": "ปี",
-    "dimensions": "ขนาด",
-    "medium": "เทคนิค",
-    "description": "คำอธิบาย",
-    "backToCollection": "กลับสู่คอลเล็กชัน"
+    "alt": {
+      "composite": "ภาพพอร์เทรตเมืองแบบคอมโพสิตของ {{city}} ({{year}})",
+      "photo": "ภาพถ่ายช่วงเวลาตัดสินใจ \"{{title}}\" จาก {{city}}",
+      "satellite": "มุมมองดาวเทียมของ {{city}}",
+      "flag": "ธงชาติของ {{country}}"
+    },
+    "loading": {
+      "composite": "กำลังโหลดภาพคอมโพสิต",
+      "photo": "กำลังโหลดภาพถ่าย",
+      "satellite": "กำลังโหลดภาพถ่ายดาวเทียม"
+    },
+    "magnifyButton": "ขยายภาพ",
+    "closeButton": "ปิดมุมมอง",
+    "viewSatellite": "ดูภาพถ่ายดาวเทียม",
+    "viewPhoto": "ดูภาพถ่ายช่วงเวลาตัดสินใจ",
+    "compositeTitle": "ภาพพอร์เทรตเมืองแบบคอมโพสิต",
+    "digitalPhotography": "ภาพถ่ายดิจิทัล",
+    "unknownMedium": "สื่อที่ไม่รู้จัก",
+    "edition": "ฉบับพิมพ์ที่ 3",
+    "available": "มีจำหน่าย",
+    "notForSale": "ไม่ได้มีไว้เพื่อขาย",
+    "printsAvailable": "มีภาพพิมพ์จำหน่าย",
+    "contactForDetails": "ติดต่อสอบถามรายละเอียด",
+    "coordinates": "พิกัด",
+    "area": "พื้นที่",
+    "population": "ประชากร",
+    "density": "ความหนาแน่น",
+    "elevation": "ระดับความสูง",
+    "photograph": "ภาพถ่าย",
+    "decisiveMoment": "ภาพถ่ายช่วงเวลาตัดสินใจ"
   },
   "contact": {
     "label": {

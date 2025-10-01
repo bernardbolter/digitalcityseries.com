@@ -57,14 +57,36 @@
     "tryAdjusting": "試下改改你嘅搜尋條件或者篩選器"
   },
   "artwork": {
-    "collection": "作品集",
-    "details": "作品詳情",
-    "city": "城市",
-    "year": "年份",
-    "dimensions": "尺寸",
-    "medium": "媒介",
-    "description": "描述",
-    "backToCollection": "返去作品集"
+    "alt": {
+      "composite": "{{city}} 嘅合成城市肖像 ({{year}})",
+      "photo": "來自 {{city}} 嘅「{{title}}」決定性瞬間攝影",
+      "satellite": "{{city}} 嘅衛星視圖",
+      "flag": "{{country}} 嘅旗幟"
+    },
+    "loading": {
+      "composite": "載入緊合成圖像",
+      "photo": "載入緊相片圖像",
+      "satellite": "載入緊衛星圖像"
+    },
+    "magnifyButton": "放大圖像",
+    "closeButton": "關閉視圖",
+    "viewSatellite": "查看衛星圖像",
+    "viewPhoto": "查看決定性瞬間攝影",
+    "compositeTitle": "合成城市肖像",
+    "digitalPhotography": "數碼攝影",
+    "unknownMedium": "未知媒介",
+    "edition": "第三版",
+    "available": "有售",
+    "notForSale": "非賣品",
+    "printsAvailable": "提供印刷品",
+    "contactForDetails": "聯絡查詢詳情",
+    "coordinates": "座標",
+    "area": "面積",
+    "population": "人口",
+    "density": "密度",
+    "elevation": "海拔",
+    "photograph": "攝影",
+    "decisiveMoment": "決定性瞬間攝影"
   },
   "contact": {
     "label": {

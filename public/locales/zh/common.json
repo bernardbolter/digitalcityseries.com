@@ -57,14 +57,36 @@
     "tryAdjusting": "尝试调整搜索条件或筛选器"
   },
   "artwork": {
-    "collection": "作品集",
-    "details": "作品详情",
-    "city": "城市",
-    "year": "年份",
-    "dimensions": "尺寸",
-    "medium": "媒介",
-    "description": "描述",
-    "backToCollection": "返回作品集"
+    "alt": {
+      "composite": "{{city}} 的合成城市肖像 ({{year}})",
+      "photo": "来自 {{city}} 的“{{title}}”决定性瞬间照片",
+      "satellite": "{{city}} 的卫星视图",
+      "flag": "{{country}} 的旗帜"
+    },
+    "loading": {
+      "composite": "正在加载合成图像",
+      "photo": "正在加载照片图像",
+      "satellite": "正在加载卫星图像"
+    },
+    "magnifyButton": "放大图像",
+    "closeButton": "关闭视图",
+    "viewSatellite": "查看卫星图像",
+    "viewPhoto": "查看决定性瞬间照片",
+    "compositeTitle": "合成城市肖像",
+    "digitalPhotography": "数码摄影",
+    "unknownMedium": "未知媒介",
+    "edition": "限量版 3",
+    "available": "有售",
+    "notForSale": "非卖品",
+    "printsAvailable": "提供印刷品",
+    "contactForDetails": "联系获取详情",
+    "coordinates": "坐标",
+    "area": "面积",
+    "population": "人口",
+    "density": "密度",
+    "elevation": "海拔",
+    "photograph": "照片",
+    "decisiveMoment": "决定性瞬间照片"
   },
   "contact": {
     "label": {
