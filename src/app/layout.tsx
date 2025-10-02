@@ -35,13 +35,12 @@ const notoSansThai = Noto_Sans_Thai({
 })
 
 export const metadata: Metadata = {
-  title: "Digital City Series",
-  description: "Exploring urban environments through digital art",
+  title: "Digital City Series | Skateboarding, AI and Oil Paintings",
+  description: "A unique urban art project by Bernard Bolter. Cities are captured on a skateboard, transformed through AI, and reimagined as collaborative oil paintings. Explore the journey.",
   icons: {
-    // 1. Array for multiple standard favicons (SVG prioritized, then .ico)
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' }, // SVG (Prioritized for modern browsers)
-      { url: '/favicon.ico', sizes: 'any' },          // .ico (Fallback for broad compatibility)
+      { url: '/favicon.svg', type: 'image/svg+xml' }, 
+      { url: '/favicon.ico', sizes: 'any' },  
     ],
   }
 };
