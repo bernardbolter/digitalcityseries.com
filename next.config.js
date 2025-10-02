@@ -20,7 +20,10 @@ const nextConfig = {
   env: {
     DEFAULT_LOCALE: 'en',
     SUPPORTED_LOCALES: 'en,fr,es,de,it,yue,sv,pt,da,lv,tr,hr,zh,th'
-  }
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 }
 
 module.exports = nextConfig

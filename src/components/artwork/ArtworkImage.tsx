@@ -99,7 +99,7 @@ const ArtworkImage: React.FC<ArtworkImageProps> = (props) => {
   const customUnloaderUI = (
     <div className='image-loader-container-unable'>
       <img alt="Failed to load" src='./images/globe.gif' />
-      <p>unable to load image, try to refresh or come back later, sorry, I'm just an artist :-)</p>
+      <p>unable to load image, try to refresh or come back later, sorry, I&apos;m just an artist :-)</p>
     </div>
   );
   

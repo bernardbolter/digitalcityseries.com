@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode } from 'react'
+import { ReactNode, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLocale } from '@/context/LocaleContext'
 import Header from '@/components/header/Header'
@@ -17,7 +17,15 @@ type RouteConfig = {
 
 const AppRouter = () => {
   const pathname = usePathname()
-  const { locale } = useLocale()
+  const { locale, t } = useLocale()
+
+  useEffect(() => {
+    const translatedTitle = t('site.title')
+
+    if (document.title !== translatedTitle) {
+      document.title = translatedTitle
+    }
+  }, [locale, t])
 
   // Define your routes
   const routes: RouteConfig[] = [

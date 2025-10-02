@@ -1,23 +1,21 @@
 // components/MarkdownViewer.tsx
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { 
+  useState, 
+  useEffect, 
+  useMemo, 
+  AnchorHTMLAttributes, 
+  BlockquoteHTMLAttributes,
+  HTMLAttributes,
+  ImgHTMLAttributes
+} from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-
 interface MarkdownViewerProps {
   filename: string;
   title?: string;
   showToc?: boolean;
   tocPosition?: 'top' | 'sidebar';
-}
-
-interface CodeProps {
-  node?: any;
-  inline?: boolean;
-  className?: string;
-  children: React.ReactNode;
 }
 
 interface TocItem {
@@ -105,137 +103,141 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
 
   // Custom components for better rendering with anchor links
   const components = {
-    code: ({ node, inline, className, children, ...props }: CodeProps) => {
-      const match = /language-(\w+)/.exec(className || '');
-      return !inline && match ? (
-        <SyntaxHighlighter
-          style={tomorrow}
-          language={match[1]}
-          PreTag="div"
-          {...props}
-        >
-          {String(children).replace(/\n$/, '')}
-        </SyntaxHighlighter>
-      ) : (
-        <code className={className} {...props}>
-          {children}
-        </code>
-      );
-    },
-    h1: ({ children }: { children: React.ReactNode }) => {
-      const text = String(children);
+    h1: (props: HTMLAttributes<HTMLHeadingElement>) => {
+      // Must use props.children and spread {...props}
+      const text = String(props.children); 
       const id = createSlug(text);
       return (
-        <h1 id={id} className="md-h1">
+        <h1 id={id} className="md-h1" {...props}>
           <a href={`#${id}`} className="heading-anchor">
-            {children}
+            {props.children}
           </a>
         </h1>
       );
     },
-    h2: ({ children }: { children: React.ReactNode }) => {
-      const text = String(children);
+    h2: (props: HTMLAttributes<HTMLHeadingElement>) => {
+      const text = String(props.children); 
       const id = createSlug(text);
       return (
-        <h2 id={id} className="md-h2">
+        <h2 id={id} className="md-h2" {...props}>
           <a href={`#${id}`} className="heading-anchor">
-            {children}
+            {props.children}
           </a>
         </h2>
       );
     },
-    h3: ({ children }: { children: React.ReactNode }) => {
-      const text = String(children);
+    h3: (props: HTMLAttributes<HTMLHeadingElement>) => {
+      const text = String(props.children);
       const id = createSlug(text);
       return (
         <h3 id={id} className="md-h3">
           <a href={`#${id}`} className="heading-anchor">
-            {children}
+            {props.children}
           </a>
         </h3>
       );
     },
-    h4: ({ children }: { children: React.ReactNode }) => {
-      const text = String(children);
+    h4: (props: HTMLAttributes<HTMLHeadingElement>) => {
+      const text = String(props.children);
       const id = createSlug(text);
       return (
         <h4 id={id} className="md-h4">
           <a href={`#${id}`} className="heading-anchor">
-            {children}
+            {props.children}
           </a>
         </h4>
       );
     },
-    h5: ({ children }: { children: React.ReactNode }) => {
-      const text = String(children);
+    h5: (props: HTMLAttributes<HTMLHeadingElement>) => {
+      const text = String(props.children);
       const id = createSlug(text);
       return (
         <h5 id={id} className="md-h5">
           <a href={`#${id}`} className="heading-anchor">
-            {children}
+            {props.children}
           </a>
         </h5>
       );
     },
-    h6: ({ children }: { children: React.ReactNode }) => {
-      const text = String(children);
+    h6: (props: HTMLAttributes<HTMLHeadingElement>) => {
+      const text = String(props.children);
       const id = createSlug(text);
       return (
         <h6 id={id} className="md-h6">
           <a href={`#${id}`} className="heading-anchor">
-            {children}
+            {props.children}
           </a>
         </h6>
       );
     },
-    p: ({ children }: { children: React.ReactNode }) => 
-      <p className="md-paragraph">{children}</p>,
-    ul: ({ children }: { children: React.ReactNode }) => 
-      <ul className="md-list">{children}</ul>,
-    ol: ({ children }: { children: React.ReactNode }) => 
-      <ol className="md-list md-list-ordered">{children}</ol>,
-    li: ({ children }: { children: React.ReactNode }) => 
-      <li className="md-list-item">{children}</li>,
-    blockquote: ({ children }: { children: React.ReactNode }) => 
-      <blockquote className="md-blockquote">{children}</blockquote>,
-    table: ({ children }: { children: React.ReactNode }) => 
-      <table className="md-table">{children}</table>,
-    thead: ({ children }: { children: React.ReactNode }) => 
-      <thead className="md-table-head">{children}</thead>,
-    tbody: ({ children }: { children: React.ReactNode }) => 
-      <tbody className="md-table-body">{children}</tbody>,
-    tr: ({ children }: { children: React.ReactNode }) => 
-      <tr className="md-table-row">{children}</tr>,
-    th: ({ children }: { children: React.ReactNode }) => 
-      <th className="md-table-header">{children}</th>,
-    td: ({ children }: { children: React.ReactNode }) => 
-      <td className="md-table-cell">{children}</td>,
-    a: ({ href, children }: { href?: string; children: React.ReactNode }) => (
-      <a href={href} className="md-link" target="_blank" rel="noopener noreferrer">
-        {children}
-      </a>
-    ),
-    img: ({ src, alt }: { src?: string; alt?: string }) => {
-      const imageSrc = src?.startsWith('http') || src?.startsWith('/') 
-        ? src 
-        : `/images/${src}`;
+    p: (props: HTMLAttributes<HTMLParagraphElement>) => 
+      <p className="md-paragraph" {...props}>{props.children}</p>,
+      
+    ul: (props: HTMLAttributes<HTMLUListElement>) => 
+      <ul className="md-list" {...props}>{props.children}</ul>,
+      
+    ol: (props: HTMLAttributes<HTMLUListElement>) => 
+      <ol className="md-list md-list-ordered" {...props}>{props.children}</ol>,
+      
+    li: (props: HTMLAttributes<HTMLLIElement>) => 
+      <li className="md-list-item" {...props}>{props.children}</li>,
+
+    blockquote: (props: BlockquoteHTMLAttributes<HTMLQuoteElement>) => 
+  <blockquote className="md-blockquote" {...props}>{props.children}</blockquote>,
+    table: (props: HTMLAttributes<HTMLTableElement>) => 
+      <table className="md-table" {...props}>{props.children}</table>,
+      
+    thead: (props: HTMLAttributes<HTMLTableSectionElement>) => 
+      <thead className="md-table-head" {...props}>{props.children}</thead>,
+      
+    tbody: (props: HTMLAttributes<HTMLTableSectionElement>) => 
+      <tbody className="md-table-body" {...props}>{props.children}</tbody>,
+      
+    tr: (props: HTMLAttributes<HTMLTableRowElement>) => 
+      <tr className="md-table-row" {...props}>{props.children}</tr>,
+      
+    th: (props: HTMLAttributes<HTMLTableCellElement>) => 
+      <th className="md-table-header" {...props}>{props.children}</th>,
+      
+    td: (props: HTMLAttributes<HTMLTableCellElement>) => 
+      <td className="md-table-cell" {...props}>{props.children}</td>,
+    a: (props: AnchorHTMLAttributes<HTMLAnchorElement>) => {
+    return <a {...props}>{props.children}</a>;
+    },
+    img: (props: ImgHTMLAttributes<HTMLImageElement>) => {
+      // Destructure src and alt, and collect the rest of the props
+      const { src, alt, ...restProps } = props;
+      let imageSrc = '';
+
+      // --- Type Guard: Check if 'src' is actually a string before using 'startsWith' ---
+      if (typeof src === 'string') {
+          // Now it's safe to use string methods
+          imageSrc = src.startsWith('http') || src.startsWith('/') 
+              ? src 
+              : `/images/${src}`;
+      }
+      // Note: If src is a Blob or undefined, imageSrc will be '' or whatever fallback you prefer.
+      // Given the previous error, we must avoid touching it unless it's a string.
       
       return (
-        <img 
-          src={imageSrc} 
-          alt={alt || ''} 
-          className="md-image"
-          onError={(e) => {
-            console.error(`Failed to load image: ${imageSrc}`);
-            (e.target as HTMLImageElement).style.display = 'none';
-          }}
-        />
+          <img 
+            src={imageSrc} 
+            alt={alt || ''} 
+            className="md-image"
+            onError={(e) => {
+              console.error(`Failed to load image: ${imageSrc}`);
+              // Safely hide the element if it fails to load
+              (e.target as HTMLImageElement).style.display = 'none';
+            }}
+            // Spread the rest of the attributes (like width, height, etc.)
+            {...restProps} 
+          />
       );
-    },
+  },
     hr: () => <hr className="md-divider" />,
   };
 
-  const renderTableOfContents = (): JSX.Element => (
+  const renderTableOfContents = (): React.ReactElement => (
     <div className="table-of-contents">
       <h3 className="toc-title">Table of Contents</h3>
       <nav className="toc-nav">
