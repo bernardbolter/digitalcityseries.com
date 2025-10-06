@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache, createHttpLink, ApolloLink } from '@apollo/client';
 
 // WordPress GraphQL API endpoint
-const WORDPRESS_GRAPHQL_ENDPOINT = 'https://digitalcityseries.com/bolter/graphql';
+const WORDPRESS_GRAPHQL_ENDPOINT = process.env.NEXT_PUBLIC_GRAPHQL_URL;
 
 // Create HTTP link
 const httpLink = createHttpLink({
