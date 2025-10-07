@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useAppContext } from '@/context/AppContext'
 import Link from 'next/link'
-import { useLocale } from '@/context/LocaleContext'
+import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import { Link as ScrollLink} from 'react-scroll'
 
@@ -34,8 +34,8 @@ const Nav = () => {
         selectArtwork
     } = useAppContext();
 
-    const { t } = useLocale();
-    const pathname = usePathname();
+    const t = useTranslations()
+    const pathname = usePathname()
     const [citiesOpen, setCitiesOpen] = useState<boolean>(false)
     const [filtersOpen, setFiltersOpen] = useState<boolean>(false)
 

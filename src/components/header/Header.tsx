@@ -1,14 +1,14 @@
 'use client';
 
-import { useLocale } from '@/context/LocaleContext';
-import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
-import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl'
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher'
+import { usePathname } from 'next/navigation'
 
 import Nav from '@/components/header/Nav'
 
 const Header = () => {
-  const { t } = useLocale();
-  const pathname = usePathname();
+  const t = useTranslations()
+  const pathname = usePathname()
 
   return (
     <header>

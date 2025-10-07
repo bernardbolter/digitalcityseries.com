@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 // Assuming useLocale comes from your context as shown in Footer.tsx
-import { useLocale } from '@/context/LocaleContext'; 
+import { useTranslations } from 'next-intl'
 
 export default function BasicForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [errors, setErrors] = useState<{name?: string; email?: string; message?: string}>({});
-  const [submitError, setSubmitError] = useState('');
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [errors, setErrors] = useState<{name?: string; email?: string; message?: string}>({})
+  const [submitError, setSubmitError] = useState('')
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   // Get the translation function 't'
-  const { t } = useLocale(); 
+  const t = useTranslations();
 
   const validateForm = () => {
     const newErrors: {name?: string; email?: string; message?: string} = {};

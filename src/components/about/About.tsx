@@ -1,8 +1,8 @@
 'use client';
 
-import { useRef } from 'react';
-import { useAppContext } from '@/context/AppContext';
-import { useLocale } from '@/context/LocaleContext';
+import { useRef } from 'react'
+import { useAppContext } from '@/context/AppContext'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image';
 import CloseIcon from '@/svg/CloseIcon'
 
@@ -15,7 +15,7 @@ const About = () => {
 
   console.log(aboutOpen)
 
-  const { t } = useLocale();
+  const t  = useTranslations()
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from 'react'
-import { useLocale } from '@/context/LocaleContext';
+import { useTranslations } from 'next-intl'
 
 import DraggableArtwork from './DraggableArtwork'
 import LoadingImage from '@/components/ui/LoadingImage'
@@ -34,7 +34,7 @@ const handleImageError = (imageSrc: string, imageType: string) => {
 // --- Functional Component ---
 const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
   console.log(artwork)
-  const { t } = useLocale();
+  const t = useTranslations()
   const [selectArtworkView, setSelectArtworkView] = useState<string>('composite')
   const [fadeOut, setFadeOut] = useState<boolean>(false)
   const [toggleMagnify, setToggleMagnify] = useState<boolean>(false)

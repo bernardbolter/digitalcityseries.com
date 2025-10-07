@@ -1,7 +1,7 @@
 "use client"
 
 import { useAppContext } from "@/context/AppContext"
-import { useLocale } from '@/context/LocaleContext'
+import { useTranslations } from 'next-intl'
 import Image from "next/image"
 import CloseIcon from "@/svg/CloseIcon"
 
@@ -11,7 +11,7 @@ const Paintings = () => {
         togglePaintings
     } = useAppContext()
 
-    const { t } = useLocale()
+    const t = useTranslations()
 
     return (
         <div 

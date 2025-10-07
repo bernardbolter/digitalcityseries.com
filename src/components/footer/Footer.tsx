@@ -1,7 +1,7 @@
 'use client';
 
 import { useAppContext } from '@/context/AppContext'
-import { useLocale } from '@/context/LocaleContext'
+import { useTranslations } from 'next-intl'
 import ContactForm from '@/components/footer/ContactForm'
 import { Link as ScrollLink} from 'react-scroll';
 import GlobeSvg from '@/svg/GlobeSvg'
@@ -13,7 +13,8 @@ const Footer = () => {
     paintingsOpen,
     togglePaintings
   } = useAppContext();  
-  const { t } = useLocale();
+
+  const t = useTranslations()
   
   return (
     <footer className="footer-container">
