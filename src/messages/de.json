@@ -1,0 +1,175 @@
+{
+  "header": {
+    "digital": "DIGITAL",
+    "city": "STADT",
+    "series": "REIHE"
+  },
+  "languageSwitcher": {
+    "currentLanguage": "Aktuelle Sprache"
+  },
+  "site": {
+    "title": "Digitale Städteserie",
+    "description": "Erkundung städtischer Umgebungen durch digitale Kunst"
+  },
+  "navigation": {
+      "about": "Über uns",
+      "paintings": "Gemälde",
+      "businessPlan": "Geschäftsplan",
+      "contact": "Kontakt"
+  },
+  "filters": {
+      "oldest": "Älteste",
+      "latest": "Neueste",
+      "random": "Zufällig",
+      "selectACity": "Stadt auswählen"
+  },
+  "hero": {
+    "title": "Digitale Städteserie",
+    "subtitle": "Erkundung städtischer Umgebungen durch digitale Kunst",
+    "viewArtwork": "Kunstwerke ansehen"
+  },
+  "about": {
+    "intro": "Über die Serie",
+    "method": "Die Methode",
+    "philosophy": "Philosophie & Smoothism",
+    "collaborations": "Zusammenarbeiten",
+    "relaunch": "Der Neustart",
+    "introText": "Die Digital City Series ist ein Kunstprojekt, das Stadtporträts erschafft. Anstatt ein einzelnes Foto eines berühmten Gebäudes zu zeigen, kombiniert jedes Porträt Hunderte von Straßenfotos zu einem quadratischen Bild. Das Ergebnis ist eine einzigartige Ansicht einer Stadt, die sich anfühlt, als bewege man sich durch sie hindurch.",
+    "methodText": "Das Projekt begann im Jahr 2007. Ich benutze ein Skateboard, um Städte zu erkunden, was eine schnelle, fließende Perspektive bietet. Auf diesen Reisen mache ich Tausende von Fotos. Zurück im Studio füge ich diese Fotos zu einer einzigen, nahtlosen Komposition zusammen.",
+    "philosophyText": "Diese Methode ist von kubistischen Malern inspiriert, die Objekte aus mehreren Blickwinkeln gleichzeitig zeigten. Meine Arbeit macht etwas Ähnliches für die moderne Stadt, unter Verwendung digitaler Werkzeuge. Dieser Prozess, den ich **Smoothism** nenne, nutzt Technologie, um die visuellen Informationen zu verwalten und Verbindungen in ihnen zu finden.",
+    "collaborationsText": "Im Laufe der Jahre ist das Projekt gewachsen und umfasst nun Zusammenarbeiten mit traditionellen Ölmalern in China, die die digitalen Bilder in physische Gemälde verwandeln. Dies verbindet neue Technologie mit klassischen Kunstfertigkeiten.",
+    "relaunchText": "Das Projekt startet jetzt neu, weil die Welt mehr dafür bereit ist. Menschen interessieren sich dafür, wie Kunst und Technologie zusammenarbeiten können, und sie wollen authentische Geschichten von Künstlern. Nach Jahren der Entwicklung ist die Zeit reif, diese Stadtporträts mit einem breiteren Publikum zu teilen.",
+    "signature": "— Bernard Bolter, Berlin 2024"
+  },
+  "paintings": {
+    "aboutThePaintings" : "Über die Gemälde",
+    "originStory": "Die Reise nach Da Fen begann mit einer Frage: Wie könnten meine digitalen Stadtkompositionen in der physischen Welt existieren? Ich reiste in das berühmte Ölmalerdorf in Shenzhen, einen Ort voller künstlerischer Energie, und fand mich beim Teilen einer Mahlzeit mit einem Künstler namens Sanzi (Wang Xiaolong) wieder. Ohne gemeinsame Sprache verbanden wir uns durch die Bilder auf meinem Laptop. Dieses Treffen löste unsere erste Zusammenarbeit aus - ein wunderschönes Ölgemälde von Los Angeles - und legte den Grundstein für eine einzigartige Brücke zwischen den Kulturen.",
+    "collaborationProcess": "Heute hat sich diese anfängliche Verbindung zu einem Kernstück der Digital City Series entwickelt. Wir arbeiten mit Meisterkünstlern in Da Fen zusammen, um unsere digitalen 'Smoothist'-Visionen in einzigartige Ölgemälde zu übersetzen. Dies ist keine bloße Reproduktion; es ist eine Neuinterpretation. Die Künstler bringen ihr tiefes Verständnis für Textur, Licht und die Körperlichkeit der Farbe ein und fügen der originalen digitalen Arbeit eine neue, haptische Ebene hinzu.",
+    "artisticSignificance": "Diese Zusammenarbeit repräsentiert eine einzigartige Fusion der digitalen und der traditionellen Kunstwelt. Sie sind ein Beweis für die Idee, dass Innovation und Tradition koexistieren und etwas völlig Neues schaffen können. Jedes Gemälde ist eine Brücke - es verbindet meine digitale Perspektive mit jahrhundertealtem analogen Handwerk und verknüpft den Vorwärtsdrang Berlins mit den geschickten Händen von Da Fen."
+  },
+  "search": {
+    "placeholder": "Kunstwerke durchsuchen...",
+    "filter": "Filter",
+    "recent": "Neu",
+    "original": "Original",
+    "random": "Zufall",
+    "noResults": "Keine Kunstwerke gefunden",
+    "tryAdjusting": "Passen Sie Ihre Suche oder Filter an"
+  },
+  "artwork": {
+    "alt": {
+      "composite": "Zusammengesetztes Stadtporträt von {{city}} ({{year}})",
+      "photo": "Fotografie des entscheidenden Moments \"{{title}}\" aus {{city}}",
+      "satellite": "Satellitenansicht von {{city}}",
+      "flag": "Flagge von {{country}}"
+    },
+    "loading": {
+      "composite": "Lade zusammengesetztes Bild",
+      "photo": "Lade Fotobild",
+      "satellite": "Lade Satellitenbild"
+    },
+    "magnifyButton": "Bild vergrößern",
+    "closeButton": "Ansicht schließen",
+    "viewSatellite": "Satellitenansicht anzeigen",
+    "viewPhoto": "Fotografie des entscheidenden Moments anzeigen",
+    "compositeTitle": "Zusammengesetztes Stadtporträt",
+    "digitalPhotography": "Digitale Fotografie",
+    "unknownMedium": "Unbekanntes Medium",
+    "edition": "Auflage von 3",
+    "available": "Verfügbar",
+    "notForSale": "Nicht zum Verkauf",
+    "printsAvailable": "Drucke verfügbar",
+    "contactForDetails": "Kontakt für Details",
+    "coordinates": "Koordinaten",
+    "area": "Fläche",
+    "population": "Bevölkerung",
+    "density": "Dichte",
+    "elevation": "Höhe",
+    "photograph": "Fotografie",
+    "decisiveMoment": "Die Fotografie des entscheidenden Moments"
+  },
+  "contact": {
+    "label": {
+      "fullName": "Vollständiger Name",
+      "email": "Ihre E-Mail-Adresse",
+      "message": "Ihre Nachricht"
+    },
+    "placeholder": {
+      "fullName": "Ihr Vor- und Nachname",
+      "email": "max@mustermann.de",
+      "message": "Geben Sie Ihre Nachricht ein..."
+    },
+    "button": {
+      "sending": "Senden...",
+      "send": "Nachricht senden"
+    },
+    "error": {
+      "nameRequired": "Name ist erforderlich",
+      "nameMinLength": "Der Name muss mindestens 2 Zeichen lang sein",
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "messageRequired": "Nachricht ist erforderlich",
+      "messageMinLength": "Die Nachricht muss mindestens 10 Zeichen lang sein"
+    },
+    "serverError": {
+      "formCarry422": "Das Absenden des Formulars ist fehlgeschlagen. Bitte überprüfen Sie Ihre Daten.",
+      "unknown": "Ein unbekannter Serverfehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      "genericCatch": "Ein Netzwerkfehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "successMessage": "Wir haben Ihre Nachricht erhalten, vielen Dank!",
+    "backToTop": "Zurück nach oben"
+  },
+  "cities": {
+    "basel": "Basel",
+    "london": "London",
+    "venice": "Venedig",
+    "losAngeles": "Los Angeles",
+    "lasVegas": "Las Vegas",
+    "marseille": "Marseille",
+    "hongKong": "Hongkong",
+    "stockholm": "Stockholm",
+    "lisbon": "Lissabon",
+    "paris": "Paris",
+    "berlin": "Berlin",
+    "copenhagen": "Kopenhagen",
+    "riga": "Riga",
+    "antalya": "Antalya",
+    "hamburg": "Hamburg",
+    "zagreb": "Zagreb",
+    "shenzhen": "Shenzhen",
+    "guangzhou": "Guangzhou",
+    "istanbul": "Istanbul",
+    "minneapolis": "Minneapolis",
+    "sanFrancisco": "San Francisco",
+    "manhattan": "Manhattan",
+    "saltLakeCity": "Salt Lake City",
+    "merida": "Mérida",
+    "denver": "Denver",
+    "beijing": "Peking",
+    "bangkok": "Bangkok",
+    "madrid": "Madrid"
+  },
+  "countries": {
+    "switzerland": "Schweiz",
+    "england": "England",
+    "italy": "Italien",
+    "california": "Kalifornien",
+    "nevada": "Nevada",
+    "france": "Frankreich",
+    "sweden": "Schweden",
+    "portugal": "Portugal",
+    "germany": "Deutschland",
+    "denmark": "Dänemark",
+    "latvia": "Lettland",
+    "turkey": "Türkei",
+    "croatia": "Kroatien",
+    "china": "China",
+    "minnesota": "Minnesota",
+    "newYork": "New York",
+    "utah": "Utah",
+    "mexico": "Mexiko",
+    "colorado": "Colorado",
+    "thailand": "Thailand",
+    "spain": "Spanien"
+  }
+}
