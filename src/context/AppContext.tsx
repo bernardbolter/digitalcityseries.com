@@ -1,43 +1,38 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useQuery } from '@apollo/client';
-import { client } from '../lib/apollo-client';
-import { GET_ARTWORK } from '../graphql/queries';
 import { ArtworkNode } from '@/types/artworkTypes';
 import { shuffleArray } from '@/helpers';
 
-// Define the context state type
 interface AppContextState {
   artlist: ArtworkNode[];
   filteredArt: ArtworkNode[];
-  isLoading: boolean;
   filter: string;
   widthOfWindow: number;
-
   latestChecked: boolean;
   oldestChecked: boolean;
   randomChecked: boolean;
   aboutOpen: boolean;
   paintingsOpen: boolean;
-
   setFilter: (filter: string) => void;
   toggleLatest: () => void;
   toggleOldest: () => void;
   toggleRandom: () => void;
   toggleAbout: () => void;
   togglePaintings: () => void;
-  selectArtwork: (id: string) => void;
+  selectArtwork: (id: number) => void;
 }
 
-// Create the context with default values
 const AppContext = createContext<AppContextState | undefined>(undefined);
 
-// Provider component
-export const AppProvider = ({ children }: { children: ReactNode }) => {
-  const [artlist, setArtlist] = useState<ArtworkNode[]>([]);
-  const [filteredArt, setFilteredArt] = useState<ArtworkNode[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+interface AppProviderProps {
+  children: ReactNode;
+  initialArtwork: ArtworkNode[]; // Data passed from server
+}
+
+export const AppProvider = ({ children, initialArtwork }: AppProviderProps) => {
+  const [artlist] = useState<ArtworkNode[]>(initialArtwork);
+  const [filteredArt, setFilteredArt] = useState<ArtworkNode[]>(initialArtwork);
   const [filter, setFilter] = useState<string>('');
   const [widthOfWindow, setWidthOfWindow] = useState<number>(
     typeof window !== 'undefined' ? window.innerWidth : 1024
@@ -48,25 +43,6 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [randomChecked, setRandomChecked] = useState<boolean>(false);
   const [aboutOpen, setAboutOpen] = useState<boolean>(false);
   const [paintingsOpen, setPaintingsOpen] = useState<boolean>(false);
-
-  // GraphQL query to fetch artwork data
-  const { loading, error, data } = useQuery(GET_ARTWORK, {
-    client,
-    fetchPolicy: 'cache-first'
-  });
-
-  // Update artlist when data is loaded
-  useEffect(() => {
-    if (data?.allArtwork?.nodes) {
-      setArtlist(data.allArtwork.nodes);
-      setFilteredArt(data.allArtwork.nodes);
-    }
-    setIsLoading(loading);
-    
-    if (error) {
-      console.error('Error loading artwork:', error);
-    }
-  }, [data, loading, error]);
 
   // Handle window resize
   useEffect(() => {
@@ -82,30 +58,44 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
+  // Apply sorting when sort options change
   useEffect(() => {
     let newFilteredArt = [...artlist];
 
+    // Apply text filter if needed
+    if (filter) {
+      newFilteredArt = newFilteredArt.filter(artwork => {
+        const searchStr = filter.toLowerCase();
+        return (
+          artwork.title?.toLowerCase().includes(searchStr) ||
+          artwork.artworkFields?.city?.toLowerCase().includes(searchStr) ||
+          artwork.artworkFields?.country?.toLowerCase().includes(searchStr)
+        );
+      });
+    }
+
+    // Apply sorting
     if (latestChecked) {
       newFilteredArt.sort((a, b) => {
-        const dateA = a.date ? new Date(a.date).getTime() : 0;
-        const dateB = b.date ? new Date(b.date).getTime() : 0;
+        const dateA = new Date(a.date).getTime();
+        const dateB = new Date(b.date).getTime();
         const yearA = parseInt(a.artworkFields?.year || '0');
         const yearB = parseInt(b.artworkFields?.year || '0');
         
         if (dateA && dateB) {
-            return dateB - dateA;
+          return dateB - dateA;
         }
         return yearB - yearA;
       });
     } else if (oldestChecked) {
       newFilteredArt.sort((a, b) => {
-        const dateA = a.date ? new Date(a.date).getTime() : 0;
-        const dateB = b.date ? new Date(b.date).getTime() : 0;
+        const dateA = new Date(a.date).getTime();
+        const dateB = new Date(b.date).getTime();
         const yearA = parseInt(a.artworkFields?.year || '0');
         const yearB = parseInt(b.artworkFields?.year || '0');
         
         if (dateA && dateB) {
-            return dateA - dateB;
+          return dateA - dateB;
         }
         return yearA - yearB;
       });
@@ -114,10 +104,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     }
 
     setFilteredArt(newFilteredArt);
+  }, [artlist, latestChecked, oldestChecked, randomChecked, filter]);
 
-  }, [artlist, latestChecked, oldestChecked, randomChecked]);
-
-  // Toggle functions
   const toggleLatest = () => {
     setLatestChecked(true);
     setOldestChecked(false);
@@ -137,18 +125,18 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const toggleAbout = () => {
-    console.log('toggled about')
     setAboutOpen(!aboutOpen);
   };
 
   const togglePaintings = () => {
-    console.log('toggled paintings')
     setPaintingsOpen(!paintingsOpen);
   };
 
-  const selectArtwork = (id: string) => {
+  const selectArtwork = (id: number) => {
     setFilteredArt(currentFilteredArt => {
-      const selectedArtworkIndex = currentFilteredArt.findIndex(artwork => artwork.id === id);
+      const selectedArtworkIndex = currentFilteredArt.findIndex(
+        artwork => artwork.databaseId === id
+      );
       if (selectedArtworkIndex === -1) {
         return currentFilteredArt;
       }
@@ -161,12 +149,9 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
-
-  // Context value
   const value = {
     artlist,
     filteredArt,
-    isLoading,
     filter,
     widthOfWindow,
     latestChecked,
@@ -180,13 +165,12 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     toggleRandom,
     toggleAbout,
     togglePaintings,
-    selectArtwork
+    selectArtwork,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
-// Custom hook to use the context
 export const useAppContext = () => {
   const context = useContext(AppContext);
   if (context === undefined) {

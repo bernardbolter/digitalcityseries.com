@@ -1,8 +1,18 @@
-export interface ImageSrc {
-  __typename: string;
-  sourceUrl: string | null;
+export interface MediaDetails {
+  width: number;
+  height: number;
+}
+
+export interface MediaNode {
+  mediaDetails: MediaDetails;
+  sourceUrl: string;
   srcSet: string | null;
-  uri: string | null;
+  slug?: string;
+  altText?: string | null;
+}
+
+export interface ImageField {
+  node: MediaNode;
 }
 
 export interface ArtworkLink {
@@ -12,50 +22,49 @@ export interface ArtworkLink {
 }
 
 export interface ArtworkFields {
-  __typename: string;
   area?: string | null;
-  artworkImage?: ImageSrc | null;
+  artworkImage?: ImageField | null;
   artworklink?: ArtworkLink | null;
   city?: string | null;
   coordinates?: string | null;
   country?: string | null;
-  databaseId?: number | null;
-  dcsFlags?: ImageSrc | null; // Note: Original plan used dcsSatellite for 2nd complementary. This is dcsFlags.
-  dcsPhoto?: ImageSrc | null;
+  dcsFlags?: ImageField | null;
+  dcsPhoto?: ImageField | null;
   dcsPhotoTitle?: string | null;
-  dcsRaw?: ImageSrc | null;
-  dcsSatellite?: ImageSrc | null;
+  dcsRaw?: ImageField | null;
+  dcsSatellite?: ImageField | null;
   density?: string | null;
   elevation?: string | null;
-  fieldGroupName?: string | null;
+  extraimages?: string | null;
   forsale?: boolean | null;
-  height?: string | null; // e.g., "48\""
+  height?: string | null;
   lat?: number | null;
   lng?: number | null;
   medium?: string | null;
   metadescription?: string | null;
   metakeywords?: string | null;
   orientation?: string | null;
+  performance?: string | null;
   population?: string | null;
   proportion?: number | null;
   series?: string | null;
-  size?: string | null; // e.g., "48 x 48 in"
+  size?: string | null;
   slug?: string | null;
   style?: string | null;
-  width?: string | null; // e.g., "48\""
+  width?: string | null;
   year?: string | null;
 }
 
 export interface ArtworkNode {
-  id: string;
-  title: string | null;
-  artworkFields?: ArtworkFields | null;
-  slug?: string | null;
-  content?: string | null;
-  databaseId?: number | null;
-  date?: Date | null;
+  title: string;
+  artworkFields: ArtworkFields;
+  date: string;
+  dateGmt: string;
+  databaseId: number;
 }
 
-export interface ArtworkProps {
-  artwork: ArtworkNode;
+export interface ArtworkResponse {
+  allArtwork: {
+    nodes: ArtworkNode[];
+  };
 }
