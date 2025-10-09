@@ -1,0 +1,112 @@
+{
+  "internationalization": {
+    "locales": [
+      "en",
+      "fr",
+      "es"
+    ],
+    "requiredLocales": [
+      "en",
+      "fr",
+      "es"
+    ],
+    "strictMode": "inclusive",
+    "defaultLocale": "en"
+  },
+  "middleware": {
+    "headerName": "x-intlayer-locale",
+    "cookieName": "INTLAYER_LOCALE",
+    "prefixDefault": false,
+    "basePath": "",
+    "serverSetCookie": "always",
+    "noPrefix": false,
+    "detectLocaleOnPrefetchNoPrefix": false
+  },
+  "content": {
+    "fileExtensions": [
+      ".content.ts",
+      ".content.js",
+      ".content.cjs",
+      ".content.cjx",
+      ".content.mjs",
+      ".content.mjx",
+      ".content.json",
+      ".content.tsx",
+      ".content.jsx"
+    ],
+    "baseDir": "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com",
+    "excludedPath": [
+      "node_modules",
+      ".intlayer",
+      ".next",
+      ".nuxt",
+      ".expo",
+      "dist"
+    ],
+    "watch": true,
+    "contentDir": [
+      "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com"
+    ],
+    "dictionariesDir": "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/.intlayer/dictionary",
+    "moduleAugmentationDir": "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/.intlayer/types",
+    "unmergedDictionariesDir": "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/.intlayer/unmerged_dictionary",
+    "remoteDictionariesDir": "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/.intlayer/remote_dictionary",
+    "dynamicDictionariesDir": "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/.intlayer/dynamic_dictionary",
+    "fetchDictionariesDir": "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/.intlayer/fetch_dictionary",
+    "typesDir": "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/.intlayer/types",
+    "mainDir": "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/.intlayer/main",
+    "configDir": "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/.intlayer/config",
+    "watchedFilesPattern": [
+      "/**/*.content.ts",
+      "/**/*.content.js",
+      "/**/*.content.cjs",
+      "/**/*.content.cjx",
+      "/**/*.content.mjs",
+      "/**/*.content.mjx",
+      "/**/*.content.json",
+      "/**/*.content.tsx",
+      "/**/*.content.jsx"
+    ],
+    "watchedFilesPatternWithPath": [
+      "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/**/*.content.ts",
+      "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/**/*.content.js",
+      "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/**/*.content.cjs",
+      "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/**/*.content.cjx",
+      "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/**/*.content.mjs",
+      "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/**/*.content.mjx",
+      "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/**/*.content.json",
+      "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/**/*.content.tsx",
+      "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/**/*.content.jsx"
+    ],
+    "outputFilesPatternWithPath": "/Users/BescoBolo/Desktop/dcs/web/digitalcityseries.com/.intlayer/dictionary/**/*.json"
+  },
+  "editor": {
+    "applicationURL": "",
+    "editorURL": "http://localhost:8000",
+    "cmsURL": "https://intlayer.org",
+    "backendURL": "https://back.intlayer.org",
+    "port": 8000,
+    "enabled": true,
+    "dictionaryPriorityStrategy": "local_first",
+    "liveSync": true,
+    "liveSyncPort": 4000,
+    "liveSyncURL": "http://localhost:4000"
+  },
+  "log": {
+    "mode": "default",
+    "prefix": "\u001b[38;5;239m[intlayer] \u001b[0m"
+  },
+  "ai": {},
+  "build": {
+    "optimize": false,
+    "importMode": "static",
+    "traversePattern": [
+      "**/*.{js,ts,mjs,cjs,jsx,tsx,mjx,cjx,vue,svelte,svte}",
+      "!**/node_modules/**"
+    ],
+    "outputFormat": [
+      "cjs",
+      "esm"
+    ]
+  }
+}

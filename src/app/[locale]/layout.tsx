@@ -1,36 +1,45 @@
-// app/[locale]/layout.tsx
-import React from 'react'
-import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
-import { setRequestLocale } from 'next-intl/server'
-import { AppProvider } from '@/context/AppContext'
-import { getArtworkData } from '@/lib/getArtworkData'
-import "@/styles/index.scss"
+import { notFound } from "next/navigation"
+import { hasLocale, NextIntlClientProvider} from 'next-intl'
+import { setRequestLocale } from "next-intl/server"
+import {routing} from '@/i18n/routing'
+import { AppProvider } from "@/context/AppContext"
+import { getArtworkData } from "@/lib/getArtworkData"
+import { ReactNode } from "react"
+import '@/styles/index.scss'
 
-// Optional: Enable ISR with revalidation
-export const revalidate = 3600; // Revalidate every hour
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale}))
+}
+
+type LocaleLayoutProps = {
+  children: ReactNode;
+  params: Promise<{
+    locale: string;
+  }>;
+}
 
 export default async function LocaleLayout({
-    children,
-    params
-}: {
-    children: React.ReactNode;
-    params: Promise<{ locale: string }>;
-}) {
-    const { locale } = await params;
-    setRequestLocale(locale);
-    const messages = await getMessages();
-    
-    // Fetch artwork data on the server
-    const artworkData = await getArtworkData();
+  children,
+  params
+}: LocaleLayoutProps) {
+  const artworkData = await getArtworkData()
 
-    return (
-        <NextIntlClientProvider messages={messages}>
-            <AppProvider initialArtwork={artworkData}>
-                <div className="layout__container">
-                    {children}
-                </div>
-            </AppProvider>
+  const {locale} = await params
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
+
+  setRequestLocale(locale)
+
+  return (
+    <html lang={locale} id="html-tag">
+      <body>
+        <NextIntlClientProvider>
+          <AppProvider initialArtwork={artworkData}>
+            {children}
+          </AppProvider>
         </NextIntlClientProvider>
-    );
+      </body>
+    </html>
+  )
 }

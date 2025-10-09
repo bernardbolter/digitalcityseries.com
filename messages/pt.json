@@ -1,0 +1,175 @@
+{
+  "header": {
+    "digital": "DIGITAL",
+    "city": "CIDADE",
+    "series": "SÉRIE"
+  },
+  "languageSwitcher": {
+    "currentLanguage": "Idioma atual"
+  },
+  "site": {
+    "title": "Série Cidade Digital",
+    "description": "Explorando ambientes urbanos através da arte digital"
+  },
+  "navigation": {
+    "about": "Sobre",
+    "paintings": "Pinturas",
+    "businessPlan": "Plano de Negócios",
+    "contact": "Contato"
+  },
+  "filters": {
+      "oldest": "Mais Antigo",
+      "latest": "Mais Recente",
+      "random": "Aleatório",
+      "selectACity": "Selecione uma cidade"
+  },
+  "hero": {
+    "title": "Série Cidade Digital",
+    "subtitle": "Explorando ambientes urbanos através da arte digital",
+    "viewArtwork": "Ver Obras"
+  },
+  "about": {
+    "intro": "Sobre a Série",
+    "method": "O Método",
+    "philosophy": "Filosofia & Smoothism",
+    "collaborations": "Colaborações",
+    "relaunch": "O Relançamento",
+    "introText": "A Digital City Series é um projeto artístico que cria retratos de cidades. Em vez de mostrar uma única foto de um edifício famoso, cada retrato combina centenas de fotos tiradas ao nível da rua em uma única imagem quadrada. O resultado é uma visão única de uma cidade que transmite a sensação de se mover através dela.",
+    "methodText": "O projeto começou em 2007. Eu uso um skate para explorar cidades, o que oferece uma perspectiva rápida e fluida. Tiro milhares de fotos nessas jornadas. De volta ao estúdio, combino essas fotos em uma única composição sem emendas.",
+    "philosophyText": "Este método é inspirado nos pintores cubistas, que mostravam objetos de múltiplos ângulos simultaneamente. Meu trabalho faz algo similar para a cidade moderna, usando ferramentas digitais. Este processo, que chamo de **Smoothism**, usa a tecnologia para ajudar a gerenciar e encontrar conexões em todas as informações visuais.",
+    "collaborationsText": "Ao longo dos anos, o projeto cresceu para incluir colaborações com pintores tradicionais a óleo na China, transformando as imagens digitais em pinturas físicas. Isso conecta a nova tecnologia com habilidades artísticas clássicas.",
+    "relaunchText": "O projeto está reiniciando agora porque o mundo está mais preparado para ele. As pessoas estão interessadas em como a arte e a tecnologia podem trabalhar juntas, e querem histórias autênticas dos artistas. Após anos de desenvolvimento, é o momento certo para compartilhar esses retratos urbanos com um público mais amplo.",
+    "signature": "— Bernard Bolter, Berlim 2024"
+  },
+  "paintings": {
+    "aboutThePaintings" : "Sobre as pinturas",
+    "originStory": "A jornada para Da Fen começou com uma pergunta: como minhas composições digitais de cidades poderiam existir no mundo físico? Viajei para a renomada vila de pintura a óleo em Shenzhen, um lugar pulsante com energia artística, e me encontrei compartilhando uma refeição com um artista chamado Sanzi (Wang Xiaolong). Sem uma língua em comum, nos conectamos através das imagens no meu laptop. Este encontro deu início à nossa primeira colaboração - uma bela pintura a óleo de Los Angeles - e estabeleceu as bases para uma ponte intercultural única.",
+    "collaborationProcess": "Hoje, essa conexão inicial evoluiu para uma parte central da Digital City Series. Colaboramos com artistas mestres em Da Fen para traduzir nossas visões digitais 'Smoothist' em pinturas a óleo únicas. Isso não é mera reprodução; é uma reinterpretação. Os artistas trazem sua compreensão profunda de textura, luz e a fisicalidade da tinta, adicionando uma nova camada tátil ao trabalho digital original.",
+    "artisticSignificance": "Essas colaborações representam uma fusão única entre os mundos da arte digital e tradicional. Elas são um testemunho da ideia de que inovação e legado podem coexistir, criando algo completamente novo. Cada pintura é uma ponte - conectando minha perspectiva digital com séculos de artesanato analógico, e unindo o impulso para a frente de Berlim com as mãos habilidosas de Da Fen."
+  },
+  "search": {
+    "placeholder": "Pesquisar obras...",
+    "filter": "Filtrar",
+    "recent": "Recentes",
+    "original": "Original",
+    "random": "Aleatório",
+    "noResults": "Nenhuma obra encontrada",
+    "tryAdjusting": "Tente ajustar sua pesquisa ou filtros"
+  },
+  "artwork": {
+    "alt": {
+      "composite": "Retrato composto da cidade de {{city}} ({{year}})",
+      "photo": "Fotografia de momento decisivo \"{{title}}\" de {{city}}",
+      "satellite": "Vista de satélite de {{city}}",
+      "flag": "Bandeira de {{country}}"
+    },
+    "loading": {
+      "composite": "A carregar imagem composta",
+      "photo": "A carregar imagem fotográfica",
+      "satellite": "A carregar imagem de satélite"
+    },
+    "magnifyButton": "Ampliar imagem",
+    "closeButton": "Fechar vista",
+    "viewSatellite": "Ver imagem de satélite",
+    "viewPhoto": "Ver fotografia de momento decisivo",
+    "compositeTitle": "Retrato Composto da Cidade",
+    "digitalPhotography": "Fotografia Digital",
+    "unknownMedium": "Meio Desconhecido",
+    "edition": "Edição de 3",
+    "available": "Disponível",
+    "notForSale": "Não está à venda",
+    "printsAvailable": "Impressões disponíveis",
+    "contactForDetails": "Contacte para detalhes",
+    "coordinates": "Coordenadas",
+    "area": "Área",
+    "population": "População",
+    "density": "Densidade",
+    "elevation": "Elevação",
+    "photograph": "Fotografia",
+    "decisiveMoment": "A Fotografia do Momento Decisivo"
+  },
+  "contact": {
+    "label": {
+      "fullName": "Nome Completo",
+      "email": "Seu endereço de e-mail",
+      "message": "Sua mensagem"
+    },
+    "placeholder": {
+      "fullName": "Seu nome e sobrenome",
+      "email": "joao@silva.pt",
+      "message": "Digite sua mensagem..."
+    },
+    "button": {
+      "sending": "Enviando...",
+      "send": "Enviar Mensagem"
+    },
+    "error": {
+      "nameRequired": "O nome é obrigatório",
+      "nameMinLength2": "O nome deve ter pelo menos 2 caracteres", 
+      "emailRequired": "O e-mail é obrigatório",
+      "emailInvalid": "Por favor, insira um endereço de e-mail válido",
+      "messageRequired": "A mensagem é obrigatória",
+      "messageMinLength10": "A mensagem deve ter pelo menos 10 caracteres"
+    },
+    "serverError": {
+      "formCarry422": "O envio do formulário falhou. Verifique seus dados e tente novamente.",
+      "unknown": "Ocorreu um erro de servidor desconhecido. Por favor, tente novamente.",
+      "genericCatch": "Ocorreu um erro de rede. Por favor, tente novamente."
+    },
+    "successMessage": "Recebemos o seu envio, obrigado!",
+    "backToTop": "Voltar ao Início"
+  },
+  "cities": {
+    "basel": "Basileia",
+    "london": "Londres",
+    "venice": "Veneza",
+    "losAngeles": "Los Angeles",
+    "lasVegas": "Las Vegas",
+    "marseille": "Marselha",
+    "hongKong": "Hong Kong",
+    "stockholm": "Estocolmo",
+    "lisbon": "Lisboa",
+    "paris": "Paris",
+    "berlin": "Berlim",
+    "copenhagen": "Copenhaga",
+    "riga": "Riga",
+    "antalya": "Antália",
+    "hamburg": "Hamburgo",
+    "zagreb": "Zagreb",
+    "shenzhen": "Shenzhen",
+    "guangzhou": "Cantão",
+    "istanbul": "Istambul",
+    "minneapolis": "Mineápolis",
+    "sanFrancisco": "São Francisco",
+    "manhattan": "Manhattan",
+    "saltLakeCity": "Salt Lake City",
+    "merida": "Mérida",
+    "denver": "Denver",
+    "beijing": "Pequim",
+    "bangkok": "Banguecoque",
+    "madrid": "Madrid"
+  },
+  "countries": {
+    "switzerland": "Suíça",
+    "england": "Inglaterra",
+    "italy": "Itália",
+    "california": "Califórnia",
+    "nevada": "Nevada",
+    "france": "França",
+    "sweden": "Suécia",
+    "portugal": "Portugal",
+    "germany": "Alemanha",
+    "denmark": "Dinamarca",
+    "latvia": "Letónia",
+    "turkey": "Turquia",
+    "croatia": "Croácia",
+    "china": "China",
+    "minnesota": "Minesota",
+    "newYork": "Nova Iorque",
+    "utah": "Utah",
+    "mexico": "México",
+    "colorado": "Colorado",
+    "thailand": "Tailândia",
+    "spain": "Espanha"
+  }
+}

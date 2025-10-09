@@ -1,61 +1,11 @@
-import type { Metadata } from "next"
-import {
-  Noto_Sans, 
-  Noto_Sans_SC,
-  Noto_Sans_TC, 
-  Noto_Sans_Thai 
-} from 'next/font/google'
+import {ReactNode} from 'react';
 
-// Configure fonts for different languages
-const notoSans = Noto_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-noto-sans',
-  display: 'swap',
-})
-
-const notoSansSC = Noto_Sans_SC({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-noto-sans-sc',
-  display: 'swap',
-})
-
-const notoSansTC = Noto_Sans_TC({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-noto-sans-tc',
-  display: 'swap',
-})
-
-const notoSansThai = Noto_Sans_Thai({
-  subsets: ['latin', 'thai'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-noto-sans-thai',
-  display: 'swap',
-})
-
-export const metadata: Metadata = {
-  title: "Digital City Series | Skateboarding, AI and Oil Paintings",
-  description: "A unique urban art project by Bernard Bolter. Cities are captured on a skateboard, transformed through AI, and reimagined as collaborative oil paintings. Explore the journey.",
-  icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' }, 
-      { url: '/favicon.ico', sizes: 'any' },  
-    ],
-  }
+type Props = {
+  children: ReactNode;
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html className={`${notoSans.variable} ${notoSansSC.variable} ${notoSansThai.variable} ${notoSansTC.variable}`} suppressHydrationWarning>
-      <body suppressHydrationWarning>
-        {children}
-      </body>
-    </html>
-  );
+// Since we have a `not-found.tsx` page on the root, a layout file
+// is required, even if it's just passing children through.
+export default function RootLayout({children}: Props) {
+  return children;
 }

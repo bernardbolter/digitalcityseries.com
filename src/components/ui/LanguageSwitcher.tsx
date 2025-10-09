@@ -1,13 +1,11 @@
-'use client';
+'use client'
 
-import { useState, useEffect, useRef, useTransition } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
-import { useLocale, useTranslations } from 'next-intl'; // Import next-intl hooks
-import FlagIcon from '../ui/FlagIcon'; // Assuming this component exists
+import { useState, useEffect, useRef, useTransition } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
+import { useLocale } from 'next-intl'
+import FlagIcon from '../ui/FlagIcon'
 
-// Helper to get language name (remains mostly the same, but remove displayLocale default)
 const getLanguageName = (locale: string): string => {
-  // For specific languages, use our custom names to ensure consistency
   const customNames: Record<string, string> = {
     en: 'English',
     fr: 'Français',
@@ -25,10 +23,6 @@ const getLanguageName = (locale: string): string => {
     th: 'ไทย'
   };
 
-  // Use Intl.DisplayNames to fallback to native name, falling back to uppercase locale code
-  // Note: Intl.DisplayNames is only useful if you want the name in a different locale
-  // For this component, we'll primarily rely on the custom list and the locale code.
-  // The original component used 'en' as the default displayLocale, but we'll simplify.
   return customNames[locale] || new Intl.DisplayNames([locale], { type: 'language' }).of(locale) || locale.toUpperCase();
 };
 
@@ -37,10 +31,7 @@ interface LanguageSwitcherProps {
 }
 
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) => {
-  // --- New next-intl v4 hooks ---
-  const locale = useLocale(); // Get current locale
-  const t = useTranslations('LanguageSwitcher'); // Use useTranslations for component-specific text
-  // ------------------------------
+  const locale = useLocale();
   
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -180,7 +171,6 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
         className="language-switcher__toggle" 
         onClick={handleToggle}
         aria-expanded={isOpen}
-        aria-label={isMobile ? (isOpen ? t('closeMenuLabel') : t('openMenuLabel')) : t('changeLanguageLabel')}
       >
         {renderToggleContent()}
       </button>
@@ -189,11 +179,8 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
           {isMobile && (
             <>
               <div className="language-switcher__current">
-                {/* Use the translation hook for text */}
-                <h3>{t('currentLanguage')}</h3>
                 <div className="language-switcher__current-flag">
                   <FlagIcon code={locale} className="language-switcher__flag" />
-                  {/* Use locale for display name language here */}
                   <p>{getLanguageName(locale)}</p>
                 </div>
               </div>
@@ -219,7 +206,6 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
                 >
                   <button
                     className="language-switcher__option"
-                    aria-label={t('changeToLabel', { language: getLanguageName(lang) })}
                     disabled={isPending} // Disable while transition is pending
                   >
                     <FlagIcon code={lang} className="language-switcher__flag" />

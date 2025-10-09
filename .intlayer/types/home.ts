@@ -1,0 +1,25 @@
+/* eslint-disable */
+export default {
+  "key": "home",
+  "content": {
+    "title": {
+      "nodeType": "translation",
+      "translation": {
+        "en": "Welcome to Intlayer",
+        "fr": "Bienvenue sur Intlayer",
+        "es": "Bienvenido a Intlayer"
+      }
+    },
+    "description": {
+      "nodeType": "translation",
+      "translation": {
+        "en": "A developer-first internationalization solution.",
+        "fr": "Une solution d’internationalisation pour les développeurs.",
+        "es": "Una solución de internacionalización para desarrolladores."
+      }
+    }
+  },
+  "localIds": [
+    "home::local::src/app/[locale]/home.content.ts"
+  ]
+} as const;

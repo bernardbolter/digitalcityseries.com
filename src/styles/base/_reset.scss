@@ -17,62 +17,63 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
   
-  html, body {
-    font-family: $font-multilingual;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-    font-weight: $font-weight-normal;
-    color: $color-text;
-    background-color: $color-background;
-    -webkit-font-smoothing: antialiased;  
-    -moz-osx-font-smoothing: grayscale;
-  }
+html, body {
+  font-family: $font-multilingual;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: $font-weight-normal;
+  color: $color-text;
+  background-color: $color-background;
+  -webkit-font-smoothing: antialiased;  
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition-fast;
   
-  a {
-    color: inherit;
-    text-decoration: none;
-    transition: color $transition-fast;
-    
-    &:hover {
-      color: $accent;
-    }
+  &:hover {
+    color: $accent;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+  margin-bottom: $spacing-small;
+}
+
+p {
+  margin-bottom: $spacing-small;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
   
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family-heading;
-    font-weight: $font-weight-bold;
-    line-height: $line-height-heading;
-    margin-bottom: $spacing-small;
+  &:focus {
+    outline: none;
   }
-  
-  p {
-    margin-bottom: $spacing-small;
-  }
-  
-  ul, ol {
-    list-style: none;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  button, input, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-  }
-  
-  button {
-    cursor: pointer;
-    border: none;
-    background: none;
-    
-    &:focus {
-      outline: none;
-    }
-  }
+}

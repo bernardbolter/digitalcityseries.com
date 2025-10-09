@@ -1,0 +1,175 @@
+{
+  "header": {
+    "digital": "DIGITALNI",
+    "city": "GRAD",
+    "series": "SERIJA"
+  },
+  "languageSwitcher": {
+    "currentLanguage": "Trenutni jezik"
+  },
+  "site": {
+    "title": "Digitalna Gradska Serija",
+    "description": "Istraživanje urbanih okruženja kroz digitalnu umjetnost"
+  },
+  "navigation": {
+      "about": "O nama",
+      "paintings": "Slike",
+      "businessPlan": "Poslovni plan",
+      "contact": "Kontakt"
+  },
+  "filters": {
+      "oldest": "Najstarije",
+      "latest": "Najnovije",
+      "random": "Nasumično",
+      "selectACity": "Odaberi grad"
+  },
+  "hero": {
+    "title": "Digitalna Gradska Serija",
+    "subtitle": "Istraživanje urbanih okruženja kroz digitalnu umjetnost",
+    "viewArtwork": "Pogledajte Radove"
+  },
+  "about": {
+    "intro": "O Seriji",
+    "method": "Metoda",
+    "philosophy": "Filozofija & Smoothism",
+    "collaborations": "Suradnje",
+    "relaunch": "Ponovno Pokretanje",
+    "introText": "Digital City Series je umjetnički projekt koji stvara portrete gradova. Umjesto prikazivanja jedne fotografije poznate zgrade, svaki portret kombinira stotine fotografija s razine ulice u jednu kvadratnu sliku. Rezultat je jedinstven pogled na grad koji daje osjećaj kretanja kroz njega.",
+    "methodText": "Projekt je započet 2007. godine. Koristim skateboard za istraživanje gradova, što pruža brzu, fluidnu perspektivu. Tijekom ovih putovanja snimam tisuće fotografija. Povratkom u studio, spajam ove fotografije u jednu jedinstvenu kompoziciju bez šavova.",
+    "philosophyText": "Ova metoda je inspirirana kubističkim slikarima, koji su prikazivali objekte iz više kutova istovremeno. Moj rad čini nešto slično za moderni grad, koristeći digitalne alate. Ovaj proces, koji nazivam **Smoothismom**, koristi tehnologiju za upravljanje i pronalaženje veza u svim vizualnim informacijama.",
+    "collaborationsText": "Tijekom godina, projekt je narastao kako bi uključio suradnju s tradicionalnim kineskim slikarima uljanih boja, pretvarajući digitalne slike u fizičke slike. Ovo povezuje novu tehnologiju s klasičnim umjetničkim vještinama.",
+    "relaunchText": "Projekt se sada ponovno pokreće jer je svijet spreman za njega. Ljudi su zainteresirani za to kako umjetnost i tehnologija mogu raditi zajedno, i žele autentične priče od umjetnika. Nakon godina razvoja, pravo je vrijeme da podijelim ove gradske portrete sa širom publikom.",
+    "signature": "— Bernard Bolter, Berlin 2024"
+  },
+  "paintings": {
+    "aboutThePaintings" : "O slikama",
+    "originStory": "Putovanje u Da Fen počelo je pitanjem: kako bi moje digitalne kompozicije gradova mogle postojati u fizičkom svijetu? Otputovao sam u poznato selo uljanih slika u Shenzhenu, mjesto puno umjetničke energije, i našao se kako dijelim obrok s umjetnikom po imenu Sanzi (Wang Xiaolong). Bez zajedničkog jezika, povezali smo se preko slika na mom laptopu. Taj susret pokrenuo je našu prvu suradnju - prekrasnu uljanu sliku Los Angelesa - i postavio temelj za jedinstven most između kultura.",
+    "collaborationProcess": "Danas je ta početna veza evoluirala u središnji dio Digital City Series. Surađujemo s majstorskim umjetnicima u Da Fenu kako bismo pretočili naše digitalne 'Smoothist' vizije u jedinstvene uljane slike. Ovo nije puko reprodukcija; to je reinterpretacija. Umjetnici donose svoje duboko razumijevanje teksture, svjetla i fizičke prirode boje, dodajući novi, taktilni sloj originalnom digitalnom djelu.",
+    "artisticSignificance": "Ove suradnje predstavljaju jedinstvenu fuziju digitalnog i tradicionalnog umjetničkog svijeta. Svjedočanstvo su ideje da inovacija i naslijeđe mogu koegzistirati, stvarajući nešto potpuno novo. Svaka slika je most - povezuje moju digitalnu perspektivu sa stoljećima analognog zanata i povezuje zamah naprijed Berlina s vještim rukama Da Fena."
+  },
+  "search": {
+    "placeholder": "Pretraži umjetničke radove...",
+    "filter": "Filtriraj",
+    "recent": "Nedavno",
+    "original": "Original",
+    "random": "Slučajno",
+    "noResults": "Nije pronađen nijedan umjetnički rad",
+    "tryAdjusting": "Pokušajte prilagoditi svoju pretragu ili filtere"
+  },
+  "artwork": {
+    "alt": {
+      "composite": "Kompozitni gradski portret od {{city}} ({{year}})",
+      "photo": "Fotografija odlučujućeg trenutka \"{{title}}\" iz {{city}}",
+      "satellite": "Satelitski prikaz od {{city}}",
+      "flag": "Zastava od {{country}}"
+    },
+    "loading": {
+      "composite": "Učitavam kompozitnu sliku",
+      "photo": "Učitavam fotografsku sliku",
+      "satellite": "Učitavam satelitsku sliku"
+    },
+    "magnifyButton": "Povećaj sliku",
+    "closeButton": "Zatvori prikaz",
+    "viewSatellite": "Pogledaj satelitsku sliku",
+    "viewPhoto": "Pogledaj fotografiju odlučujućeg trenutka",
+    "compositeTitle": "Kompozitni Gradski Portret",
+    "digitalPhotography": "Digitalna Fotografija",
+    "unknownMedium": "Nepoznati Medij",
+    "edition": "Izdanje od 3",
+    "available": "Dostupno",
+    "notForSale": "Nije za prodaju",
+    "printsAvailable": "Grafike su dostupne",
+    "contactForDetails": "Kontakt za detalje",
+    "coordinates": "Koordinate",
+    "area": "Područje",
+    "population": "Populacija",
+    "density": "Gustoća",
+    "elevation": "Nadmorska visina",
+    "photograph": "Fotografija",
+    "decisiveMoment": "Fotografija Odlučujućeg Trenutka"
+  },
+  "contact": {
+    "label": {
+      "fullName": "Puno ime",
+      "email": "Vaša adresa e-pošte",
+      "message": "Vaša poruka"
+    },
+    "placeholder": {
+      "fullName": "Vaše ime i prezime",
+      "email": "ivan@peric.hr",
+      "message": "Unesite svoju poruku..."
+    },
+    "button": {
+      "sending": "Slanje...",
+      "send": "Pošalji poruku"
+    },
+    "error": {
+      "nameRequired": "Ime je obavezno",
+      "nameMinLength2": "Ime mora imati najmanje 2 znaka", 
+      "emailRequired": "E-pošta je obavezna",
+      "emailInvalid": "Molimo unesite valjanu adresu e-pošte",
+      "messageRequired": "Poruka je obavezna",
+      "messageMinLength10": "Poruka mora imati najmanje 10 znakova"
+    },
+    "serverError": {
+      "formCarry422": "Slanje obrasca nije uspjelo. Provjerite svoje podatke i pokušajte ponovno.",
+      "unknown": "Došlo je do nepoznate pogreške poslužitelja. Molimo pokušajte ponovno.",
+      "genericCatch": "Došlo je do mrežne pogreške. Molimo pokušajte ponovno."
+    },
+    "successMessage": "Primili smo vašu poruku, hvala!",
+    "backToTop": "Povratak na vrh"
+  },
+  "cities": {
+    "basel": "Basel",
+    "london": "London",
+    "venice": "Venecija",
+    "losAngeles": "Los Angeles",
+    "lasVegas": "Las Vegas",
+    "marseille": "Marseille",
+    "hongKong": "Hong Kong",
+    "stockholm": "Stockholm",
+    "lisbon": "Lisabon",
+    "paris": "Pariz",
+    "berlin": "Berlin",
+    "copenhagen": "Kopenhagen",
+    "riga": "Riga",
+    "antalya": "Antalya",
+    "hamburg": "Hamburg",
+    "zagreb": "Zagreb",
+    "shenzhen": "Shenzhen",
+    "guangzhou": "Guangzhou",
+    "istanbul": "Istanbul",
+    "minneapolis": "Minneapolis",
+    "sanFrancisco": "San Francisco",
+    "manhattan": "Manhattan",
+    "saltLakeCity": "Salt Lake City",
+    "merida": "Mérida",
+    "denver": "Denver",
+    "beijing": "Peking",
+    "bangkok": "Bangkok",
+    "madrid": "Madrid"
+  },
+  "countries": {
+    "switzerland": "Švicarska",
+    "england": "Engleska",
+    "italy": "Italija",
+    "california": "Kalifornija",
+    "nevada": "Nevada",
+    "france": "Francuska",
+    "sweden": "Švedska",
+    "portugal": "Portugal",
+    "germany": "Njemačka",
+    "denmark": "Danska",
+    "latvia": "Latvija",
+    "turkey": "Turska",
+    "croatia": "Hrvatska",
+    "china": "Kina",
+    "minnesota": "Minnesota",
+    "newYork": "New York",
+    "utah": "Utah",
+    "mexico": "Meksiko",
+    "colorado": "Colorado",
+    "thailand": "Tajland",
+    "spain": "Španjolska"
+  }
+}

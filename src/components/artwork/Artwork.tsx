@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from 'react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 import DraggableArtwork from './DraggableArtwork'
@@ -10,7 +11,11 @@ import HandDrag from '@/svg/HandDrag'
 import PlusSvg from '@/svg/PlusSvg'
 import { toCamelCase } from '@/helpers'
 
-import { ArtworkProps } from '@/types/artworkTypes'
+import { ArtworkNode } from '@/types/artworkTypes'
+
+interface ArtworkProps  {
+  artwork: ArtworkNode
+}
 
 // Helper function to create responsive sizes attribute
 const getResponsiveSizes = (type: 'main' | 'thumbnail' | 'flag') => {
@@ -39,7 +44,6 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
   const [fadeOut, setFadeOut] = useState<boolean>(false)
   const [toggleMagnify, setToggleMagnify] = useState<boolean>(false)
 
-  // FIX: Rename/Re-purpose the ref to point to the composite container
   const compositeContainerRef = useRef<HTMLDivElement>(null)
 
   const [handDragVisible, setHandDragVisible] = useState<boolean>(false)
@@ -67,19 +71,15 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
           city: cityCountry,
           year: fields?.year || ''
         });
-        // Fallback if translation missing: `Composite city portrait of ${cityCountry} (${fields?.year})`
       case 'photo':
         return t('artwork.alt.photo', { 
           city: cityCountry,
           title: fields?.dcsPhotoTitle || 'decisive moment'
         });
-        // Fallback: `Decisive moment photograph "${fields?.dcsPhotoTitle}" from ${cityCountry}`
       case 'satellite':
         return t('artwork.alt.satellite', { city: cityCountry });
-        // Fallback: `Satellite view of ${cityCountry}`
       case 'flag':
         return t('artwork.alt.flag', { country: translatedCountryName });
-        // Fallback: `Flag of ${translatedCountryName}`
       default:
         return cityCountry;
     }
@@ -147,10 +147,10 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
 
   // --- Helper Rendering Functions ---
   const showCompositeImage = () => { 
-    const compositeData = artwork.artworkFields?.artworkImage
-    const photoData = artwork.artworkFields?.dcsPhoto
-    const satelliteData = artwork.artworkFields?.dcsSatellite
-    const rawData = artwork.artworkFields?.dcsRaw
+    const compositeData = artwork.artworkFields?.artworkImage?.node
+    const photoData = artwork.artworkFields?.dcsPhoto?.node
+    const satelliteData = artwork.artworkFields?.dcsSatellite?.node
+    const rawData = artwork.artworkFields?.dcsRaw?.node
 
     const handleMainLoad = () => {
       console.log('image loaded')
@@ -161,7 +161,6 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
       return (
         <DraggableArtwork
           src={compositeData?.sourceUrl || '' }
-          // FIX: Pass the new, correct ref here
           artworkContainerRef={compositeContainerRef}
           alt={getAltText('composite')}
         />
@@ -169,89 +168,103 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
     } else if (selectArtworkView === 'photo') {
       return (
         <>
-          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading', { type: selectArtworkView }) || 'loading photo image'} />}
-          <img
-            src={photoData?.sourceUrl || undefined}
-            alt={getAltText('photo')}
-            srcSet={photoData?.srcSet || undefined}
-            sizes={getResponsiveSizes('main')}
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-            onLoad={handleMainLoad}
-            onError={() => {
-              handleImageError(photoData?.sourceUrl || '', 'photo')
-              handleMainLoad()
-            }}
-            style={{
-              width: '100%',
-              height: 'auto',
-              objectFit: 'contain'
-            }}
-          />
+          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading.photo') || 'loading photo image'} />}
+          {photoData?.sourceUrl && (
+            <Image
+              src={photoData.sourceUrl}
+              alt={getAltText('photo')}
+              width={photoData.mediaDetails?.width || 1200}
+              height={photoData.mediaDetails?.height || 1200}
+              sizes={getResponsiveSizes('main')}
+              priority
+              quality={90}
+              onLoad={handleMainLoad}
+              onError={() => {
+                handleImageError(photoData.sourceUrl, 'photo')
+                handleMainLoad()
+              }}
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'contain'
+              }}
+            />
+          )}
         </>
       )
     } else if (selectArtworkView === 'satellite') {
       return (
         <>
-          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading', { type: selectArtworkView }) || 'loading satellite image'} />}
-          <img
-            src={satelliteData?.sourceUrl || undefined}
-            alt={getAltText('satellite')}
-            srcSet={satelliteData?.srcSet || undefined}
-            sizes={getResponsiveSizes('main')}
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-            onError={() => handleImageError(satelliteData?.sourceUrl || '', 'satellite')}
-            style={{
-              width: '100%',
-              height: 'auto',
-              objectFit: 'contain'
-            }}
-          />
+          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading.satellite') || 'loading satellite image'} />}
+          {satelliteData?.sourceUrl && (
+            <Image
+              src={satelliteData.sourceUrl}
+              alt={getAltText('satellite')}
+              width={satelliteData.mediaDetails?.width || 1200}
+              height={satelliteData.mediaDetails?.height || 1200}
+              sizes={getResponsiveSizes('main')}
+              priority
+              quality={90}
+              onLoad={handleMainLoad}
+              onError={() => {
+                handleImageError(satelliteData.sourceUrl, 'satellite')
+                handleMainLoad()
+              }}
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'contain'
+              }}
+            />
+          )}
         </>
       )
     } else if (selectArtworkView === 'raw') {
       return (
-        <img
-          src={rawData?.sourceUrl || undefined}
-          alt={getAltText('composite')}
-          srcSet={rawData?.srcSet || undefined}
-          sizes={getResponsiveSizes('main')}
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-          onError={() => handleImageError(rawData?.sourceUrl || '', 'raw')}
-          style={{
-            width: '100%',
-            height: 'auto',
-            objectFit: 'contain'
-          }}
-        />
+        <>
+          {rawData?.sourceUrl && (
+            <Image
+              src={rawData.sourceUrl}
+              alt={getAltText('composite')}
+              width={rawData.mediaDetails?.width || 1200}
+              height={rawData.mediaDetails?.height || 1200}
+              sizes={getResponsiveSizes('main')}
+              priority
+              quality={90}
+              onError={() => handleImageError(rawData.sourceUrl, 'raw')}
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'contain'
+              }}
+            />
+          )}
+        </>
       )
     } else {
       return (
         <>
-          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading', { type: selectArtworkView }) || 'loading composite image'} />}
-          <img
-            src={compositeData?.sourceUrl || undefined}
-            alt={getAltText('composite')}
-            srcSet={compositeData?.srcSet || undefined}
-            sizes={getResponsiveSizes('main')}
-            loading="lazy"
-            decoding="async"
-            onLoad={handleMainLoad}
-            onError={() => {
-              handleImageError(compositeData?.sourceUrl || '', 'composite')
-              handleMainLoad()
-            }}
-            style={{
-              width: '100%',
-              height: 'auto',
-              objectFit: 'contain'
-            }}
-          />
+          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading.composite') || 'loading composite image'} />}
+          {compositeData?.sourceUrl && (
+            <Image
+              src={compositeData.sourceUrl}
+              alt={getAltText('composite')}
+              width={compositeData.mediaDetails?.width || 1200}
+              height={compositeData.mediaDetails?.height || 1200}
+              sizes={getResponsiveSizes('main')}
+              quality={90}
+              onLoad={handleMainLoad}
+              onError={() => {
+                handleImageError(compositeData.sourceUrl, 'composite')
+                handleMainLoad()
+              }}
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'contain'
+              }}
+            />
+          )}
         </>
       )
     }
@@ -305,7 +318,7 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
   };
 
   const showSatelliteViewExtras = () => {
-    const satelliteData = artwork.artworkFields?.dcsSatellite
+    const satelliteData = artwork.artworkFields?.dcsSatellite?.node
 
     if (selectArtworkView === 'composite') {
       return (
@@ -315,20 +328,22 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
           aria-label={t('artwork.viewSatellite') || 'View satellite image'}
           type="button"
         >
-          <img
-            src={satelliteData?.sourceUrl || undefined}
-            alt={getAltText('satellite')}
-            srcSet={satelliteData?.srcSet || undefined}
-            sizes={getResponsiveSizes('thumbnail')}
-            loading="lazy"
-            decoding="async"
-            onError={() => handleImageError(satelliteData?.sourceUrl || '', 'satellite')}
-            style={{
-              width: '100%',
-              height: 'auto',
-              objectFit: 'contain'
-            }}
-          />
+          {satelliteData?.sourceUrl && (
+            <Image
+              src={satelliteData.sourceUrl}
+              alt={getAltText('satellite')}
+              width={satelliteData.mediaDetails?.width || 300}
+              height={satelliteData.mediaDetails?.height || 300}
+              sizes={getResponsiveSizes('thumbnail')}
+              quality={75}
+              onError={() => handleImageError(satelliteData.sourceUrl, 'satellite')}
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'contain'
+              }}
+            />
+          )}
           <div className="artwork-satellite__magnify">
             <PlusSvg />
           </div>
@@ -356,7 +371,7 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
   };
 
   const showPhotoViewExtras = () => {
-    const photoData = artwork.artworkFields?.dcsPhoto;
+    const photoData = artwork.artworkFields?.dcsPhoto?.node;
     const fields = artwork.artworkFields
 
     if (selectArtworkView === 'composite') {
@@ -367,20 +382,22 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
           aria-label={t('artwork.viewPhoto') || 'View decisive moment photograph'}
           type="button"
         >
-          <img
-            src={photoData?.sourceUrl || undefined}
-            alt={getAltText('photo')}
-            srcSet={photoData?.srcSet || undefined}
-            sizes={getResponsiveSizes('thumbnail')}
-            loading="lazy"
-            decoding="async"
-            onError={() => handleImageError(photoData?.sourceUrl || '', 'photo')}
-            style={{
-              width: '100%',
-              height: 'auto',
-              objectFit: 'contain'
-            }}
-          />
+          {photoData?.sourceUrl && (
+            <Image
+              src={photoData.sourceUrl}
+              alt={getAltText('photo')}
+              width={photoData.mediaDetails?.width || 300}
+              height={photoData.mediaDetails?.height || 300}
+              sizes={getResponsiveSizes('thumbnail')}
+              quality={75}
+              onError={() => handleImageError(photoData.sourceUrl, 'photo')}
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'contain'
+              }}
+            />
+          )}
           <div className="artwork-satellite__magnify">
             <PlusSvg />
           </div>
@@ -388,7 +405,7 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
       );
     } else if (selectArtworkView === 'magnify') {
       return (
-        <div className={fields?.dcsRaw?.sourceUrl ? 'artwork-composite-info' : 'artwork-composite-info artwork-composite-full'}>
+        <div className={fields?.dcsRaw?.node?.sourceUrl ? 'artwork-composite-info' : 'artwork-composite-info artwork-composite-full'}>
           <h2>{t('artwork.compositeTitle') || 'Composite City Portrait'}</h2>
           <h3>{`${fields?.width || ''} x ${fields?.height || ''}`} | {fields?.year || 'N/A'}</h3>
           <h4>{t('artwork.digitalPhotography') || 'Digital Photography'}</h4>
@@ -428,13 +445,14 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
         <div className="artwork-title">
           <h1>{translatedCityName} <span>{translatedCountryName}</span></h1>
         </div>
-        {artwork.artworkFields?.dcsFlags?.sourceUrl && (
-          <img
-            src={artwork.artworkFields.dcsFlags.sourceUrl}
+        {artwork.artworkFields?.dcsFlags?.node?.sourceUrl && (
+          <Image
+            src={artwork.artworkFields.dcsFlags.node.sourceUrl}
             alt={getAltText('flag')}
+            width={artwork.artworkFields.dcsFlags.node.mediaDetails?.width || 200}
+            height={artwork.artworkFields.dcsFlags.node.mediaDetails?.height || 133}
             sizes="200px"
-            loading="lazy"
-            decoding="async"
+            quality={85}
           />
         )}
       </div>

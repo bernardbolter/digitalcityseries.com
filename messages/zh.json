@@ -1,0 +1,175 @@
+{
+  "header": {
+    "digital": "数字",
+    "city": "城市",
+    "series": "系列"
+  },
+  "languageSwitcher": {
+    "currentLanguage": "当前语言"
+  },
+  "site": {
+    "title": "数字城市系列",
+    "description": "通过数字艺术探索城市环境"
+  },
+  "navigation": {
+      "about": "关于",
+      "paintings": "绘画",
+      "businessPlan": "商业计划",
+      "contact": "联系"
+  },
+  "filters": {
+      "oldest": "最旧",
+      "latest": "最新",
+      "random": "随机",
+      "selectACity": "选择一个城市"
+  },
+  "hero": {
+    "title": "数字城市系列",
+    "subtitle": "通过数字艺术探索城市环境",
+    "viewArtwork": "查看作品"
+  },
+  "about": {
+    "intro": "关于系列",
+    "method": "方法",
+    "philosophy": "哲学与Smoothism",
+    "collaborations": "合作项目",
+    "relaunch": "重新启动",
+    "introText": "Digital City Series 是一个创作城市肖像的艺术项目。与单纯展示著名建筑物的单一照片不同，每个肖像将数百张街头照片融合成一个方形图像。最终呈现的是城市的独特视角，给人一种穿梭其中的感觉。",
+    "methodText": "该项目始于2007年。我利用滑板探索城市，从而获得快速流畅的视角。在这些旅程中我会拍摄数千张照片。回到工作室后，我将这些照片组合成无缝的单一作品。",
+    "philosophyText": "这种方法受到立体派画家的启发，他们同时从多个角度描绘物体。我的工作是为现代城市做类似的事，但使用数字工具完成。这个我称之为 **Smoothism** 的过程，利用科技来处理和连接所有视觉信息。",
+    "collaborationsText": "多年来，该项目已发展到包括与中国传统油画家的合作，将数字影像变成实体画作。这种合作将新技术与古典艺术技巧连接起来。",
+    "relaunchText": "现在重新启动这个项目，是因为世界已经更准备好迎接它。人们对艺术与科技如何结合很感兴趣，而且想从艺术家那里听到真实的故事。经过多年发展，是时候与更广大的观众分享这些城市肖像了。",
+    "signature": "— Bernard Bolter，柏林 2024"
+  },
+  "paintings": {
+    "aboutThePaintings": "关于这些画作",
+    "originStory": "大芬村之旅始于一个问题：我的数字城市作品如何在物理世界中存在？我来到了深圳著名的油画村，这个充满艺术能量的地方，与一位名叫三仔（王小龙）的艺术家共进晚餐。虽然没有共同语言，但我们通过笔记本电脑上的图像建立了联系。这次会面促成了我们的第一次合作——一幅美丽的洛杉矶油画——为独特的跨文化桥梁奠定了基础。",
+    "collaborationProcess": "如今，这种最初的连接已发展成为Digital City Series的核心部分。我们与来自大芬村的艺术家合作，将我们的数字'Smoothist'视觉转化为独特的油画作品。这不仅仅是复制；更是一种重新诠释。艺术家们带来了他们对质感、光线和颜料物理性的深刻理解，为原始数字作品增添了新的触觉层次。",
+    "artisticSignificance": "这些合作代表了数字与传统艺术世界的独特融合。它们证明了创新与传承可以共存，创造出全新的事物。每一幅画都是一座桥梁——将我的数字视角与数百年的传统工艺相连接，并将柏林的前进动力与大芬村灵巧的双手联系在一起。"
+  },
+  "search": {
+    "placeholder": "搜索作品...",
+    "filter": "筛选",
+    "recent": "最近",
+    "original": "原创",
+    "random": "随机",
+    "noResults": "未找到作品",
+    "tryAdjusting": "尝试调整搜索条件或筛选器"
+  },
+  "artwork": {
+    "alt": {
+      "composite": "{{city}} 的合成城市肖像 ({{year}})",
+      "photo": "来自 {{city}} 的“{{title}}”决定性瞬间照片",
+      "satellite": "{{city}} 的卫星视图",
+      "flag": "{{country}} 的旗帜"
+    },
+    "loading": {
+      "composite": "正在加载合成图像",
+      "photo": "正在加载照片图像",
+      "satellite": "正在加载卫星图像"
+    },
+    "magnifyButton": "放大图像",
+    "closeButton": "关闭视图",
+    "viewSatellite": "查看卫星图像",
+    "viewPhoto": "查看决定性瞬间照片",
+    "compositeTitle": "合成城市肖像",
+    "digitalPhotography": "数码摄影",
+    "unknownMedium": "未知媒介",
+    "edition": "限量版 3",
+    "available": "有售",
+    "notForSale": "非卖品",
+    "printsAvailable": "提供印刷品",
+    "contactForDetails": "联系获取详情",
+    "coordinates": "坐标",
+    "area": "面积",
+    "population": "人口",
+    "density": "密度",
+    "elevation": "海拔",
+    "photograph": "照片",
+    "decisiveMoment": "决定性瞬间照片"
+  },
+  "contact": {
+    "label": {
+      "fullName": "全名",
+      "email": "您的电子邮件地址",
+      "message": "您的留言"
+    },
+    "placeholder": {
+      "fullName": "您的名字和姓氏",
+      "email": "wang@ming.cn",
+      "message": "请输入您的留言..."
+    },
+    "button": {
+      "sending": "正在发送...",
+      "send": "发送留言"
+    },
+    "error": {
+      "nameRequired": "姓名是必填项",
+      "nameMinLength2": "姓名至少需要 2 个字符", 
+      "emailRequired": "电子邮件是必填项",
+      "emailInvalid": "请输入有效的电子邮件地址",
+      "messageRequired": "留言是必填项",
+      "messageMinLength10": "留言至少需要 10 个字符"
+    },
+    "serverError": {
+      "formCarry422": "表单提交失败。请检查您的数据并重试。",
+      "unknown": "发生了一个未知的服务器错误。请重试。",
+      "genericCatch": "发生了一个网络错误。请重试。"
+    },
+    "successMessage": "我们已收到您的提交，谢谢！",
+    "backToTop": "返回顶部"
+  },
+  "cities": {
+    "basel": "巴塞尔",
+    "london": "伦敦",
+    "venice": "威尼斯",
+    "losAngeles": "洛杉矶",
+    "lasVegas": "拉斯维加斯",
+    "marseille": "马赛",
+    "hongKong": "香港",
+    "stockholm": "斯德哥尔摩",
+    "lisbon": "里斯本",
+    "paris": "巴黎",
+    "berlin": "柏林",
+    "copenhagen": "哥本哈根",
+    "riga": "里加",
+    "antalya": "安塔利亚",
+    "hamburg": "汉堡",
+    "zagreb": "萨格勒布",
+    "shenzhen": "深圳",
+    "guangzhou": "广州",
+    "istanbul": "伊斯坦布尔",
+    "minneapolis": "明尼阿波利斯",
+    "sanFrancisco": "旧金山",
+    "manhattan": "曼哈顿",
+    "saltLakeCity": "盐湖城",
+    "merida": "梅里达",
+    "denver": "丹佛",
+    "beijing": "北京",
+    "bangkok": "曼谷",
+    "madrid": "马德里"
+  },
+  "countries": {
+    "switzerland": "瑞士",
+    "england": "英格兰",
+    "italy": "意大利",
+    "california": "加利福尼亚",
+    "nevada": "内华达州",
+    "france": "法国",
+    "sweden": "瑞典",
+    "portugal": "葡萄牙",
+    "germany": "德国",
+    "denmark": "丹麦",
+    "latvia": "拉脱维亚",
+    "turkey": "土耳其",
+    "croatia": "克罗地亚",
+    "china": "中国",
+    "minnesota": "明尼苏达州",
+    "newYork": "纽约",
+    "utah": "犹他州",
+    "mexico": "墨西哥",
+    "colorado": "科罗拉多州",
+    "thailand": "泰国",
+    "spain": "西班牙"
+  }
+}

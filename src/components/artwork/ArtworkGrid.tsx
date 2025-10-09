@@ -29,7 +29,7 @@ const ArtworkGrid = () => {
     <div className="artwork__grid">
       {filteredArt.map((artwork) => (
         <Artwork 
-          key={artwork.id} 
+          key={artwork.databaseId} 
           artwork={artwork} 
         />
       ))}

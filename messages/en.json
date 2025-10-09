@@ -1,0 +1,177 @@
+{
+  "header": {
+    "digital": "DIGITAL",
+    "city": "CITY",
+    "series": "SERIES"
+  },
+  "site": {
+    "title": "Digital City Series: Capturing the Pulse of the Street",
+    "description": "From the streets of San Francisco and Berlin, artist Bernard Bolter transforms the chaos of the city into unified, high-definition art. This project is rooted in the kinetic energy of skateboarding, using a unique approach to gather visual data that goes beyond a single moment. The final artwork—from large-scale prints to masterfully executed oil paintings—is a cohesive narrative of the urban experience that you can own."
+  },
+  "navigation": {
+    "about": "About",
+    "paintings" : "Paintings",
+    "businessPlan" : "Business Plan",
+    "contact" : "Contact"
+  },
+  "filters": {
+    "oldest" : "Oldest",
+    "latest" : "Latest",
+    "random" : "Random",
+    "selectACity" : "Select a City"
+  },
+  "hero": {
+    "title": "Digital City Series",
+    "subtitle": "Exploring urban environments through digital art",
+    "viewArtwork": "View Artwork"
+  },
+  "about": {
+    "intro" : "About the Series",
+    "method" : "The Method",
+    "philosophy" : "Philosophy & Smoothism",
+    "collaborations" : "Collaborations",
+    "relaunch" : "The Relaunch",
+    "introText": "The Digital City Series is an art project that creates portraits of cities. Instead of showing a single photo of a famous building, each portrait combines hundreds of street-level photos into one square image. The result is a unique view of a city that feels like moving through it.",
+    "methodText": "The project started in 2007. I use a skateboard to explore cities, which gives a fast, fluid perspective. I take thousands of pictures on these journeys. Back in the studio, I blend these photos together into a single, seamless composition.",
+    "philosophyText": "This method is inspired by Cubist painters, who showed objects from many angles at once. My work does something similar for the modern city, using digital tools. This process, which I call **Smoothism**, uses technology to help manage and find connections in all the visual information.",
+    "collaborationsText": "Over the years, the project has grown to include collaborations with traditional oil painters in China, turning the digital images into physical paintings. This connects new technology with classic art skills.",
+    "relaunchText": "The project is starting again now because the world is more ready for it. People are interested in how art and technology can work together, and they want authentic stories from artists. After years of development, the time is right to share these city portraits with a wider audience.",
+    "signature": "— Bernard Bolter, Berlin 2024"
+  },
+  "search": {
+    "title": "Search Artwork",
+    "description": "Find artwork by city, year, or keyword",
+    "placeholder": "Search artwork...",
+    "filter": "Filter",
+    "recent": "Recent",
+    "original": "Original",
+    "random": "Random",
+    "noResults": "No artwork found",
+    "tryAdjusting": "Try adjusting your search or filters"
+  },
+  "artwork": {
+    "alt": {
+      "composite": "Composite city portrait of {city} ({year})",
+      "photo": "Decisive moment photograph \"{title}\" from {city}",
+      "satellite": "Satellite view of {city}",
+      "flag": "Flag of {country}"
+    },
+    "loading": {
+      "composite": "Loading composite image",
+      "photo": "Loading photo image",
+      "satellite": "Loading satellite image"
+    },
+    "magnifyButton": "Magnify image",
+    "closeButton": "Close view",
+    "viewSatellite": "View satellite image",
+    "viewPhoto": "View decisive moment photograph",
+    "compositeTitle": "Composite City Portrait",
+    "digitalPhotography" : "Digital Photography",
+    "unknownMedium": "Unknown Medium",
+    "edition": "Edition of 3",
+    "available": "Available",
+    "notForSale": "Not for sale",
+    "printsAvailable" : "Prints Available",
+    "contactForDetails": "Contact for details",
+    "coordinates": "Coordinates",
+    "area": "Area",
+    "population": "Population",
+    "density": "Density",
+    "elevation": "Elevation",
+    "photograph": "Photograph",
+    "decisiveMoment": "The Decisive Moment Photograph"
+  },
+  "paintings" : {
+    "aboutThePaintings" : "About the Paintings",
+    "originStory": "The journey to Da Fen began with a question: how could my digital city compositions exist in the physical world? I traveled to the renowned oil painting village in Shenzhen, a place pulsing with artistic energy, and found myself sharing a meal with an artist named Sanzi (Wang Xiaolong). Without a common language, we connected through the images on my laptop. This meeting sparked our first collaboration—a beautiful oil painting of Los Angeles—and laid the foundation for a unique cross-cultural bridge.",
+    "collaborationProcess": "Today, that initial connection has evolved into a core part of Digital City Series. We collaborate with master artists in Da Fen to translate our digital 'Smoothist' visions into one-of-a-kind oil paintings. This is not mere reproduction; it is a reinterpretation. The artists bring their profound understanding of texture, light, and the physicality of paint, adding a new, tactile layer to the original digital work.",
+    "artisticSignificance": "These collaborations represent a unique fusion of the digital and the traditional art worlds. They are a testament to the idea that innovation and legacy can coexist, creating something entirely new. Each painting is a bridge—connecting my digital perspective with centuries of analog craft, and linking the forward momentum of Berlin with the skilled hands of Da Fen."
+  },
+  "contact": {
+    "label": {
+      "fullName": "Full Name",
+      "email": "Your Email Address",
+      "message": "Your Message"
+    },
+    "placeholder": {
+      "fullName": "Your first and last name",
+      "email": "name@mail.com",
+      "message": "Enter your message..."
+    },
+    "button": {
+      "sending": "Sending...",
+      "send": "Send Message"
+    },
+    "error": {
+      "nameRequired": "Name is required",
+      "nameMinLength": "Name must be at least 2 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters"
+    },
+    "serverError": {
+      "formCarry422": "Form submission failed. Please check your data and try again.",
+      "unknown": "An unknown server error occurred. Please try again.",
+      "genericCatch": "A network error occurred. Please try again."
+    },
+    "successMessage": "We received your submission, thank you!",
+    "backToTop": "Back to Top"
+  },
+  "languageSwitcher": {
+    "currentLanguage": "Current Language"
+  },
+  "cities": {
+    "basel": "Basel",
+    "london": "London",
+    "venice": "Venice",
+    "losAngeles": "Los Angeles",
+    "lasVegas": "Las Vegas",
+    "marseille": "Marseille",
+    "hongKong": "Hong Kong",
+    "stockholm": "Stockholm",
+    "lisbon": "Lisbon",
+    "paris": "Paris",
+    "berlin": "Berlin",
+    "copenhagen": "Copenhagen",
+    "riga": "Riga",
+    "antalya": "Antalya",
+    "hamburg": "Hamburg",
+    "zagreb": "Zagreb",
+    "shenzhen": "Shenzhen",
+    "guangzhou": "Guangzhou",
+    "istanbul": "Istanbul",
+    "minneapolis": "Minneapolis",
+    "sanFrancisco": "San Francisco",
+    "manhattan": "Manhattan",
+    "saltLakeCity": "Salt Lake City",
+    "merida": "Merida",
+    "denver": "Denver",
+    "beijing": "Beijing",
+    "bangkok": "Bangkok",
+    "madrid": "Madrid"
+  },
+  "countries": {
+    "switzerland": "Switzerland",
+    "england": "England",
+    "italy": "Italy",
+    "california": "California",
+    "nevada": "Nevada",
+    "france": "France",
+    "sweden": "Sweden",
+    "portugal": "Portugal",
+    "germany": "Germany",
+    "denmark": "Denmark",
+    "latvia": "Latvia",
+    "turkey": "Turkey",
+    "croatia": "Croatia",
+    "china": "China",
+    "minnesota": "Minnesota",
+    "newYork": "New York",
+    "utah": "Utah",
+    "mexico": "Mexico",
+    "colorado": "Colorado",
+    "thailand": "Thailand",
+    "spain": "Spain"
+  }
+}
