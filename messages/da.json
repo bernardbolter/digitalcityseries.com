@@ -171,5 +171,11 @@
     "colorado": "Colorado",
     "thailand": "Thailand",
     "spain": "Spanien"
-  }
+  },
+  "cookieConsent": {
+      "message": "Denne hjemmeside bruger cookies for at sikre grundlæggende funktionalitet og analysere brugen. Ved at klikke på \"Accepter\" accepterer du brugen af analyse-cookies. For spørgsmål, kontakt bernard@digitalcityseries.com",
+      "acceptButton": "Accepter",
+      "declineButton": "Afvis",
+      "learnMore": "Lær mere"
+    }
 }

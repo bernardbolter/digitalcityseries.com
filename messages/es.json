@@ -171,5 +171,11 @@
     "colorado": "Colorado",
     "thailand": "Tailandia",
     "spain": "España"
-  }
+  },
+  "cookieConsent": {
+      "message": "Este sitio web utiliza cookies para garantizar la funcionalidad básica y analizar el uso. Al hacer clic en \"Aceptar\", aceptas el uso de cookies de análisis. Para cualquier pregunta, contacta con bernard@digitalcityseries.com",
+      "acceptButton": "Aceptar",
+      "declineButton": "Rechazar",
+      "learnMore": "Saber más"
+    }
 }

@@ -16,6 +16,7 @@
     "next": "15.3.2",
     "next-intl": "^4.3.11",
     "react": "^19.0.0",
+    "react-cookie-consent": "^9.0.0",
     "react-dom": "^19.0.0",
     "react-draggable": "^4.4.6",
     "react-markdown": "^10.1.0",

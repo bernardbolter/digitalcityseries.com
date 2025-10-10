@@ -171,5 +171,11 @@
     "colorado": "Colorado",
     "thailand": "Tayland",
     "spain": "İspanya"
-  }
+  },
+  "cookieConsent": {
+      "message": "Bu web sitesi, temel işlevselliği sağlamak ve kullanımı analiz etmek için çerezler kullanır. \"Kabul Et\" butonuna tıklayarak analiz çerezlerinin kullanımını kabul etmiş olursunuz. Herhangi bir sorunuz için bernard@digitalcityseries.com adresine başvurun",
+      "acceptButton": "Kabul Et",
+      "declineButton": "Reddet",
+      "learnMore": "Daha Fazla Bilgi"
+    }
 }

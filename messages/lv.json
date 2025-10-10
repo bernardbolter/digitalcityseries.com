@@ -171,5 +171,11 @@
     "colorado": "Kolorādo",
     "thailand": "Taizeme",
     "spain": "Spānija"
-  }
+  },
+  "cookieConsent": {
+      "message": "Šī vietne izmanto sīkdatnes, lai nodrošinātu pamata funkcionalitāti un analizētu lietojumu. Noklikšķinot uz \"Pieņemt\", jūs piekrītat analītisko sīkdatņu izmantošanai. Ja ir kādi jautājumi, sazinieties ar bernard@digitalcityseries.com",
+      "acceptButton": "Pieņemt",
+      "declineButton": "Noraidīt",
+      "learnMore": "Uzzināt vairāk"
+    }
 }

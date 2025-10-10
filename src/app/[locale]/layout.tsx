@@ -2,6 +2,8 @@ import { notFound } from "next/navigation"
 import { hasLocale, NextIntlClientProvider} from 'next-intl'
 import { setRequestLocale } from "next-intl/server"
 import {routing} from '@/i18n/routing'
+import CookieConsentManager from "@/components/gdpr/CookieConsentManager"
+import { GATracker } from "@/components/gdpr/GATracker"
 import { AppProvider } from "@/context/AppContext"
 import { getArtworkData } from "@/lib/getArtworkData"
 import { ReactNode } from "react"
@@ -35,6 +37,8 @@ export default async function LocaleLayout({
     <html lang={locale} id="html-tag">
       <body>
         <NextIntlClientProvider>
+          <GATracker />
+          <CookieConsentManager key={locale} />
           <AppProvider initialArtwork={artworkData}>
             {children}
           </AppProvider>

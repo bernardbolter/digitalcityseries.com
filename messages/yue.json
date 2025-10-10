@@ -171,5 +171,11 @@
     "colorado": "科羅拉多州",
     "thailand": "泰國",
     "spain": "西班牙"
-  }
+  },
+  "cookieConsent": {
+      "message": "呢個網站使用Cookies嚟確保基本功能同分析使用情況。點擊「接受」，你就同意使用分析Cookies。如有任何問題，請聯繫bernard@digitalcityseries.com",
+      "acceptButton": "接受",
+      "declineButton": "拒絕",
+      "learnMore": "了解更多"
+    }
 }

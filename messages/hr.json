@@ -171,5 +171,11 @@
     "colorado": "Colorado",
     "thailand": "Tajland",
     "spain": "Španjolska"
-  }
+  },
+  "cookieConsent": {
+      "message": "Ova web stranica koristi kolačiće kako bi osigurala osnovnu funkcionalnost i analizirala korištenje. Klikom na \"Prihvati\" pristajete na korištenje analitičkih kolačića. Za bilo kakva pitanja, kontaktirajte bernard@digitalcityseries.com",
+      "acceptButton": "Prihvati",
+      "declineButton": "Odbij",
+      "learnMore": "Saznaj više"
+    }
 }
