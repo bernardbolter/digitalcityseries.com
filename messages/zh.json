@@ -58,10 +58,10 @@
   },
   "artwork": {
     "alt": {
-      "composite": "{{city}} 的合成城市肖像 ({{year}})",
-      "photo": "来自 {{city}} 的“{{title}}”决定性瞬间照片",
-      "satellite": "{{city}} 的卫星视图",
-      "flag": "{{country}} 的旗帜"
+      "composite": "{city} 的合成城市肖像 ({year})",
+      "photo": "来自 {city} 的“{title}”决定性瞬间照片",
+      "satellite": "{city} 的卫星视图",
+      "flag": "{country} 的旗帜"
     },
     "loading": {
       "composite": "正在加载合成图像",

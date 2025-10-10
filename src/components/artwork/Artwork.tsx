@@ -38,7 +38,6 @@ const handleImageError = (imageSrc: string, imageType: string) => {
 
 // --- Functional Component ---
 const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
-  console.log(artwork)
   const t = useTranslations()
   const [selectArtworkView, setSelectArtworkView] = useState<string>('composite')
   const [fadeOut, setFadeOut] = useState<boolean>(false)
@@ -48,7 +47,14 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
 
   const [handDragVisible, setHandDragVisible] = useState<boolean>(false)
   const [handDragCount, setHandDragCount] = useState<number>(0)
-  const [isLoadingMain, setIsLoadingMain] = useState<boolean>(true)
+  
+  // Separate loading states for each image type
+  const [isLoadingComposite, setIsLoadingComposite] = useState<boolean>(true)
+  const [isLoadingPhoto, setIsLoadingPhoto] = useState<boolean>(true)
+  const [isLoadingSatellite, setIsLoadingSatellite] = useState<boolean>(true)
+  
+  // Track if we're transitioning to a new view
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false)
 
   let handDragTimeoutId: NodeJS.Timeout | null;
 
@@ -88,10 +94,12 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
   // --- Event Handlers ---
   const clickComposite = () => {
     setFadeOut(true);
+    setIsTransitioning(true);
     setTimeout(() => {
       setSelectArtworkView('composite');
       setToggleMagnify(false);
       setFadeOut(false);
+      // Don't reset transitioning here - let the image onLoad do it
     }, 500);
   };
 
@@ -107,6 +115,7 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
         setToggleMagnify(false);
       }
       setFadeOut(false);
+      setIsTransitioning(false); // Magnify doesn't need loading
     }, 500);
   };
 
@@ -129,6 +138,7 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
 
   const clickSatellite = () => {
     setFadeOut(true);
+    setIsTransitioning(true);
     setTimeout(() => {
       setSelectArtworkView('satellite');
       setToggleMagnify(false);
@@ -138,6 +148,7 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
 
   const clickPhoto = () => {
     setFadeOut(true);
+    setIsTransitioning(true);
     setTimeout(() => {
       setSelectArtworkView('photo');
       setToggleMagnify(false);
@@ -152,11 +163,6 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
     const satelliteData = artwork.artworkFields?.dcsSatellite?.node
     const rawData = artwork.artworkFields?.dcsRaw?.node
 
-    const handleMainLoad = () => {
-      console.log('image loaded')
-      setIsLoadingMain(false);
-    };
-
     if (selectArtworkView === 'magnify') {
       return (
         <DraggableArtwork
@@ -166,9 +172,12 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
         />
       )
     } else if (selectArtworkView === 'photo') {
+      const showLoading = isLoadingPhoto || isTransitioning;
       return (
         <>
-          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading.photo') || 'loading photo image'} />}
+          {showLoading && (
+            <LoadingImage loadingImageText={t('artwork.loading.photo') || 'loading photo image'} />
+          )}
           {photoData?.sourceUrl && (
             <Image
               src={photoData.sourceUrl}
@@ -178,24 +187,32 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
               sizes={getResponsiveSizes('main')}
               priority
               quality={90}
-              onLoad={handleMainLoad}
+              onLoad={() => {
+                setIsLoadingPhoto(false);
+                setIsTransitioning(false);
+              }}
               onError={() => {
                 handleImageError(photoData.sourceUrl, 'photo')
-                handleMainLoad()
+                setIsLoadingPhoto(false);
+                setIsTransitioning(false);
               }}
               style={{
                 width: '100%',
                 height: 'auto',
-                objectFit: 'contain'
+                objectFit: 'contain',
+                display: showLoading ? 'none' : 'block'
               }}
             />
           )}
         </>
       )
     } else if (selectArtworkView === 'satellite') {
+      const showLoading = isLoadingSatellite || isTransitioning;
       return (
         <>
-          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading.satellite') || 'loading satellite image'} />}
+          {showLoading && (
+            <LoadingImage loadingImageText={t('artwork.loading.satellite') || 'loading satellite image'} />
+          )}
           {satelliteData?.sourceUrl && (
             <Image
               src={satelliteData.sourceUrl}
@@ -205,15 +222,20 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
               sizes={getResponsiveSizes('main')}
               priority
               quality={90}
-              onLoad={handleMainLoad}
+              onLoad={() => {
+                setIsLoadingSatellite(false);
+                setIsTransitioning(false);
+              }}
               onError={() => {
                 handleImageError(satelliteData.sourceUrl, 'satellite')
-                handleMainLoad()
+                setIsLoadingSatellite(false);
+                setIsTransitioning(false);
               }}
               style={{
                 width: '100%',
                 height: 'auto',
-                objectFit: 'contain'
+                objectFit: 'contain',
+                display: showLoading ? 'none' : 'block'
               }}
             />
           )}
@@ -242,9 +264,12 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
         </>
       )
     } else {
+      const showLoading = isLoadingComposite || isTransitioning;
       return (
         <>
-          {isLoadingMain && <LoadingImage loadingImageText={t('artwork.loading.composite') || 'loading composite image'} />}
+          {showLoading && (
+            <LoadingImage loadingImageText={t('artwork.loading.composite') || 'loading composite image'} />
+          )}
           {compositeData?.sourceUrl && (
             <Image
               src={compositeData.sourceUrl}
@@ -252,16 +277,22 @@ const Artwork: React.FC<ArtworkProps> = ({ artwork }) => {
               width={compositeData.mediaDetails?.width || 1200}
               height={compositeData.mediaDetails?.height || 1200}
               sizes={getResponsiveSizes('main')}
+              priority
               quality={90}
-              onLoad={handleMainLoad}
+              onLoad={() => {
+                setIsLoadingComposite(false);
+                setIsTransitioning(false);
+              }}
               onError={() => {
                 handleImageError(compositeData.sourceUrl, 'composite')
-                handleMainLoad()
+                setIsLoadingComposite(false);
+                setIsTransitioning(false);
               }}
               style={{
                 width: '100%',
                 height: 'auto',
-                objectFit: 'contain'
+                objectFit: 'contain',
+                display: showLoading ? 'none' : 'block'
               }}
             />
           )}

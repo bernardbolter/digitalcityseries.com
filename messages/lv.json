@@ -58,10 +58,10 @@
   },
   "artwork": {
     "alt": {
-      "composite": "Kompozīts pilsētas portrets no {{city}} ({{year}})",
-      "photo": "Izšķirošā momenta fotogrāfija \"{{title}}\" no {{city}}",
-      "satellite": "Satelītattēls no {{city}}",
-      "flag": "Karogs no {{country}}"
+      "composite": "Kompozīts pilsētas portrets no {city} ({year})",
+      "photo": "Izšķirošā momenta fotogrāfija \"{title}\" no {city}",
+      "satellite": "Satelītattēls no {city}",
+      "flag": "Karogs no {country}"
     },
     "loading": {
       "composite": "Ielādē kompozītu attēlu",

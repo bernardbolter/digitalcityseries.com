@@ -58,10 +58,10 @@
   },
   "artwork": {
     "alt": {
-      "composite": "{{city}} şehrinin kompozit portresi ({{year}})",
-      "photo": "{{city}} şehrinden \"{{title}}\" adlı belirleyici an fotoğrafı",
-      "satellite": "{{city}} şehrinin uydu görüntüsü",
-      "flag": "{{country}} bayrağı"
+      "composite": "{city} şehrinin kompozit portresi ({year})",
+      "photo": "{city} şehrinden \"{title}\" adlı belirleyici an fotoğrafı",
+      "satellite": "{city} şehrinin uydu görüntüsü",
+      "flag": "{country} bayrağı"
     },
     "loading": {
       "composite": "Kompozit görüntü yükleniyor",

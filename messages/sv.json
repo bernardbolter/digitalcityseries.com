@@ -58,10 +58,10 @@
   },
   "artwork": {
     "alt": {
-      "composite": "Sammansatt stadsporträtt av {{city}} ({{year}})",
-      "photo": "Avgörande ögonblicksfotografi \"{{title}}\" från {{city}}",
-      "satellite": "Satellitvy av {{city}}",
-      "flag": "Flagga av {{country}}"
+      "composite": "Sammansatt stadsporträtt av {city} ({year})",
+      "photo": "Avgörande ögonblicksfotografi \"{title}\" från {city}",
+      "satellite": "Satellitvy av {city}",
+      "flag": "Flagga av {country}"
     },
     "loading": {
       "composite": "Laddar sammansatt bild",

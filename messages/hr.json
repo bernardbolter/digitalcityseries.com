@@ -58,10 +58,10 @@
   },
   "artwork": {
     "alt": {
-      "composite": "Kompozitni gradski portret od {{city}} ({{year}})",
-      "photo": "Fotografija odlučujućeg trenutka \"{{title}}\" iz {{city}}",
-      "satellite": "Satelitski prikaz od {{city}}",
-      "flag": "Zastava od {{country}}"
+      "composite": "Kompozitni gradski portret od {city} ({year})",
+      "photo": "Fotografija odlučujućeg trenutka \"{title}\" iz {city}",
+      "satellite": "Satelitski prikaz od {city}",
+      "flag": "Zastava od {country}"
     },
     "loading": {
       "composite": "Učitavam kompozitnu sliku",

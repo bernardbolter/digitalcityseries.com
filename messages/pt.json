@@ -58,10 +58,10 @@
   },
   "artwork": {
     "alt": {
-      "composite": "Retrato composto da cidade de {{city}} ({{year}})",
-      "photo": "Fotografia de momento decisivo \"{{title}}\" de {{city}}",
-      "satellite": "Vista de satélite de {{city}}",
-      "flag": "Bandeira de {{country}}"
+      "composite": "Retrato composto da cidade de {city} ({year})",
+      "photo": "Fotografia de momento decisivo \"{title}\" de {city}",
+      "satellite": "Vista de satélite de {city}",
+      "flag": "Bandeira de {country}"
     },
     "loading": {
       "composite": "A carregar imagem composta",

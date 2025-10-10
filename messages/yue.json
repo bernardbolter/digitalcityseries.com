@@ -58,10 +58,10 @@
   },
   "artwork": {
     "alt": {
-      "composite": "{{city}} 嘅合成城市肖像 ({{year}})",
-      "photo": "來自 {{city}} 嘅「{{title}}」決定性瞬間攝影",
-      "satellite": "{{city}} 嘅衛星視圖",
-      "flag": "{{country}} 嘅旗幟"
+      "composite": "{city} 嘅合成城市肖像 ({year})",
+      "photo": "來自 {city} 嘅「{title}」決定性瞬間攝影",
+      "satellite": "{city} 嘅衛星視圖",
+      "flag": "{country} 嘅旗幟"
     },
     "loading": {
       "composite": "載入緊合成圖像",

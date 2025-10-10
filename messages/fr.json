@@ -53,10 +53,10 @@
   },
   "artwork": {
     "alt": {
-      "composite": "Portrait de ville composite de {{city}} ({{year}})",
-      "photo": "Photographie du moment décisif « {{title}} » de {{city}}",
-      "satellite": "Vue satellite de {{city}}",
-      "flag": "Drapeau de {{country}}"
+      "composite": "Portrait de ville composite de {city} ({year})",
+      "photo": "Photographie du moment décisif « {title} » de {city}",
+      "satellite": "Vue satellite de {city}",
+      "flag": "Drapeau de {country}"
     },
     "loading": {
       "composite": "Chargement de l'image composite",
