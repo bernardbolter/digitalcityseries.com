@@ -172,14 +172,14 @@ const Nav = () => {
                                     onClick={() => {
                                         setFiltersOpen(false)
                                         setCitiesOpen(false)
-                                        selectArtwork(city.id)
+                                        selectArtwork(city.databaseId)
                                     }}
                                 >
                                     <h1>{translatedCityName} <span>{translatedCountryName}</span></h1>
                                     
-                                    {city.artworkFields?.dcsFlags?.sourceUrl && (
+                                    {city.artworkFields?.dcsFlags?.node?.sourceUrl && (
                                     <img 
-                                        src={city.artworkFields?.dcsFlags.sourceUrl} 
+                                        src={city.artworkFields?.dcsFlags.node.sourceUrl} 
                                         alt={'flags from ' + city.title } 
                                     />
                                     )}

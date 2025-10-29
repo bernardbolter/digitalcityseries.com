@@ -1,11 +1,14 @@
 'use client';
 
-import Script from 'next/script';
-import { Fragment } from 'react';
+import Script from 'next/script'
+import { Fragment } from 'react'
+import { useLocale } from 'next-intl'
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX';
 
 export function GATracker() {
+  const locale = useLocale()
+  
   if (!GA_MEASUREMENT_ID) {
     console.warn('🟥 [GATracker] No GA_MEASUREMENT_ID found');
     return null;
@@ -32,6 +35,9 @@ export function GATracker() {
             });
             gtag('config', '${GA_MEASUREMENT_ID}', {
               page_path: window.location.pathname,
+              send_page_view: false,
+              dimension1: '${locale}',
+              dimension2: navigator.language
             });
             console.log('🟦 [GATracker] gtag initialized:', typeof window.gtag);
           `,

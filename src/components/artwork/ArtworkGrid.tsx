@@ -1,11 +1,18 @@
 'use client';
 
+import { useState, useEffect } from 'react'
 import { useAppContext } from '@/context/AppContext';
 import Artwork from './Artwork';
 
 const ArtworkGrid = () => {
-  const { filteredArt, isLoading } = useAppContext();
-  // console.log(filteredArt);
+  const { filteredArt } = useAppContext();
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+  
+  useEffect(() => {
+    if (filteredArt) {
+      setIsLoading(false)
+    }
+  }, [filteredArt])
 
   if (isLoading) {
     return (

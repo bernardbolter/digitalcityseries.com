@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useLocale } from '../../context/LocaleContext';
+import { useLocale } from 'next-intl'
 
 interface LoadingScreenProps {
   minDisplayTime?: number; // Minimum time to display the loading screen in ms
@@ -14,7 +14,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({
 }) => {
   const [isLoading, setIsLoading] = useState(false); // Start as false for SEO
   const [isFirstLoad, setIsFirstLoad] = useState(true);
-  const { locale } = useLocale();
+  const locale = useLocale();
   
   // Handle initial page load
   useEffect(() => {
