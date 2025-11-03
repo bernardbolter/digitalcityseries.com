@@ -173,9 +173,16 @@
     "spain": "西班牙"
   },
   "cookieConsent": {
-      "message": "呢個網站使用Cookies嚟確保基本功能同分析使用情況。點擊「接受」，你就同意使用分析Cookies。如有任何問題，請聯繫bernard@digitalcityseries.com",
-      "acceptButton": "接受",
-      "declineButton": "拒絕",
-      "learnMore": "了解更多"
-    }
+    "message": "呢個網站使用Cookies嚟確保基本功能同分析使用情況。點擊「接受」，你就同意使用分析Cookies。如有任何問題，請聯繫bernard@digitalcityseries.com",
+    "acceptButton": "接受",
+    "declineButton": "拒絕",
+    "learnMore": "了解更多"
+  },
+  "notFound": {
+    "heading": "暫時脫離軌道",
+    "description": "您已經導航到數碼城市系列嘅大氣層之外。呢個視角未繪製；請重新建立同地球嘅連接。",
+    "returnHome": "返回全球視圖",
+    "reviewMission": "查看任務控制",
+    "metaTitle": "404 - 搵唔到頁面"
+  }
 }

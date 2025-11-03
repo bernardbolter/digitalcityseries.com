@@ -177,5 +177,12 @@
       "acceptButton": "Accepter",
       "declineButton": "Afvis",
       "learnMore": "Lær mere"
-    }
+    },
+  "notFound": {
+    "heading": "MIDLERTIDIGT UDE AF KREDSLØB.",
+    "description": "Du har navigeret ud over Digital City Series' atmosfære. Dette perspektiv er ukortlagt; genopret venligst din forbindelse til globussen.",
+    "returnHome": "Vend tilbage til den globale visning",
+    "reviewMission": "Gennemgå missionskontrol",
+    "metaTitle": "404 - Siden blev ikke fundet"
+  }
 }

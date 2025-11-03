@@ -174,8 +174,15 @@
   },
   "cookieConsent": {
       "message": "Ova web stranica koristi kolačiće kako bi osigurala osnovnu funkcionalnost i analizirala korištenje. Klikom na \"Prihvati\" pristajete na korištenje analitičkih kolačića. Za bilo kakva pitanja, kontaktirajte bernard@digitalcityseries.com",
-      "acceptButton": "Prihvati",
-      "declineButton": "Odbij",
-      "learnMore": "Saznaj više"
-    }
+    "acceptButton": "Prihvati",
+    "declineButton": "Odbij",
+    "learnMore": "Saznaj više"
+  },
+  "notFound": {
+    "heading": "PRIVREMENO IZVAN ORBITE.",
+    "description": "Navigirali ste izvan atmosfere Digital City Seriesa. Ova perspektiva nije mapirana; molimo ponovno uspostavite vezu s globusom.",
+    "returnHome": "Povratak na globalni pregled",
+    "reviewMission": "Pregledaj kontrolu misije",
+    "metaTitle": "404 - Stranica nije pronađena"
+  }
 }

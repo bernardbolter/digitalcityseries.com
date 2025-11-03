@@ -173,9 +173,16 @@
     "spain": "Espanha"
   },
   "cookieConsent": {
-      "message": "Este site utiliza cookies para garantir a funcionalidade básica e analisar o uso. Ao clicar em \"Aceitar\", você concorda com o uso de cookies de análise. Para quaisquer perguntas, entre em contato com bernard@digitalcityseries.com",
-      "acceptButton": "Aceitar",
-      "declineButton": "Recusar",
-      "learnMore": "Saiba mais"
-    }
+    "message": "Este site utiliza cookies para garantir a funcionalidade básica e analisar o uso. Ao clicar em \"Aceitar\", você concorda com o uso de cookies de análise. Para quaisquer perguntas, entre em contato com bernard@digitalcityseries.com",
+    "acceptButton": "Aceitar",
+    "declineButton": "Recusar",
+    "learnMore": "Saiba mais"
+  },
+  "notFound": {
+    "heading": "TEMPORARIAMENTE FORA DE ÓRBITA.",
+    "description": "Você navegou além da atmosfera da Digital City Series. Esta perspectiva não está mapeada; por favor, restabeleça sua conexão com o globo.",
+    "returnHome": "Retornar à vista global",
+    "reviewMission": "Revisar o controle de missão",
+    "metaTitle": "404 - Página não encontrada"
+  }
 }

@@ -173,9 +173,16 @@
     "spain": "西班牙"
   },
   "cookieConsent": {
-      "message": "本网站使用Cookies以确保基本功能和分析使用情况。点击“接受”，您同意使用分析Cookies。如有任何问题，请联系bernard@digitalcityseries.com",
-      "acceptButton": "接受",
-      "declineButton": "拒绝",
-      "learnMore": "了解更多"
-    }
+    "message": "本网站使用Cookies以确保基本功能和分析使用情况。点击“接受”，您同意使用分析Cookies。如有任何问题，请联系bernard@digitalcityseries.com",
+    "acceptButton": "接受",
+    "declineButton": "拒绝",
+    "learnMore": "了解更多"
+  },
+  "notFound": {
+    "heading": "暂时脱离轨道",
+    "description": "您已经导航到数字城市系列的大气层之外。此视角尚未绘制；请重新建立与地球的连接。",
+    "returnHome": "返回全球视图",
+    "reviewMission": "查看任务控制",
+    "metaTitle": "404 - 页面未找到"
+  }
 }

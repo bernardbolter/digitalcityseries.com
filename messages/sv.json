@@ -177,5 +177,12 @@
     "acceptButton": "Acceptera",
     "declineButton": "Avvisa",
     "learnMore": "Läs mer"
+  },
+  "notFound": {
+    "heading": "TILLFÄLLIGT UTANFÖR OMLOPPSBANA.",
+    "description": "Du har navigerat bortom Digital City Series atmosfär. Detta perspektiv är okartlagt; vänligen återupprätta din anslutning till globen.",
+    "returnHome": "Återvänd till den globala vyn",
+    "reviewMission": "Granska uppdragskontroll",
+    "metaTitle": "404 - Sidan hittades inte"
   }
 }

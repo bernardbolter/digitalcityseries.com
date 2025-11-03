@@ -177,5 +177,12 @@
       "acceptButton": "Aceptar",
       "declineButton": "Rechazar",
       "learnMore": "Saber más"
-    }
+    },
+  "notFound": {
+    "heading": "TEMPORALMENTE FUERA DE ÓRBITA.",
+    "description": "Has navegado más allá de la atmósfera de Digital City Series. Esta perspectiva no está mapeada; por favor, restablece tu conexión con el globo.",
+    "returnHome": "Regresar a la vista global",
+    "reviewMission": "Revisar el control de misión",
+    "metaTitle": "404 - Página no encontrada"
+  }
 }

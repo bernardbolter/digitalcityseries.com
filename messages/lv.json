@@ -173,9 +173,16 @@
     "spain": "Spānija"
   },
   "cookieConsent": {
-      "message": "Šī vietne izmanto sīkdatnes, lai nodrošinātu pamata funkcionalitāti un analizētu lietojumu. Noklikšķinot uz \"Pieņemt\", jūs piekrītat analītisko sīkdatņu izmantošanai. Ja ir kādi jautājumi, sazinieties ar bernard@digitalcityseries.com",
-      "acceptButton": "Pieņemt",
-      "declineButton": "Noraidīt",
-      "learnMore": "Uzzināt vairāk"
-    }
+    "message": "Šī vietne izmanto sīkdatnes, lai nodrošinātu pamata funkcionalitāti un analizētu lietojumu. Noklikšķinot uz \"Pieņemt\", jūs piekrītat analītisko sīkdatņu izmantošanai. Ja ir kādi jautājumi, sazinieties ar bernard@digitalcityseries.com",
+    "acceptButton": "Pieņemt",
+    "declineButton": "Noraidīt",
+    "learnMore": "Uzzināt vairāk"
+  },
+  "notFound": {
+    "heading": "ĪSLAICĪGI ĀRPUSorbitty ORBĪTAS.",
+    "description": "Jūs esat novirzījies ārpus Digital City Series atmosfēras. Šī perspektīva nav kartēta; lūdzu, atjaunojiet savu savienojumu ar globusu.",
+    "returnHome": "Atgriezties pie globālā skata",
+    "reviewMission": "Pārskatīt misijas kontroli",
+    "metaTitle": "404 - Lapa nav atrasta"
+  }
 }

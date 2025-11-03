@@ -172,5 +172,12 @@
       "acceptButton": "Accepter",
       "declineButton": "Refuser",
       "learnMore": "En savoir plus"
-    }
+  },
+  "notFound": {
+    "heading": "TEMPORAIREMENT HORS D'ORBITE.",
+    "description": "Vous avez navigué au-delà de l'atmosphère de Digital City Series. Cette perspective n'est pas cartographiée ; veuillez rétablir votre connexion au globe.",
+    "returnHome": "Retour à la vue globale",
+    "reviewMission": "Consulter le contrôle de mission",
+    "metaTitle": "404 - Page introuvable"
+  }
 }
