@@ -1,0 +1,23 @@
+.globe-wrapper { 
+  position:fixed; inset:0; background:#000; 
+  display:flex; align-items:center; justify-content:center; 
+  z-index:999999; 
+}
+
+.globe-sphere {
+  width: 80vmin;
+  height: 80vmin;
+  border-radius: 50%;
+  background: url('/images/night_earth.jpg') center/cover;
+  animation: pan 20s linear infinite;
+  box-shadow: 
+    inset -40px 0 80px #000a,     /* Left shadow */
+    inset 40px 0 80px transparent, /* Right highlight */
+    0 0 100px #fff3;               /* Outer glow */
+  position: relative;
+}
+
+/* Pan the background to simulate rotation */
+@keyframes pan {
+  to { background-position: 200% center; }
+}

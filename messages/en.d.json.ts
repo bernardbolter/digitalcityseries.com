@@ -182,6 +182,13 @@ declare const messages: {
     "acceptButton": "Accept",
     "declineButton": "Decline",
     "learnMore": "Learn more"
+  },
+  "notFound": {
+    "heading": "TEMPORARILY OUT OF ORBIT.",
+    "description": "You've navigated beyond the atmosphere of the Digital City Series. This perspective is unmapped; please re-establish your connection to the globe.",
+    "returnHome": "Return to the Global View",
+    "reviewMission": "Review Mission Control",
+    "metaTitle": "404 - Page Not Found"
   }
 };
 export default messages;

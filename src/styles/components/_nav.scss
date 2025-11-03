@@ -112,7 +112,7 @@
     transform: translateX(120%);
     transition: transform .7s ease-in-out;
     margin-top: 5px;
-    position: fixed;
+    position: absolute;
 }
 
 .nav-filters__open {

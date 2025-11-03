@@ -153,6 +153,7 @@ const Nav = () => {
                 </div>
                     <div className={citiesOpen ? 'nav-city-list nav-city-list__open' : 'nav-city-list'}>
                         {artlist.map((city: ArtworkNode, index) => {
+                            console.log(city.artworkFields.dcsFlags)
                             let translatedCityName
                             if (city.artworkFields?.city) {
                                 translatedCityName = t(`cities.${toCamelCase(city.artworkFields?.city)}`)

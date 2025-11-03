@@ -177,5 +177,12 @@
     "acceptButton": "Akzeptieren",
     "declineButton": "Ablehnen",
     "learnMore": "Erfahren Sie mehr"
+  },
+  "notFound": {
+    "heading": "VORÜBERGEHEND AUßERHALB DER UMLAUFBAHN.",
+    "description": "Sie haben die Atmosphäre der Digital City Series verlassen. Diese Perspektive ist nicht kartografiert; bitte stellen Sie Ihre Verbindung zum Globus wieder her.",
+    "returnHome": "Zurück zur globalen Ansicht",
+    "reviewMission": "Missionskontrolle überprüfen",
+    "metaTitle": "404 - Seite nicht gefunden"
   }
 }
